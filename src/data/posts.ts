@@ -36,12 +36,12 @@ export const blogPosts: BlogPost[] = [
       <p>In our rush to optimize everything, we often optimize away the very experiences that bring us joy. My coffee ritual is intentionally inefficient. I could make coffee in a machine while doing other things, but that would miss the point entirely.</p>
       
       <p>Settings for the recipe:</p>
-      <ul>
-        <li>- A transition from sleep to wakefulness</li>
-        <li>- A moment of presence before the day's demands</li>
-        <li>- A practice in patience and precision</li>
-        <li>- A reminder that small pleasures matter</li>
-      </ul>
+      <ol>
+        <li>FILM SIMULATION: Classic Chrome</li>
+        <li>Grain Effect: Off/li>
+        <li>Color Chrome Effect: Weak</li>
+        <li>White Balance: Auto</li>
+      </ol>
       
       <h2>Wide Angle</h2>
       <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
     `,
-    date: "February 15, 2025",
+    date: "November 15, 2025",
     readTime: "6 min read",
     tags: ["Photography", "Lifestyle"],
     author: "Author Name"
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
     `,
-    date: "February 15, 2024",
+    date: "October 22, 2025",
     readTime: "6 min read",
     tags: ["Coffee", "Mindfulness", "Morning Routine", "Lifestyle"],
     author: "Author Name"
@@ -160,9 +160,9 @@ export const blogPosts: BlogPost[] = [
       
       <p>The journey from confusion to clarity taught me that sometimes the best tools are the ones that initially feel like obstacles. They're not making things harder – they're making things better.</p>
     `,
-    date: "February 20, 2024",
+    date: "October 20, 2025",
     readTime: "5 min read",
-    tags: ["TypeScript", "Learning", "Programming"],
+    tags: ["Learning", "Programming"],
     author: "Author Name"
   },
   {
@@ -209,7 +209,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Rating: 5/5 stars</strong></p>
       <p>A masterpiece that sets a new standard for science fiction cinema.</p>
     `,
-    date: "February 28, 2024",
+    date: "September 28, 2025",
     readTime: "7 min read",
     tags: ["Movies", "Review"],
     author: "Author Name"
@@ -249,7 +249,7 @@ export const blogPosts: BlogPost[] = [
       <p><strong>Rating: 4.5/5 stars</strong></p>
       <p>A compelling page-turner that's also a thoughtful exploration of identity, ambition, and love in all its forms.</p>
     `,
-    date: "March 5, 2024",
+    date: "September 5, 2025",
     readTime: "6 min read",
     tags: ["Books", "Review", "Fiction"],
     author: "Author Name"
@@ -290,9 +290,9 @@ export const blogPosts: BlogPost[] = [
       
       <p>That's the essence of vibe coding: finding joy in the process, learning through doing, and building something that reflects your personality rather than just solving a problem.</p>
     `,
-    date: "March 10, 2024",
+    date: "August 20, 2025",
     readTime: "5 min read",
-    tags: ["Vibe Coding", "React", "TypeScript", "Learning"],
+    tags: ["Vibe Coding", "Learning"],
     author: "Author Name"
   },
   {
@@ -322,7 +322,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>The coffee tastes better, yes. But more importantly, the morning feels better. There's intentionality now, a sense of craft and care that carries into the rest of the day.</p>
     `,
-    date: "March 15, 2024",
+    date: "August 15, 2025",
     readTime: "4 min read",
     tags: ["Coffee", "Mindfulness", "Morning Routine"],
     author: "Author Name"

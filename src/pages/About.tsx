@@ -12,7 +12,7 @@ const About: React.FC = () => {
   const interests = [
     { name: 'Coffee Brewing', icon: Coffee, description: 'Exploring different brewing methods and coffee origins' },
     { name: 'Reading', icon: Book, description: 'Fiction, non-fiction, and manga' },
-    { name: 'Film Analysis', icon: Film, description: 'Appreciating cinematography and storytelling' },
+    { name: 'Film & TV', icon: Film, description: 'Appreciating cinematography and storytelling' },
     { name: 'Vibe Coding', icon: Code, description: 'Learning to code through experimentation and joy' },
   ]
 
@@ -43,9 +43,9 @@ const About: React.FC = () => {
           <CardContent className="prose">
             <p>
               I believe that the best learning happens when you're genuinely curious and having fun.
-              或是單純為了生存 :) 
-              That's why I approach both life and coding with what I call "vibe coding" – learning 
-              through experimentation, joy, and authentic interest.
+              – learning through experimentation and authentic interest.
+              這個部落格是嘗試 Vibe Coding 所建立而成的，也同時<s>逼迫</s>自己記錄每天發生的事情、學習的東西，
+              試圖重新找回熱情和人生方向。
             </p>
             <p>
               When I'm not behind a screen, you'll find me brewing the perfect cup of coffee, 
@@ -124,9 +124,11 @@ const About: React.FC = () => {
               <Mail className="h-4 w-4 mr-2" />
               Email
             </Button>
-            <Button variant="outline" size="sm" className="rounded-full">
-              <Github className="h-4 w-4 mr-2" />
-              GitHub
+            <Button asChild variant="outline" size="sm" className="rounded-full">
+              <a href="https://github.com/abby-chung" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4 mr-2" />
+                GitHub
+              </a>
             </Button>
             <Button variant="outline" size="sm" className="rounded-full">
               <Twitter className="h-4 w-4 mr-2" />
