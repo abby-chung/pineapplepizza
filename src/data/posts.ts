@@ -291,7 +291,7 @@ export const blogPosts: BlogPost[] = [
       <h2>6th Ave, New York City</h2>
       <p>The process is always the same:</p>
         <div class="image-container">
-          <img src="/images/Street of New York City.jpg" alt="Street of New York City" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/photography/Street of New York City.jpg" alt="Street of New York City" class="blog-image" />
           <p class="image-caption">Street of New York City</p>
         </div>
       <h2>The Mindfulness</h2>
