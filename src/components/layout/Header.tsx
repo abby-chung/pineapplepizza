@@ -25,7 +25,7 @@ const Header: React.FC = () => {
           <div className="flex-shrink-0">
               <Link to="/" className="flex items-center gap-2">
                 <img
-                  src="/favicon.ico"
+                  src="/pineapplepizza/favicon.ico"
                   alt="Pineapple Pizza Logo"
                   className="h-8 w-8"
                 />
