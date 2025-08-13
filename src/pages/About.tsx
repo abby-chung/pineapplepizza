@@ -42,7 +42,8 @@ const About: React.FC = () => {
           </CardHeader>
           <CardContent className="prose">
             <p>
-              I believe that the best learning happens when you're genuinely curious and having fun. 
+              I believe that the best learning happens when you're genuinely curious and having fun.
+              或是單純為了生存 :) 
               That's why I approach both life and coding with what I call "vibe coding" – learning 
               through experimentation, joy, and authentic interest.
             </p>
