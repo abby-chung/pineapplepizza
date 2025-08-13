@@ -94,7 +94,7 @@ const PostPage: React.FC = () => {
             <div className="space-y-2">
               <h3 className="font-semibold text-foreground">{post.author}</h3>
               <p className="text-muted-foreground">
-                Passionate about coffee, books, movies, and the art of vibe coding. 
+                Passionate about coffee, books, TV shows, movies, and the art of surviving in civilization. 
                 Always learning, always experimenting, and documenting the journey along the way.
               </p>
             </div>

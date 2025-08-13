@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     { name: 'Coffee', icon: Coffee, description: 'Brewing methods, tasting notes, and cafe discoveries' },
     { name: 'Books', icon: Book, description: 'Literary adventures and reading reflections' },
     { name: 'Movies', icon: Film, description: 'Cinematic experiences and film analysis' },
-    { name: 'Vibe Coding', icon: Code, description: 'Technical learning journey and coding experiments' },
+    { name: 'Modern-Day Survival', icon: Code, description: 'Technical learning journey and coding experiments' },
   ]
 
   return (

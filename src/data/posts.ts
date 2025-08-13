@@ -289,7 +289,7 @@ export const blogPosts: BlogPost[] = [
       <p>This isn't about caffeine addiction or productivity optimization. It's about creating a moment of mindfulness in an otherwise chaotic world.</p>
       
       <h2>6th Ave, New York City</h2>
-      <p>The process is always the same:</p>
+      <p>Morning light hits differently</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/photography/Street of New York City.jpg" alt="Street of New York City" class="blog-image" />
           <p class="image-caption">Street of New York City</p>
@@ -299,18 +299,18 @@ export const blogPosts: BlogPost[] = [
       
       <p>When I pour the water, I'm completely present. The slow, deliberate circles require focus. There's no room for mental multitasking, no space for the day's anxieties to intrude.</p>
       
-      <h2>Why It Matters</h2>
+      <h2>Film Simulation/h2>
       <p>In our rush to optimize everything, we often optimize away the very experiences that bring us joy. My coffee ritual is intentionally inefficient. I could make coffee in a machine while doing other things, but that would miss the point entirely.</p>
       
-      <p>This ten-minute routine serves as:</p>
+      <p>Settings for the recipe:</p>
       <ul>
-        <li>A transition from sleep to wakefulness</li>
-        <li>A moment of presence before the day's demands</li>
-        <li>A practice in patience and precision</li>
-        <li>A reminder that small pleasures matter</li>
+        <li>- A transition from sleep to wakefulness</li>
+        <li>- A moment of presence before the day's demands</li>
+        <li>- A practice in patience and precision</li>
+        <li>- A reminder that small pleasures matter</li>
       </ul>
       
-      <h2>Beyond Coffee</h2>
+      <h2>Wide Angle</h2>
       <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
       
       <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
@@ -322,7 +322,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
     `,
-    date: "February 15, 2024",
+    date: "February 15, 2025",
     readTime: "6 min read",
     tags: ["Photography", "Lifestyle"],
     author: "Author Name"
