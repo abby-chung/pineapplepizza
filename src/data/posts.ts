@@ -170,7 +170,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "February 28, 2024",
     readTime: "7 min read",
-    tags: ["Movies", "Review", "Sci-Fi"],
+    tags: ["Movies", "Review"],
     author: "Author Name"
   },
   {

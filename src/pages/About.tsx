@@ -11,7 +11,7 @@ const About: React.FC = () => {
 
   const interests = [
     { name: 'Coffee Brewing', icon: Coffee, description: 'Exploring different brewing methods and coffee origins' },
-    { name: 'Reading', icon: Book, description: 'Fiction, non-fiction, and technical books' },
+    { name: 'Reading', icon: Book, description: 'Fiction, non-fiction, and manga' },
     { name: 'Film Analysis', icon: Film, description: 'Appreciating cinematography and storytelling' },
     { name: 'Vibe Coding', icon: Code, description: 'Learning to code through experimentation and joy' },
   ]
