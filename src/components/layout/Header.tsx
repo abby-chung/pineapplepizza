@@ -23,9 +23,19 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-              Name of the site
-            </Link>
+              <Link to="/" className="flex items-center gap-2">
+                <img
+                  src="/favicon.ico"
+                  alt="Pineapple Pizza Logo"
+                  className="h-8 w-8"
+                />
+                <span className="text-xl font-bold text-foreground hover:text-primary transition-colors">
+                  Pineapple Pizza
+                </span>
+              </Link>
+            {/* <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
+              Pineapple Pizza
+            </Link> */}
           </div>
 
           {/* Desktop Navigation */}

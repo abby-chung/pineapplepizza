@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
       <p>Settings for the recipe:</p>
       <ol>
         <li>FILM SIMULATION: Classic Chrome</li>
-        <li>Grain Effect: Off/li>
+        <li>Grain Effect: Off</li>
         <li>Color Chrome Effect: Weak</li>
         <li>White Balance: Auto</li>
       </ol>
