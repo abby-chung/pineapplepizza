@@ -277,5 +277,54 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     tags: ["Coffee", "Mindfulness", "Morning Routine", "Lifestyle"],
     author: "Author Name"
+  },
+    {
+    id: 7,
+    title: "My Review on Voigtlander Color-Skopar 18mm F2.8 with Fujifilm XT4",
+    slug: "voigtlander-lens-with-fujifilm",
+    excerpt: "Walking on the street of New York on a cold December, what images have I captured?",
+    content: `
+      <p>Every morning at 6:30 AM, before checking my phone or thinking about the day ahead, I perform a small ritual that has become one of my most cherished daily practices: making coffee.</p>
+      
+      <p>This isn't about caffeine addiction or productivity optimization. It's about creating a moment of mindfulness in an otherwise chaotic world.</p>
+      
+      <h2>6th Ave, New York City</h2>
+      <p>The process is always the same:</p>
+        <div class="image-container">
+          <img src="/images/Street of New York City.jpg" alt="Street of New York City" class="blog-image" />
+          <p class="image-caption">Street of New York City</p>
+        </div>
+      <h2>The Mindfulness</h2>
+      <p>What transforms this from simple coffee-making into meditation is the attention to each step. The weight of the beans in my hand. The aroma released when grinding. The sound of water beginning to boil.</p>
+      
+      <p>When I pour the water, I'm completely present. The slow, deliberate circles require focus. There's no room for mental multitasking, no space for the day's anxieties to intrude.</p>
+      
+      <h2>Why It Matters</h2>
+      <p>In our rush to optimize everything, we often optimize away the very experiences that bring us joy. My coffee ritual is intentionally inefficient. I could make coffee in a machine while doing other things, but that would miss the point entirely.</p>
+      
+      <p>This ten-minute routine serves as:</p>
+      <ul>
+        <li>A transition from sleep to wakefulness</li>
+        <li>A moment of presence before the day's demands</li>
+        <li>A practice in patience and precision</li>
+        <li>A reminder that small pleasures matter</li>
+      </ul>
+      
+      <h2>Beyond Coffee</h2>
+      <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
+      
+      <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
+      
+      <h2>Starting Your Own Ritual</h2>
+      <p>You don't need expensive equipment or perfect technique to create meaningful morning moments. The magic isn't in the pour-over method or the single-origin beans – it's in the attention you bring to whatever process you choose.</p>
+      
+      <p>Maybe it's tea instead of coffee. Maybe it's journaling or stretching or simply sitting quietly for five minutes. The specific activity matters less than the mindfulness you bring to it.</p>
+      
+      <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
+    `,
+    date: "February 15, 2024",
+    readTime: "6 min read",
+    tags: ["Photography", "Lifestyle"],
+    author: "Author Name"
   }
 ]

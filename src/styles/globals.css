@@ -129,13 +129,45 @@ html {
   }
 }
 
+/* Enhanced image styles */
+.prose .image-container {
+  @apply my-6 text-center;
+}
 
+.prose .blog-image {
+  @apply w-full max-w-2xl mx-auto rounded-lg shadow-md;
+}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+.prose .blog-image-small {
+  @apply max-w-md mx-auto rounded-lg shadow-sm;
+}
+
+.prose .image-caption {
+  @apply text-sm text-muted-foreground italic mt-2 mb-0;
+}
+
+/* Enhanced code block styles
+.prose pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto border border-border my-6;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-sm font-mono leading-relaxed;
+  color: inherit;
+}
+
+.prose code {
+  @apply bg-muted px-2 py-1 rounded text-sm font-mono;
+  color: hsl(var(--foreground));
+}
+
+/* Language-specific syntax highlighting (basic) */
+/* .prose .language-typescript,
+.prose .language-javascript {
+  @apply text-foreground;
+} */
+
+/* Responsive images */
+.prose img {
+  @apply max-w-full h-auto;
 }
