@@ -15,35 +15,42 @@ export const blogPosts: BlogPost[] = [
     id: 7,
     title: "My Review on Voigtlander Color-Skopar 18mm F2.8 with Fujifilm XT4",
     slug: "voigtlander-lens-with-fujifilm",
-    excerpt: "Walking on the street of New York on a cold December, what images have I captured?",
+    excerpt: "Walking on the street of New York on a cold December, is it a bad idea to use a manual focus lens?",
     content: `
-      <p>Every morning at 6:30 AM, before checking my phone or thinking about the day ahead, I perform a small ritual that has become one of my most cherished daily practices: making coffee.</p>
+      <p>December 6th, 2024. First morning in New York City. I embarked a photo-walk journey on 6th Ave. It was unintentional, yet rewarding.</p>
       
-      <p>This isn't about caffeine addiction or productivity optimization. It's about creating a moment of mindfulness in an otherwise chaotic world.</p>
+      <p>I purchased Voigtlander Color-Skopar 18mm F2.8 just a weeks before my trip to New York.
+         The main reason that I decided to get a Voigtlander instead of another Fujifilm lens with the same focal length, was mainly because of the infinity focus.
+         Supposedly, you should have everything beyond 3 meters in focus when turning the focus to a hard stop on the infinity symbol.
+         This is often not true for most lenses, which was why this part was mentioned in several reviews.
+      </p>
       
-      <h2>6th Ave, New York City</h2>
-      <p>Morning light hits differently</p>
+      <h2>6th Ave, New York</h2>
+      <p>Morning light hits differently... especially shooting against the light</p>
         <div class="image-container">
-          <img src="/pineapplepizza/images/posts/photography/Street of New York City.jpg" alt="Street of New York City" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/photography/6th-ave-new-york.jpg" alt="Street of New York City" class="blog-image" />
           <p class="image-caption">Street of New York City</p>
         </div>
-      <h2>The Mindfulness</h2>
-      <p>What transforms this from simple coffee-making into meditation is the attention to each step. The weight of the beans in my hand. The aroma released when grinding. The sound of water beginning to boil.</p>
-      
-      <p>When I pour the water, I'm completely present. The slow, deliberate circles require focus. There's no room for mental multitasking, no space for the day's anxieties to intrude.</p>
+
+      <h2>China Town, New York</h2>
+      <p>Random snap in the evening... the very first photo I took in New York</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/china-town-new-york.jpg" alt="Night in China Town" class="blog-image" />
+          <p class="image-caption">Night in China Town</p>
+        </div>
       
       <h2>Film Simulation</h2>
-      <p>In our rush to optimize everything, we often optimize away the very experiences that bring us joy. My coffee ritual is intentionally inefficient. I could make coffee in a machine while doing other things, but that would miss the point entirely.</p>
+      <p>Classic Chrome was the top choice for the entire trip.</p>
       
       <p>Settings for the recipe:</p>
-      <ol>
+      <ol type="1">
         <li>FILM SIMULATION: Classic Chrome</li>
         <li>Grain Effect: Off</li>
         <li>Color Chrome Effect: Weak</li>
         <li>White Balance: Auto</li>
       </ol>
       
-      <h2>Wide Angle</h2>
+      <h2>Wide Angle Challenge</h2>
       <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
       
       <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
@@ -258,7 +265,7 @@ export const blogPosts: BlogPost[] = [
     id: 2,
     title: "Building This Blog: A Vibe Coding Adventure",
     slug: "building-blog-vibe-coding-adventure",
-    excerpt: "How I approached building this personal blog with curiosity over perfectionism, learning React and TypeScript along the way.",
+    excerpt: "How I approached building this personal blog with curiosity over perfectionism, learning asking the right questions (prompts) along the way.",
     content: `
       <p>When I decided to build this blog, I could have chosen a simple solution – Medium, WordPress, or any number of ready-made platforms. Instead, I chose the scenic route: building it from scratch with React and TypeScript.</p>
       
@@ -272,6 +279,50 @@ export const blogPosts: BlogPost[] = [
         <li>Making mistakes and finding joy in debugging</li>
         <li>Building things that spark joy, not just functionality</li>
       </ul>
+
+      <h2>Prompt/h2>
+      <p>After spending almost an entire day, I finalized my prompt for Claude.</p>
+      <pre><code class="language-typescript">
+        Create a blog site.
+
+        ### Project Goal ###
+        This will be a personal blog site that serves as a digital journal and a public notebook. The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
+
+        ### Technical Specifications ###
+        - Hosting: GitHub Pages
+        - Development Environment: GitHub Codespaces
+        - Frameworks & Libraries:
+          - UI Components: shadcn/ui
+          - Styling: Tailwind CSS
+          - Language: TypeScript
+          
+        ### Implementation Requirements ###
+
+        - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
+        - Inform folder structure for the project
+        - yarn will be used as the package manager, provide installation command lines and necessary instructions
+        - Provide command lines to deploy the site to GitHub Page
+
+        ### Content and Structure ###
+        Content:
+        - Personal interests (coffee, books, movies)
+        - Technical learning notes (e.g., "vibe coding")
+        - Personal growth reflections
+        - Site Structure: Reference the blog_sitemap.md file for the detailed site map.
+
+        ### Design and User Interface ###
+        Layout:
+        - Use layout.png as a foundational guide for the basic layout.
+        - Adjustments can be made to follow modern web design principles and best practices.
+
+        Visual Style:
+        - Color Palette: A minimalist scheme using variations of white, grey, and black.
+        - Typography: A sans-serif font family for a clean, modern aesthetic.
+        - UI Elements: All components should have rounded corners.
+
+        Reusable Components:
+        - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
+      </code></pre>
       
       <h2>The Tech Stack</h2>
       <p>I went with modern tools that I wanted to learn:</p>
