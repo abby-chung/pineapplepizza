@@ -286,7 +286,8 @@ export const blogPosts: BlogPost[] = [
         Create a blog site.
 
         ### Project Goal ###
-        This will be a personal blog site that serves as a digital journal and a public notebook. The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
+        This will be a personal blog site that serves as a digital journal and a public notebook.
+        The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
 
         ### Technical Specifications ###
         - Hosting: GitHub Pages
@@ -362,17 +363,31 @@ export const blogPosts: BlogPost[] = [
         <li>A kitchen scale</li>
         <li>Fresh, good-quality beans</li>
       </ul>
+
+      <h2>The Beans</h2>
+      <p>選擇障礙的開始：</p>
+      <ul>
+        <li>深焙</li>
+        <li>中深焙</li>
+        <li>中焙</li>
+        <li>淺中焙</li>
+        <li>淺焙</li>
+      </ul>
+      <blockquote>未來可能會再依照產區與處理方法再做細分。</blockquote>
       
-      <h2>The Process</h2>
+      <h2>各派學說</h2>
       <p>The beauty lies in the simplicity and precision. Heat water to 200°F. Grind your beans (1:16 ratio works well). Wet the filter. Add grounds. Pour in small circles, watching the coffee bloom.</p>
       
       <p>What started as a quest for better coffee became a lesson in patience, precision, and presence. Each cup is a small meditation, a moment to pause before the day begins in earnest.</p>
       
       <p>The coffee tastes better, yes. But more importantly, the morning feels better. There's intentionality now, a sense of craft and care that carries into the rest of the day.</p>
+
+      <h2>什麼是好喝的咖啡</h2>
+      <p>其實自己喜歡的口味就可以稱為好喝的咖啡，除非要開咖啡店賺錢，但那會是另一個故事了。</p>
     `,
     date: "August 15, 2025",
     readTime: "4 min read",
-    tags: ["Coffee", "Mindfulness", "Morning Routine"],
+    tags: ["Coffee"],
     author: "Author Name"
   }
 ]

@@ -167,9 +167,9 @@ html {
 
 /* Language-specific syntax highlighting (basic) */
 /* .prose .language-javascript */
-.prose .language-typescript {
+/* .prose .language-typescript {
   @apply text-foreground;
-}
+} */
 
 /* Responsive images */
 .prose img {
