@@ -100,8 +100,12 @@
   @apply bg-muted p-4 rounded-lg overflow-x-auto;
 }
 
-.prose ul, .prose ol {
-  @apply text-muted-foreground mb-4;
+.prose ul {
+  @apply list-disc pl-6 text-muted-foreground mb-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 text-muted-foreground mb-4;
 }
 
 .prose li {
@@ -162,10 +166,10 @@ html {
 }
 
 /* Language-specific syntax highlighting (basic) */
-/* .prose .language-typescript,
-.prose .language-javascript {
+/* .prose .language-javascript */
+.prose .language-typescript {
   @apply text-foreground;
-} */
+}
 
 /* Responsive images */
 .prose img {

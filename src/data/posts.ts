@@ -280,7 +280,7 @@ export const blogPosts: BlogPost[] = [
         <li>Building things that spark joy, not just functionality</li>
       </ul>
 
-      <h2>Prompt/h2>
+      <h2>Prompt</h2>
       <p>After spending almost an entire day, I finalized my prompt for Claude.</p>
       <pre><code class="language-typescript">
         Create a blog site.
@@ -297,7 +297,6 @@ export const blogPosts: BlogPost[] = [
           - Language: TypeScript
           
         ### Implementation Requirements ###
-
         - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
         - Inform folder structure for the project
         - yarn will be used as the package manager, provide installation command lines and necessary instructions
@@ -314,12 +313,10 @@ export const blogPosts: BlogPost[] = [
         Layout:
         - Use layout.png as a foundational guide for the basic layout.
         - Adjustments can be made to follow modern web design principles and best practices.
-
         Visual Style:
         - Color Palette: A minimalist scheme using variations of white, grey, and black.
         - Typography: A sans-serif font family for a clean, modern aesthetic.
         - UI Elements: All components should have rounded corners.
-
         Reusable Components:
         - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
       </code></pre>
