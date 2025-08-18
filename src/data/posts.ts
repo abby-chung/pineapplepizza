@@ -285,84 +285,47 @@ export const blogPosts: BlogPost[] = [
       \`\`\`markdown
       Create a blog site.
 
-        ### Project Goal ###
-        This will be a personal blog site that serves as a digital journal and a public notebook.
-        The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
+      ### Project Goal ###
+      This will be a personal blog site that serves as a digital journal and a public notebook.
+      The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
 
-        ### Technical Specifications ###
-        - Hosting: GitHub Pages
-        - Development Environment: GitHub Codespaces
-        - Frameworks & Libraries:
-          - UI Components: shadcn/ui
-          - Styling: Tailwind CSS
-          - Language: TypeScript
+      ### Technical Specifications ###
+      - Hosting: GitHub Pages
+      - Development Environment: GitHub Codespaces
+      - Frameworks & Libraries:
+        - UI Components: shadcn/ui
+        - Styling: Tailwind CSS
+        - Language: TypeScript
           
-        ### Implementation Requirements ###
-        - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
-        - Inform folder structure for the project
-        - yarn will be used as the package manager, provide installation command lines and necessary instructions
-        - Provide command lines to deploy the site to GitHub Page
+      ### Implementation Requirements ###
+      - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
+      - Inform folder structure for the project
+      - yarn will be used as the package manager, provide installation command lines and necessary instructions
+      - Provide command lines to deploy the site to GitHub Page
 
-        ### Content and Structure ###
-        Content:
-        - Personal interests (coffee, books, movies)
-        - Technical learning notes (e.g., "vibe coding")
-        - Personal growth reflections
-        - Site Structure: Reference the blog_sitemap.md file for the detailed site map.
+      ### Content and Structure ###
+      Content:
+      - Personal interests (coffee, books, movies)
+      - Technical learning notes (e.g., "vibe coding")
+      - Personal growth reflections
+      - Site Structure: Reference the blog_sitemap.md file for the detailed site map.
 
-        ### Design and User Interface ###
-        Layout:
-        - Use layout.png as a foundational guide for the basic layout.
-        - Adjustments can be made to follow modern web design principles and best practices.
-        Visual Style:
-        - Color Palette: A minimalist scheme using variations of white, grey, and black.
-        - Typography: A sans-serif font family for a clean, modern aesthetic.
-        - UI Elements: All components should have rounded corners.
-        Reusable Components:
-        - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
+      ### Design and User Interface ###
+      Layout:
+      - Use layout.png as a foundational guide for the basic layout.
+      - Adjustments can be made to follow modern web design principles and best practices.
+      Visual Style:
+      - Color Palette: A minimalist scheme using variations of white, grey, and black.
+      - Typography: A sans-serif font family for a clean, modern aesthetic.
+      - UI Elements: All components should have rounded corners.
+      Reusable Components:
+      - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
       \`\`\`  
-      <pre><code class="language-typescript">
-        Create a blog site.
-
-        ### Project Goal ###
-        This will be a personal blog site that serves as a digital journal and a public notebook.
-        The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
-
-        ### Technical Specifications ###
-        - Hosting: GitHub Pages
-        - Development Environment: GitHub Codespaces
-        - Frameworks & Libraries:
-          - UI Components: shadcn/ui
-          - Styling: Tailwind CSS
-          - Language: TypeScript
-          
-        ### Implementation Requirements ###
-        - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
-        - Inform folder structure for the project
-        - yarn will be used as the package manager, provide installation command lines and necessary instructions
-        - Provide command lines to deploy the site to GitHub Page
-
-        ### Content and Structure ###
-        Content:
-        - Personal interests (coffee, books, movies)
-        - Technical learning notes (e.g., "vibe coding")
-        - Personal growth reflections
-        - Site Structure: Reference the blog_sitemap.md file for the detailed site map.
-
-        ### Design and User Interface ###
-        Layout:
-        - Use layout.png as a foundational guide for the basic layout.
-        - Adjustments can be made to follow modern web design principles and best practices.
-        Visual Style:
-        - Color Palette: A minimalist scheme using variations of white, grey, and black.
-        - Typography: A sans-serif font family for a clean, modern aesthetic.
-        - UI Elements: All components should have rounded corners.
-        Reusable Components:
-        - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
-      </code></pre>
       
       <h2>The Tech Stack</h2>
-      <p>I went with modern tools that I wanted to learn:</p>
+      <p>從前幾次非常失敗的 Vibe Coding 經驗得出，使用 TypeScript 比起 Javascript 相對來說比較合適，尤其是針對 Coding 經驗值極低的人士（我），
+      有問題的話在前期就能開始 debug，也不會因為要修 A 問題，結果修完出現 B, C, D... 問題。
+      </p>
       <ul>
         <li>React with TypeScript for the frontend</li>
         <li>Tailwind CSS for styling (those rounded corners everywhere!)</li>
@@ -381,7 +344,7 @@ export const blogPosts: BlogPost[] = [
     date: "August 13, 2025",
     readTime: "5 min read",
     tags: ["Vibe Coding", "Learning"],
-    author: "Author Name"
+    author: "Abby Chung"
   },
   {
     id: 1,
