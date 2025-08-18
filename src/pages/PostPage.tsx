@@ -7,6 +7,7 @@ import { Separator } from '@/components/ui/separator'
 import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
 import NotFound from './NotFound'
+import MarkdownContent from '@/components/MarkdownContent'
 
 const PostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -71,10 +72,11 @@ const PostPage: React.FC = () => {
 
       {/* Article Content */}
       <article className="prose prose-lg max-w-none">
-        <div 
+        {/* <div 
           dangerouslySetInnerHTML={{ __html: post.content }}
           className="space-y-6"
-        />
+        /> */}
+        <MarkdownContent content={post.content} />
       </article>
 
       <Separator />

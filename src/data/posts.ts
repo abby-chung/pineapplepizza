@@ -282,6 +282,10 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Prompt</h2>
       <p>After spending almost an entire day, I finalized my prompt for Claude.</p>
+      \`\`\`bash
+      npm install
+      npm run dev
+      \`\`\`  
       <pre><code class="language-typescript">
         Create a blog site.
 
