@@ -98,7 +98,9 @@ const PostPage: React.FC = () => {
               <p className="text-muted-foreground">
                 Passionate about coffee, books, TV shows, movies, and the art of surviving in civilization. 
                 Always learning, always experimenting, and documenting the journey along the way.
-                But really, 有時候太認真、有時候不負責任，希望此處不會雜草叢生。
+              </p>
+              <p className="text-muted-foreground">
+                有時候太認真、有時候不負責任，希望此處不會雜草叢生。
               </p>
             </div>
           </div>
