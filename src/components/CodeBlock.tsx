@@ -25,10 +25,10 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'text', title })
   return (
     <div className="relative group my-6">
       {/* Header with title and copy button */}
-      <div className="flex items-center justify-between bg-muted px-4 py-2 rounded-t-lg border border-border">
+      <div className="flex items-center justify-between bg-gray-100 px-4 py-2 rounded-t-lg border border-border">
         <div className="flex items-center gap-2">
-          {title && <span className="text-sm font-medium text-muted-foreground">{title}</span>}
-          <span className="text-xs text-muted-foreground uppercase tracking-wider">
+          {title && <span className="text-sm font-medium text-gray-700">{title}</span>}
+          <span className="text-xs text-gray-500 uppercase tracking-wider">
             {language}
           </span>
         </div>
@@ -36,10 +36,10 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'text', title })
           variant="ghost"
           size="sm"
           onClick={copyToClipboard}
-          className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity"
+          className="h-8 w-8 p-0 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 hover:text-gray-700 hover:bg-gray-200"
         >
           {copied ? (
-            <Check className="h-4 w-4 text-green-500" />
+            <Check className="h-4 w-4 text-green-600" />
           ) : (
             <Copy className="h-4 w-4" />
           )}
@@ -47,8 +47,8 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'text', title })
       </div>
 
       {/* Code content */}
-      <pre className="bg-muted/50 p-4 rounded-b-lg border-l border-r border-b border-border overflow-x-auto">
-        <code className={`language-${language} text-sm font-mono leading-relaxed`}>
+      <pre className="bg-gray-50 p-4 rounded-b-lg border-l border-r border-b border-border overflow-x-auto">
+        <code className={`language-${language} text-sm font-mono leading-relaxed text-gray-800`}>
           {code}
         </code>
       </pre>

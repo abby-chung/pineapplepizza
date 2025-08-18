@@ -28,35 +28,35 @@ const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
         // Highlight keywords
         highlightedCode = highlightedCode
           .replace(/\b(const|let|var|function|return|if|else|for|while|class|extends|import|export|from|default)\b/g, 
-            '<span style="color: #569cd6;">$1</span>')
+            '<span style="color: #0969da;">$1</span>')
           // Highlight strings
           .replace(/(["'`])((?:\\.|(?!\1)[^\\])*?)\1/g, 
-            '<span style="color: #ce9178;">$1$2$1</span>')
+            '<span style="color: #032f62;">$1$2$1</span>')
           // Highlight comments
           .replace(/(\/\/.*$)/gm, 
-            '<span style="color: #6a9955;">$1</span>')
+            '<span style="color: #6a737d;">$1</span>')
           // Highlight numbers
           .replace(/\b(\d+)\b/g, 
-            '<span style="color: #b5cea8;">$1</span>');
+            '<span style="color: #005cc5;">$1</span>');
       } else if (language === 'css') {
         highlightedCode = highlightedCode
           // Highlight selectors
           .replace(/^([^{]*)\s*{/gm, 
-            '<span style="color: #d7ba7d;">$1</span> {')
+            '<span style="color: #6f42c1;">$1</span> {')
           // Highlight properties
           .replace(/\s+([a-z-]+):/g, 
-            '  <span style="color: #9cdcfe;">$1</span>:')
+            '  <span style="color: #005cc5;">$1</span>:')
           // Highlight values
           .replace(/:\s*([^;]+);/g, 
-            ': <span style="color: #ce9178;">$1</span>;');
+            ': <span style="color: #032f62;">$1</span>;');
       } else if (language === 'html') {
         highlightedCode = highlightedCode
           // Highlight tags
           .replace(/(<\/?)([a-zA-Z][a-zA-Z0-9]*)(.*?)(\/?>)/g, 
-            '<span style="color: #569cd6;">$1</span><span style="color: #4fc1ff;">$2</span><span style="color: #92c5f7;">$3</span><span style="color: #569cd6;">$4</span>')
+            '<span style="color: #22863a;">$1</span><span style="color: #22863a;">$2</span><span style="color: #6f42c1;">$3</span><span style="color: #22863a;">$4</span>')
           // Highlight attributes
           .replace(/(\w+)=("[^"]*"|'[^']*')/g, 
-            '<span style="color: #9cdcfe;">$1</span>=<span style="color: #ce9178;">$2</span>');
+            '<span style="color: #6f42c1;">$1</span>=<span style="color: #032f62;">$2</span>');
       }
 
       setHighlighted(highlightedCode);
@@ -98,42 +98,33 @@ const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
   };
 
   return (
-    <div className="relative group my-6 rounded-lg border border-border overflow-hidden bg-slate-900">
+    <div className="relative group my-6 rounded-lg border border-border overflow-hidden bg-gray-50">
       {/* Header */}
-      <div className="flex items-center justify-between bg-slate-800 px-4 py-2">
-        <div className="flex items-center gap-3">
-          {/* Traffic light dots */}
-          <div className="flex gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          </div>
-          
-          <div className="flex items-center gap-2">
-            <span className="text-lg">{getLanguageIcon()}</span>
-            {fileName && (
-              <div className="flex items-center gap-1">
-                <FileText className="h-4 w-4 text-slate-400" />
-                <span className="text-sm text-slate-300">{fileName}</span>
-              </div>
-            )}
-            {title && !fileName && (
-              <span className="text-sm text-slate-300">{title}</span>
-            )}
-            <span className="text-xs text-slate-400 uppercase tracking-wider">
-              {language}
-            </span>
-          </div>
+      <div className="flex items-center justify-between bg-gray-100 px-4 py-2">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">{getLanguageIcon()}</span>
+          {fileName && (
+            <div className="flex items-center gap-1">
+              <FileText className="h-4 w-4 text-gray-600" />
+              <span className="text-sm text-gray-700">{fileName}</span>
+            </div>
+          )}
+          {title && !fileName && (
+            <span className="text-sm text-gray-700">{title}</span>
+          )}
+          <span className="text-xs text-gray-500 uppercase tracking-wider">
+            {language}
+          </span>
         </div>
 
         <Button
           variant="ghost"
           size="sm"
           onClick={copyToClipboard}
-          className="h-8 w-8 p-0 text-slate-400 hover:text-slate-200 hover:bg-slate-700 opacity-0 group-hover:opacity-100 transition-all"
+          className="h-8 w-8 p-0 text-gray-500 hover:text-gray-700 hover:bg-gray-200 opacity-0 group-hover:opacity-100 transition-all"
         >
           {copied ? (
-            <Check className="h-4 w-4 text-green-400" />
+            <Check className="h-4 w-4 text-green-600" />
           ) : (
             <Copy className="h-4 w-4" />
           )}
@@ -142,9 +133,9 @@ const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
 
       {/* Code content */}
       <div className="relative">
-        <pre className="p-4 overflow-x-auto text-sm leading-relaxed bg-slate-900">
+        <pre className="p-4 overflow-x-auto text-sm leading-relaxed bg-gray-50">
           <code 
-            className="font-mono text-slate-100"
+            className="font-mono text-gray-800"
             dangerouslySetInnerHTML={{ __html: highlighted }}
           />
         </pre>
