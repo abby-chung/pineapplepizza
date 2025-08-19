@@ -60,7 +60,7 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
 
   // Simple markdown processor for basic formatting
   const processSimpleMarkdown = (text: string) => {
-    return text
+    let processed = text
       // Headers
       .replace(/^### (.*$)/gm, '<h3>$1</h3>')
       .replace(/^## (.*$)/gm, '<h2>$1</h2>')
@@ -69,14 +69,33 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       // Italic
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
-      // Lists
-      .replace(/^- (.*$)/gm, '<li>$1</li>')
-      // Wrap consecutive list items
-      .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
-      // Line breaks
+      // Lists - convert individual items first
+      .replace(/^- (.*$)/gm, '<li>$1</li>');
+
+    // Wrap consecutive list items in <ul> tags
+    // This handles multiple separate lists correctly
+    processed = processed.replace(/(<li>.*?<\/li>(?:\s*<li>.*?<\/li>)*)/gm, (match) => {
+      // Only wrap if not already wrapped
+      if (!match.includes('<ul>')) {
+        return `<ul>${match}</ul>`;
+      }
+      return match;
+    });
+
+    // Handle paragraphs and line breaks
+    processed = processed
       .replace(/\n\n/g, '</p><p>')
       .replace(/^\s*/, '<p>')
-      .replace(/\s*$/, '</p>');
+      .replace(/\s*$/, '</p>')
+      // Clean up empty paragraphs
+      .replace(/<p><\/p>/g, '')
+      // Fix paragraphs around headers and lists
+      .replace(/<p>(<h[1-6]>)/g, '$1')
+      .replace(/(<\/h[1-6]>)<\/p>/g, '$1')
+      .replace(/<p>(<ul>)/g, '$1')
+      .replace(/(<\/ul>)<\/p>/g, '$1');
+
+    return processed;
   };
 
   return (

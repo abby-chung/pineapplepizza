@@ -307,6 +307,9 @@ export const blogPosts: BlogPost[] = [
         <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
         <li>Gemini Output:</li>
       </ol>
+      \`\`\`markdown
+      This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+      \`\`\`
       <h3>3. A quick sketch on Excalidraw</h3>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
@@ -316,7 +319,72 @@ export const blogPosts: BlogPost[] = [
 
       <h2>Prompt:</h2>
       <h3>Draft</h3>
+      \`\`\`markdown
+      Create a blog site.
+      This site will be hosted on GitHub Page and Codespaces on GitHub will be used for adding and editing codes.
+
+      ### About the site ###
+      - This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+
+      ### Guideline ###
+      - The blog site will be using the structure detailed in blog_sitemap.md
+      - Reference layout.png for basic layout, adjustments can be made for best design practice
+      - Create reusable components such as buttons, cards, loading indicators, and other common UI elements
+
+      ### Design ###
+      - Rounded corners
+      - Color white, grey and black are the main color scheme, use variations and lightness for best reading experience
+      - Sans serif is the main font.
+
+      ### Codebase ###
+      The codebase should support:
+      - shadcn project structure
+      - Tailwind CSS
+      - Typescript
+      If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+      \`\`\`  
+
       <p>Asked Gemini to review, and made some minor adjustments on my own, this was the final prompt which I provided to Claude Sonnet 4:</p>
+      \`\`\`markdown
+      Create a blog site.
+
+      ### Project Goal ###
+      This will be a personal blog site that serves as a digital journal and a public notebook. The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
+
+      ### Technical Specifications ###
+      - Hosting: GitHub Pages
+      - Development Environment: GitHub Codespaces
+      - Frameworks & Libraries:
+        - UI Components: shadcn/ui
+        - Styling: Tailwind CSS
+        - Language: TypeScript
+        
+      ### Implementation Requirements ###
+      - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
+      - Inform folder structure for the project
+      - yarn will be used as the package manager, provide installation command lines and necessary instructions
+      - Provide command lines to deploy the site to GitHub Page
+
+      ### Content and Structure ###
+      Content:
+      - Personal interests (coffee, books, movies)
+      - Technical learning notes (e.g., "vibe coding")
+      - Personal growth reflections
+      - Site Structure: Reference the blog_sitemap.md file for the detailed site map.
+
+      ### Design and User Interface ###
+      Layout:
+      - Use layout.png as a foundational guide for the basic layout.
+      - Adjustments can be made to follow modern web design principles and best practices.
+
+      Visual Style:
+      - Color Palette: A minimalist scheme using variations of white, grey, and black.
+      - Typography: A sans-serif font family for a clean, modern aesthetic.
+      - UI Elements: All components should have rounded corners.
+
+      Reusable Components:
+      - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
+      \`\`\`
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/initial-prompt.png" alt="Initial Prompt" class="blog-image" />
           <p class="image-caption">Initial Prompt</p>
