@@ -276,53 +276,45 @@ export const blogPosts: BlogPost[] = [
       <p>由於每個人的出發點不同，操作方法或是處理 prompt 的想法差異必定存在，這邊粗略提供個人的相關背景作為此次 Vibe Coding 最大變數。</p>
 
       <p>個人相關背景：</p>
-      <ul>
-        <li>只了解非常粗淺的 HTML 和 CSS</li>
-        <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
-        <li>英文能力 is A-OK</li>
-      </ul>
-      
+        <ul>
+          <li>只了解非常粗淺的 HTML 和 CSS</li>
+          <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
+          <li>英文能力 is A-OK</li>
+        </ul>
       <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
       
       <p>希望達到的目標：</p>
-      <ol type="1">
-        <li>首次產出的 code 能直接正常使用（未跳錯誤訊息）</li>
-        <li>如果跳錯誤訊息，可以在三次以內的提問，請 LLMs 成功 debug 且不影響其他正常運作的功能和頁面</li>
-        <li>細部調整或是加減功能時，只針對提出的部分進行改動，不影響原程式碼架構為原則</li>
-      </ol>
-      // Preparations for creating the prompt
-      <h2>Preparations</h2>
-      <h3>Ask Claude to create a functional map.</h3>
-      <ol type="1">
-        <li>Prompt: Create a minimalistic functional map for a blog website.</li>
-        <li>Download as Markdown file</li>
-        <li>Clean up the file, review the content and remove unwanted content</li>
-        <li><a href="/pineapplepizza/docs/blog_sitemap.md">blog_sitemap.md</a></li>
-      </ol>
+        <ol type="1">
+          <li>首次產出的 code 能直接正常使用（未跳錯誤訊息）</li>
+          <li>如果跳錯誤訊息，可以在三次以內的提問，請 LLMs 成功 debug 且不影響其他正常運作的功能和頁面</li>
+          <li>細部調整或是加減功能時，只針對提出的部分進行改動，不影響原程式碼架構為原則</li>
+        </ol>
 
-      <h3>Ask Gemini to outline the goal of the site</h3>
-      <ol type="1">
-        <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
-        <li>Gemini Output:</li>
-          <ul>
-            <li>
-              \`\`\`markdown
-              This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
-              \`\`\`
-            </li>
-          </ul>
-      </ol>
-      <h3>A quick sketch on Excalidraw</h3>
+      <h2>Preparations</h2>
+      <h3>1. Ask Claude to create a functional map.</h3>
+          <ol type="1">
+            <li>Prompt: Create a minimalistic functional map for a blog website.</li>
+            <li>Download as Markdown file</li>
+            <li>Clean up the file, review the content and remove unwanted content</li>
+            <li><a href="/pineapplepizza/docs/blog_sitemap.md">blog_sitemap.md</a></li>
+          </ol>
+      <h3>2. Ask Gemini to outline the goal of the site</h3>
+          <ol type="1">
+            <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
+            <li>Gemini Output:</li>
+          </ol>
+            \`\`\`markdown
+            This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+            \`\`\`
+      <h3>3. A quick sketch on Excalidraw</h3>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
           <p class="image-caption">Blog Site Map</p>
         </div>
-      <h3>Set up a GitHub Repository and Codespace</h3>
+      <h3>4. Set up a GitHub Repository and Codespace</h3>
 
-      <hr />
-      // Here is the actual prompt.
-      <h2>Prompt</h2>
-      <p>Draft</p>
+      <h2>Prompt:</h2>
+      <h3>Draft</h3>
       \`\`\`markdown
       Create a blog site.
       This site will be hosted on GitHub Page and Codespaces on GitHub will be used for adding and editing codes.
@@ -453,7 +445,7 @@ export const blogPosts: BlogPost[] = [
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/404-solution.png" alt="GitHub 404 Page Solution" class="blog-image" />
         </div>
-      <hr />
+
       <h2>💡心得小結</h2>
       <p>其實在此次成功的經驗之前，有兩個失敗的 Project，也是因為兩次的失敗，大概知道如何稍微避免再度踩雷（？）同時也是因為失敗的經驗，藉此稍微再熟悉了一下程式碼以及每個 config 之間的交互關係。在重新開始新的 Project 時，對於該如何下準確的 prompt 向 LLMs 詢問，相對來說也順利許多，自己也比較能推測可能出錯的地方在哪裡，僅需擷取對應的 code 給 LLMs，或是單純請 LLMs 建議如何優化某段 code。</p>
       <p>新增功能或是修改現有的 UX，我給 LLMs 的前提都是不允許大幅度地改動原始 code，因為害怕進入 bug 黑洞，而我不具備飛出來的能力，同時在 debug 時，我也會要求 LLMs 提供長期解法而非 hotfix（我好害怕技術債）。當我提出的需求與 LLMs 提供的 solution 有衝突、必捨其一的狀況時，我會再請 LLMs 分析「長期來看」或是以架構而言，何者是最佳建議 or best practice，避免未來發生更多問題。</p>
