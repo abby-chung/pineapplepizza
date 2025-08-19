@@ -276,11 +276,9 @@ export const blogPosts: BlogPost[] = [
       <p>由於每個人的出發點不同，操作方法或是處理 prompt 的想法差異必定存在，這邊粗略提供個人的相關背景作為此次 Vibe Coding 最大變數。</p>
       
       <h3>個人相關背景：</h3>
-      <ul>
-        <li>只了解非常粗淺的 HTML 和 CSS</li>
+      <ul><li>只了解非常粗淺的 HTML 和 CSS</li>
         <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
-        <li>英文能力 is A-OK</li>
-      </ul>
+        <li>英文能力 is A-OK</li></ul>
       
       <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
       
@@ -306,6 +304,11 @@ export const blogPosts: BlogPost[] = [
         <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
         <li>Gemini Output:</li>
       </ol>
+
+      \`\`\`markdown
+      This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+      \`\`\`
+
       <h3>3. A quick sketch on Excalidraw</h3>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
