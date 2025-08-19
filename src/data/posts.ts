@@ -274,8 +274,8 @@ export const blogPosts: BlogPost[] = [
       <hr />
 
       <p>由於每個人的出發點不同，操作方法或是處理 prompt 的想法差異必定存在，這邊粗略提供個人的相關背景作為此次 Vibe Coding 最大變數。</p>
-
-      <p>個人相關背景：</p>
+      
+      <h3>個人相關背景：</h3>
       <ul>
         <li>只了解非常粗淺的 HTML 和 CSS</li>
         <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
       
-      <p>希望達到的目標：</p>
+      <h3>希望達到的目標：</h3>
       <ul>
         <li>首次產出的 code 能直接正常使用（未跳錯誤訊息）</li>
         <li>如果跳錯誤訊息，可以在三次以內的提問，請 LLMs 成功 debug 且不影響其他正常運作的功能和頁面</li>
@@ -299,6 +299,7 @@ export const blogPosts: BlogPost[] = [
         <li>Clean up the file, review the content and remove unwanted content</li>
         <li><a href="/pineapplepizza/docs/blog_sitemap.md">blog_sitemap.md</a></li>
       </ol>
+      
       <h3>2. Ask Gemini to outline the goal of the site</h3>
       <ol type="1">
         <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
