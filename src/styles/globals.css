@@ -85,7 +85,12 @@
 }
 
 .prose p {
-  @apply text-muted-foreground leading-relaxed mb-4;
+  @apply text-muted-foreground leading-relaxed;
+}
+
+.prose > * + p {
+  @apply ml-0; /* flush paragraphs with main text */
+  @apply mt-4; /* optional: control vertical spacing */
 }
 
 .prose blockquote {
@@ -101,11 +106,11 @@
 }
 
 .prose ul {
-  @apply list-disc pl-6 text-muted-foreground mb-4;
+  @apply list-disc list-inside text-muted-foreground mb-4;
 }
 
 .prose ol {
-  @apply list-decimal pl-6 text-muted-foreground mb-4;
+  @apply list-decimal list-inside text-muted-foreground mb-4;
 }
 
 .prose li {
