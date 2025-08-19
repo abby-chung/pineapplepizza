@@ -44,14 +44,14 @@ export const blogPosts: BlogPost[] = [
       
       <p>Settings for the recipe:</p>
       <ol type="1">
-        <li>FILM SIMULATION: Classic Chrome</li>
+        <li>Film Simulation: Classic Chrome</li>
         <li>Grain Effect: Off</li>
         <li>Color Chrome Effect: Weak</li>
         <li>White Balance: Auto</li>
       </ol>
       
       <h2>Wide Angle Challenge</h2>
-      <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
+      <p>Figure out what to capture and get as close as possible.</p>
       
       <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
       
@@ -306,10 +306,6 @@ export const blogPosts: BlogPost[] = [
         <li>Gemini Output:</li>
       </ol>
 
-      \`\`\`markdown
-      This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
-      \`\`\`
-
       <h3>3. A quick sketch on Excalidraw</h3>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
@@ -473,7 +469,7 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     title: "The Art of Pour-Over Coffee: A Beginner's Journey",
     slug: "pour-over-coffee-beginners-journey",
-    excerpt: "Discovering the meditative process of manual coffee brewing and how it transformed my morning routine into a mindful ritual.",
+    excerpt: "Discovering the meditative process of coffee brewing and how it becomes the source of my financial crisis.",
     content: `
       <p>There's something magical about the ritual of pour-over coffee. It's not just about the caffeine – though that's certainly welcome – it's about the process itself. The careful measurement of beans, the precise water temperature, the deliberate, circular motions as you pour.</p>
       
@@ -513,6 +509,6 @@ export const blogPosts: BlogPost[] = [
     date: "August 15, 2025",
     readTime: "4 min read",
     tags: ["Coffee"],
-    author: "Author Name"
+    author: "Abby Chung"
   }
 ]
