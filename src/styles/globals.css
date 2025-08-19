@@ -100,16 +100,29 @@
   @apply bg-muted p-4 rounded-lg overflow-x-auto;
 }
 
-.prose ul {
+/* Updated list rules to be more specific */
+.prose ul:not(.not-prose) {
   @apply list-disc pl-6 text-muted-foreground mb-4;
 }
 
-.prose ol {
+.prose ol:not(.not-prose) {
   @apply list-decimal pl-6 text-muted-foreground mb-4;
 }
 
 .prose li {
   @apply mb-1;
+}
+
+/* Reset margins for headings and paragraphs after lists */
+.prose ul + h1,
+.prose ul + h2,
+.prose ul + h3,
+.prose ul + p,
+.prose ol + h1,
+.prose ol + h2,
+.prose ol + h3,
+.prose ol + p {
+  @apply mt-4 ml-0 pl-0;
 }
 
 /* Smooth scrolling */
