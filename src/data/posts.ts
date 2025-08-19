@@ -267,27 +267,93 @@ export const blogPosts: BlogPost[] = [
     slug: "building-blog-vibe-coding-adventure",
     excerpt: "How I approached building this personal blog with curiosity over perfectionism, learning asking the right questions (prompts) along the way.",
     content: `
-      <p>When I decided to build this blog, I could have chosen a simple solution – Medium, WordPress, or any number of ready-made platforms. Instead, I chose the scenic route: building it from scratch with React and TypeScript.</p>
+      <p>此網站的建立源自於我想嘗試使用 Vibe Coding 做出點什麼，決定從一個部落格網站開始，順便督促自己記錄這一路走來的經驗，好好做筆記和整理思緒，練習論述自身能力和經驗。</p>
       
-      <p>This wasn't about efficiency. It was about learning, experimenting, and what I like to call "vibe coding" – programming driven by curiosity and joy rather than just getting things done.</p>
-      
-      <h2>The Vibe Coding Philosophy</h2>
-      <p>Vibe coding is about:</p>
-      <ul>
-        <li>Following your curiosity, even if it's not the "practical" choice</li>
-        <li>Embracing the learning process over the final product</li>
-        <li>Making mistakes and finding joy in debugging</li>
-        <li>Building things that spark joy, not just functionality</li>
-      </ul>
+      <p>這裡的內容單純是我個人的經驗紀錄，並非教學，我也還在學習的道路上。</p>
 
+      <hr />
+
+      <p>由於每個人的出發點不同，操作方法或是處理 prompt 的想法差異必定存在，這邊粗略提供個人的相關背景作為此次 Vibe Coding 最大變數。</p>
+
+      <p>個人相關背景：</p>
+      <ul>
+        <li>只了解非常粗淺的 HTML 和 CSS</li>
+        <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
+        <li>英文能力 is A-OK</li>
+      </ul>
+      
+      <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
+      
+      <p>希望達到的目標：</p>
+      <ol type="1">
+        <li>首次產出的 code 能直接正常使用（未跳錯誤訊息）</li>
+        <li>如果跳錯誤訊息，可以在三次以內的提問，請 LLMs 成功 debug 且不影響其他正常運作的功能和頁面</li>
+        <li>細部調整或是加減功能時，只針對提出的部分進行改動，不影響原程式碼架構為原則</li>
+      </ol>
+      // Preparations for creating the prompt
+      <h2>Preparations</h2>
+      <h3>Ask Claude to create a functional map.</h3>
+      <ol type="1">
+        <li>Prompt: Create a minimalistic functional map for a blog website.</li>
+        <li>Download as Markdown file</li>
+        <li>Clean up the file, review the content and remove unwanted content</li>
+        <li><a href="/pineapplepizza/docs/blog_sitemap.md">blog_sitemap.md</a></li>
+      </ol>
+
+      <h3>Ask Gemini to outline the goal of the site</h3>
+      <ol type="1">
+        <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
+        <li>Gemini Output:</li>
+          <ul>
+            <li>
+              \`\`\`markdown
+              This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+              \`\`\`
+            </li>
+          </ul>
+      </ol>
+      <h3>A quick sketch on Excalidraw</h3>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
+          <p class="image-caption">Blog Site Map</p>
+        </div>
+      <h3>Set up a GitHub Repository and Codespace</h3>
+
+      <hr />
+      // Here is the actual prompt.
       <h2>Prompt</h2>
-      <p>After spending almost an entire day, I finalized my prompt for Claude.</p>
+      <p>Draft</p>
+      \`\`\`markdown
+      Create a blog site.
+      This site will be hosted on GitHub Page and Codespaces on GitHub will be used for adding and editing codes.
+
+      ### About the site ###
+      - This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+
+      ### Guideline ###
+      - The blog site will be using the structure detailed in blog_sitemap.md
+      - Reference layout.png for basic layout, adjustments can be made for best design practice
+      - Create reusable components such as buttons, cards, loading indicators, and other common UI elements
+
+      ### Design ###
+      - Rounded corners
+      - Color white, grey and black are the main color scheme, use variations and lightness for best reading experience
+      - Sans serif is the main font.
+
+      ### Codebase ###
+      The codebase should support:
+      - shadcn project structure
+      - Tailwind CSS
+      - Typescript
+      If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+      \`\`\`  
+
+      <p>Asked Gemini to review, and made some minor adjustments on my own, this was the final prompt which I provided to Claude Sonnet 4:</p>
       \`\`\`markdown
       Create a blog site.
 
       ### Project Goal ###
-      This will be a personal blog site that serves as a digital journal and a public notebook.
-      The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
+      This will be a personal blog site that serves as a digital journal and a public notebook. The site will showcase content on lifestyle topics like coffee, books, and movies, while also documenting the learning journey of technical skills, such as "vibe coding."
 
       ### Technical Specifications ###
       - Hosting: GitHub Pages
@@ -296,7 +362,7 @@ export const blogPosts: BlogPost[] = [
         - UI Components: shadcn/ui
         - Styling: Tailwind CSS
         - Language: TypeScript
-          
+        
       ### Implementation Requirements ###
       - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
       - Inform folder structure for the project
@@ -314,35 +380,96 @@ export const blogPosts: BlogPost[] = [
       Layout:
       - Use layout.png as a foundational guide for the basic layout.
       - Adjustments can be made to follow modern web design principles and best practices.
+
       Visual Style:
       - Color Palette: A minimalist scheme using variations of white, grey, and black.
       - Typography: A sans-serif font family for a clean, modern aesthetic.
       - UI Elements: All components should have rounded corners.
+
       Reusable Components:
       - Create a library of reusable UI components such as buttons, cards, loading indicators, and navigation elements to ensure consistency and efficiency.
-      \`\`\`  
+      \`\`\`
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/initial-prompt.png" alt="Initial Prompt" class="blog-image" />
+          <p class="image-caption">Initial Prompt</p>
+        </div>
+
+      <h2>Process</h2>
+      <p>待 Claude 完成產出所有要的東西，於 GitHub Codespace 新增各個檔案、package 和 config，Claude 很友善，最後會幫忙統整該做些什麼事、步驟是什麼、為什麼要做，就算沒有提供也可以再追問。我個人覺得 Claude 的解釋和統整比 GPT 容易理解。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/prompt-result.png" alt="Prompt Result" class="blog-image" />
+          <p class="image-caption">Prompt Result</p>
+        </div>
+      <p>在 Codespace 建完所有檔案和下該下的指令後，跳出了幾十個一樣的錯誤訊息。</p>
+        <blockquote>…"message": "Cannot find module '@/lib/utils' or its corresponding type declarations.",…</blockquote>
+
+      <p>我自己推測是路徑的問題，只要解決一個地方，應該可以一次解決所有，後來是將這段錯誤訊息，連同相關的 script 一起給 ChatGPT 請它分析問題原因以及解法，後來也按照 ChatGPT 的步驟解決此問題。（忘了截對話紀錄，但路徑問題通常都算是好解決的）</p>
       
-      <h2>The Tech Stack</h2>
-      <p>從前幾次非常失敗的 Vibe Coding 經驗得出，使用 TypeScript 比起 Javascript 相對來說比較合適，尤其是針對 Coding 經驗值極低的人士（我），
-      有問題的話在前期就能開始 debug，也不會因為要修 A 問題，結果修完出現 B, C, D... 問題。
-      </p>
+      <p>部署到 GitHub Pages 後，網站正常運作（而且還有點好看），接著就是調整一些細部內容。</p>
+      
+      <p>我在 Claude 中開啟另一個 chat，並使用 Add from GitHub 將相關的檔案上傳至 chat 內，這樣就不需要一直提供前後文，解決我不太滿意的 UI/UX 相關問題。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/add-from-github.png" alt="Add from GitHub" class="blog-image" />
+          <p class="image-caption">Select Add from GitHub in Claude</p>
+        </div>
+
+      <h3>Scroll issue</h3>
+      <p>點擊文章，發現進入文章的位置會與先前頁面停留位置相同，比如說直接進到文章中段，而非標題或是文章的開頭。</p>
+      
+      <p>根據 LLMs 解釋，主要原因源自於 React Router 這種單頁應用（SPA, Single Page Application），當切換不同路徑時，頁面並不會自動滾動到最上頭。</p>
+      
+      <p>解法則是新增 ScrollToTop Component，新增至程式碼後，此問題快速被解決。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/scroll-to-top.png" alt="Scroll to Top" class="blog-image" />
+        </div>
+
+      <h3>文章排序</h3>
+      <p>Recent Posts 和 Blog 理想情況是依照 date 作為排序依據，但問了 Claude 之後發現要變更的檔案太多了，加上會有「計算」的過程，為了降低衍生新問題的可能性，加上我對自己 debug 的（無）能力，我提出希望以最小改動程式碼、當文章增加時不影響效能為原則，調整程式碼。</p>
+      
+      <p>Claude 建議 <b>Pre-sort the data array</b>，基本上就是在程式碼中，直接將 posts 改成自己要的順序，最上面就是最新的方式處理。</p>
+      
+      <p>雖然我的直覺告訴我，這並非最妥當的方式處理，畢竟太「手工」，但回歸操作者本質，以非工程技術背景的人來說，這是最容易理解的方式處理。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/post-order.png" alt="Post Order" class="blog-image" />
+        </div>
+
+      <h3>Image & Code Format</h3>
+      <p>考量未來我會分享一些攝影的內容，以及技術相關文章勢必會包含截圖或 code snippets，先將這部分的設計做好，未來只需要專注在內容的部分就好了，少了格式問題需要擔心。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/image-code-block.png" alt="Image and Code Format" class="blog-image" />
+        </div>      
+      <p>由於我對於第一個產出的 code block layout 不是很滿意，同時希望有複製功能，我接著將 Notion 的格式截圖作為參考，請 Claude 提供修改。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/code-block.png" alt="Code Snippets Format" class="blog-image" />
+        </div>
+
+      <h3>404 Error</h3>
+      <p>當重新整理或直接進入 …/blog/post-slug 之類的頁面時，會跳出 404 Error，這個是將單頁應用（SPA, Single Page Application）部署到 GitHub Pages 常見的問題。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/404-page.png" alt="GitHub 404 Error Page" class="blog-image" />
+        </div>      
+      <p>新增 <code>404.html</code> 檔案並於 <code>index.html</code> 新增一段 script 即完成修復。</p>
+      <p>Prompt: How can I resolve the issue where a GitHub Pages site shows a 404 error or fails to load correctly when directly accessing or refreshing a route?</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/404-solution.png" alt="GitHub 404 Page Solution" class="blog-image" />
+        </div>
+      <hr />
+      <h2>💡心得小結</h2>
+      <p>其實在此次成功的經驗之前，有兩個失敗的 Project，也是因為兩次的失敗，大概知道如何稍微避免再度踩雷（？）同時也是因為失敗的經驗，藉此稍微再熟悉了一下程式碼以及每個 config 之間的交互關係。在重新開始新的 Project 時，對於該如何下準確的 prompt 向 LLMs 詢問，相對來說也順利許多，自己也比較能推測可能出錯的地方在哪裡，僅需擷取對應的 code 給 LLMs，或是單純請 LLMs 建議如何優化某段 code。</p>
+      <p>新增功能或是修改現有的 UX，我給 LLMs 的前提都是不允許大幅度地改動原始 code，因為害怕進入 bug 黑洞，而我不具備飛出來的能力，同時在 debug 時，我也會要求 LLMs 提供長期解法而非 hotfix（我好害怕技術債）。當我提出的需求與 LLMs 提供的 solution 有衝突、必捨其一的狀況時，我會再請 LLMs 分析「長期來看」或是以架構而言，何者是最佳建議 or best practice，避免未來發生更多問題。</p>
+
+      <h2>下集待續</h2>
+      <p><b>實作出一個可以上線使用的產品。</b></p>
+      <p>Tech Stack</p>
       <ul>
-        <li>React with TypeScript for the frontend</li>
-        <li>Tailwind CSS for styling (those rounded corners everywhere!)</li>
-        <li>shadcn/ui for consistent components</li>
-        <li>React Router for navigation</li>
-        <li>Deployed on GitHub Pages</li>
+        <li>Next.js</li>
+        <li>Supabase</li>
+        <li>Tailwind CSS</li>
+        <li>Vercel</li>
       </ul>
-      
-      <h2>What I Learned</h2>
-      <p>Beyond the technical skills, this project taught me about the value of building something yourself. Every rounded corner, every color choice, every animation – they all reflect intentional decisions rather than default templates.</p>
-      
-      <p>The code isn't perfect. There are probably better ways to structure some components. But it's mine, and it works, and I learned something new every day building it.</p>
-      
-      <p>That's the essence of vibe coding: finding joy in the process, learning through doing, and building something that reflects your personality rather than just solving a problem.</p>
     `,
     date: "August 13, 2025",
-    readTime: "5 min read",
+    readTime: "15 min read",
     tags: ["Vibe Coding", "Learning"],
     author: "Abby Chung"
   },
