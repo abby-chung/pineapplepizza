@@ -44,14 +44,14 @@ export const blogPosts: BlogPost[] = [
       
       <p>Settings for the recipe:</p>
       <ol type="1">
-        <li>Film Simulation: Classic Chrome</li>
+        <li>FILM SIMULATION: Classic Chrome</li>
         <li>Grain Effect: Off</li>
         <li>Color Chrome Effect: Weak</li>
         <li>White Balance: Auto</li>
       </ol>
       
       <h2>Wide Angle Challenge</h2>
-      <p>Figure out what to capture and get as close as possible.</p>
+      <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
       
       <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
       
@@ -178,6 +178,7 @@ export const blogPosts: BlogPost[] = [
     slug: "dune-part-two-review",
     excerpt: "Denis Villeneuve delivers a stunning continuation that surpasses the first film in every way, creating one of the best sci-fi epics ever made.",
     content: `
+      <p><strong>This article is written by Claude. I still haven't watched Dune: Part Two.</strong></p>
       <p>Denis Villeneuve has done something remarkable with "Dune: Part Two." Not only has he successfully adapted one of science fiction's most challenging novels, but he's created a film that stands as a cinematic achievement in its own right.</p>
       
       <p>Where the first film was necessarily about world-building and setup, Part Two is about payoff – and what a payoff it is.</p>
@@ -274,15 +275,16 @@ export const blogPosts: BlogPost[] = [
       <hr />
 
       <p>由於每個人的出發點不同，操作方法或是處理 prompt 的想法差異必定存在，這邊粗略提供個人的相關背景作為此次 Vibe Coding 最大變數。</p>
-
+      
       <h3>個人相關背景：</h3>
-      <p>
-      - 只了解非常粗淺的 HTML 和 CSS <br>
-      - 軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）<br>
-      - 英文能力 is A-OK
-      </p>
+      <ul>
+        <li>只了解非常粗淺的 HTML 和 CSS</li>
+        <li>軟體業工作過的 Product Manager，模糊知道某些程式語言或是術語大概是做什麼用的（約近視 500 度的模糊程度）</li>
+        <li>英文能力 is A-OK</li>
+      </ul>
+      
       <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
-
+      
       <h3>希望達到的目標：</h3>
       <ul>
         <li>首次產出的 code 能直接正常使用（未跳錯誤訊息）</li>
@@ -305,7 +307,9 @@ export const blogPosts: BlogPost[] = [
         <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
         <li>Gemini Output:</li>
       </ol>
-
+      \`\`\`markdown
+      This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
+      \`\`\`
       <h3>3. A quick sketch on Excalidraw</h3>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
@@ -440,7 +444,7 @@ export const blogPosts: BlogPost[] = [
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/404-page.png" alt="GitHub 404 Error Page" class="blog-image" />
         </div>      
-      <p>新增 <code>404.html</code> 檔案並於 <code>index.html</code> 新增一段 script 即完成修復。</p>
+      <p>新增 <code>404.html</code>檔案並於<code>index.html</code>新增一段 script 即完成修復。</p>
       <p>Prompt: How can I resolve the issue where a GitHub Pages site shows a 404 error or fails to load correctly when directly accessing or refreshing a route?</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/404-solution.png" alt="GitHub 404 Page Solution" class="blog-image" />
@@ -469,7 +473,7 @@ export const blogPosts: BlogPost[] = [
     id: 1,
     title: "The Art of Pour-Over Coffee: A Beginner's Journey",
     slug: "pour-over-coffee-beginners-journey",
-    excerpt: "Discovering the meditative process of coffee brewing and how it becomes the source of my financial crisis.",
+    excerpt: "Discovering the meditative process of manual coffee brewing and how it became the source of my financial crisis.",
     content: `
       <p>There's something magical about the ritual of pour-over coffee. It's not just about the caffeine – though that's certainly welcome – it's about the process itself. The careful measurement of beans, the precise water temperature, the deliberate, circular motions as you pour.</p>
       
@@ -485,7 +489,7 @@ export const blogPosts: BlogPost[] = [
         <li>Fresh, good-quality beans</li>
       </ul>
 
-      <h2>The Beans</h2>
+      <h2>咖啡豆</h2>
       <p>選擇障礙的開始：</p>
       <ul>
         <li>深焙</li>
@@ -509,6 +513,6 @@ export const blogPosts: BlogPost[] = [
     date: "August 15, 2025",
     readTime: "4 min read",
     tags: ["Coffee"],
-    author: "Abby Chung"
+    author: "Author Name"
   }
 ]
