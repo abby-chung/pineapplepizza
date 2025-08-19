@@ -395,28 +395,29 @@ Error generating stack: `+o.message+`
       </ul>
 
       <h2>Preparations</h2>
-      <h3>1. Ask Claude to create a functional map.</h3>
-      <ol type="1">
+      <p>1. Ask Claude to create a functional map.</p>
+      <ul>
         <li>Prompt: Create a minimalistic functional map for a blog website.</li>
         <li>Download as Markdown file</li>
         <li>Clean up the file, review the content and remove unwanted content</li>
         <li><a href="/pineapplepizza/docs/blog_sitemap.md">blog_sitemap.md</a></li>
-      </ol>
+      </ul>
       
-      <h3>2. Ask Gemini to outline the goal of the site</h3>
-      <ol type="1">
+      <p>2. Ask Gemini to outline the goal of the site</p>
+      <ul>
         <li>Prompt: The goal of the site is to share my life in general, such as coffee, book or movie review, and also learning notes, such as vibe coding. Please outline the goal within five sentences to help structure my thoughts.</li>
         <li>Gemini Output:</li>
-      </ol>
+      </ul>
+
       \`\`\`markdown
             This website serves as a personal digital journal, chronicling my multifaceted interests and personal growth. It will share my passions for life's simple pleasures through reviews of coffee, books, and movies. Concurrently, the site will act as a public notebook for my learning journey, documenting technical skills I am acquiring, such as "vibe coding." By blending lifestyle content with educational notes, I aim to connect with others who share a similar curiosity for both art and technology. Ultimately, this platform is a space to explore, learn, and share my unique perspective with a community of fellow enthusiasts.
       \`\`\`
-      <h3>3. A quick sketch on Excalidraw</h3>
+      <p>3. A quick sketch on Excalidraw</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/layout.png" alt="Blog Site Map" class="blog-image" />
           <p class="image-caption">Blog Site Map</p>
         </div>
-      <h3>4. Set up a GitHub Repository and Codespace</h3>
+      <p>4. Set up a GitHub Repository and Codespace</p>
 
       <h2>Prompt:</h2>
       <h3>Draft</h3>
