@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           {/* Copyright */}
           <div className="text-center text-sm text-muted-foreground">
             <p>
-              © {new Date().getFullYear()} Personal Blog. Built with love and caffeine.
+              © {new Date().getFullYear()} Pineapple Pizza. Built with love and caffeine.
             </p>
           </div>
         </div>

@@ -12,28 +12,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 7,
-    title: "My Review on Voigtlander Color-Skopar 18mm F2.8 with Fujifilm XT4",
+    id: 5,
+    title: "First Take on Voigtlander Color-Skopar 18mm F2.8 with Fujifilm XT4",
     slug: "voigtlander-lens-with-fujifilm",
     excerpt: "Walking on the street of New York on a cold December, is it a bad idea to use a manual focus lens?",
     content: `
-      <p>December 6th, 2024. First morning in New York City. I embarked a photo-walk journey on 6th Ave. It was unintentional, yet rewarding.</p>
+      <p>December 6th, 2024. First morning in New York City. I embarked on a photo-walk along 6th Ave. It was unintentional, yet rewarding.</p>
       
-      <p>I purchased Voigtlander Color-Skopar 18mm F2.8 just a weeks before my trip to New York.
-         The main reason that I decided to get a Voigtlander instead of another Fujifilm lens with the same focal length, was mainly because of the infinity focus.
-         Supposedly, you should have everything beyond 3 meters in focus when turning the focus to a hard stop on the infinity symbol.
-         This is often not true for most lenses, which was why this part was mentioned in several reviews.
+      <p>I picked up the <b>Voigtländer Color-Skopar 18mm f/2.8</b> just a week before my trip to New York. The main reason I chose the Voigtländer over Fujifilm’s native 18mm option came down to one detail: <b>infinity focus</b>.
+      </p>
+      <p>
+      In theory, setting the focus ring to the infinity hard stop should render everything beyond three meters perfectly sharp. In practice, though, many lenses fall short of this promise—which is why this point came up repeatedly in the reviews I read. The Voigtländer, however, seemed to handle infinity focus with more reliability, and that tipped the scales for me.
       </p>
       
       <h2>6th Ave, New York</h2>
-      <p>Morning light hits differently... especially shooting against the light</p>
+      <p>Morning light feels different—especially when shooting against it.</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/photography/6th-ave-new-york.jpg" alt="Street of New York City" class="blog-image" />
           <p class="image-caption">Street of New York City</p>
         </div>
 
       <h2>China Town, New York</h2>
-      <p>Random snap in the evening... the very first photo I took in New York</p>
+      <p>A random evening snap—the very first photo I took in New York.</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/photography/china-town-new-york.jpg" alt="Night in China Town" class="blog-image" />
           <p class="image-caption">Night in China Town</p>
@@ -44,133 +44,32 @@ export const blogPosts: BlogPost[] = [
       
       <p>Settings for the recipe:</p>
       <ol type="1">
-        <li>FILM SIMULATION: Classic Chrome</li>
+        <li>Film Simulation: Classic Chrome</li>
         <li>Grain Effect: Off</li>
         <li>Color Chrome Effect: Weak</li>
         <li>White Balance: Auto</li>
       </ol>
       
       <h2>Wide Angle Challenge</h2>
-      <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
+      <p>Even in a city filled with buildings and people, shooting with a wide-angle lens presented its own challenges.</p>
+      <p>With a wide-angle lens, you’re either too far from the subject with no time to move closer, or you risk stepping into someone’s space and drawing attention. Getting noticed isn’t always ideal in street photography—especially not for an introvert like me.</p>
+      <p>I never really had the courage to shoot right in people’s faces, so I switched back to my Fujifilm XF 35mm. It felt more comfortable for street shots of human beings, and I ended up with some of my favorite photos—which I’ll share in a separate post.</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/dead-end-new-york.jpg" alt="Kent Park" class="blog-image" />
+          <p class="image-caption">Kent Park, Brooklyn</p>
+        </div>
       
-      <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
-      
-      <h2>Starting Your Own Ritual</h2>
-      <p>You don't need expensive equipment or perfect technique to create meaningful morning moments. The magic isn't in the pour-over method or the single-origin beans – it's in the attention you bring to whatever process you choose.</p>
-      
-      <p>Maybe it's tea instead of coffee. Maybe it's journaling or stretching or simply sitting quietly for five minutes. The specific activity matters less than the mindfulness you bring to it.</p>
-      
-      <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
+      <h2>As always, let the food heal our souls</h2>
+      <p>Tacos, pizzas, bagels, donuts, coffee... so many good stuff... 🤤</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/tacos-new-york.jpg" alt="Tacos in New York" class="blog-image" />
+          <p class="image-caption">Esse Taco</p>
+        </div>
     `,
     date: "November 15, 2025",
     readTime: "6 min read",
     tags: ["Photography", "Lifestyle"],
     author: "Abby Chung"
-  },
-  {
-    id: 6,
-    title: "My Morning Coffee Ritual: Finding Mindfulness in Routine",
-    slug: "morning-coffee-ritual-mindfulness",
-    excerpt: "How a simple morning routine became a practice in presence, patience, and appreciation for small daily pleasures.",
-    content: `
-      <p>Every morning at 6:30 AM, before checking my phone or thinking about the day ahead, I perform a small ritual that has become one of my most cherished daily practices: making coffee.</p>
-      
-      <p>This isn't about caffeine addiction or productivity optimization. It's about creating a moment of mindfulness in an otherwise chaotic world.</p>
-      
-      <h2>The Ritual</h2>
-      <p>The process is always the same:</p>
-      <ul>
-        <li>Measure 22g of beans on the kitchen scale</li>
-        <li>Grind them fresh (the sound itself is meditative)</li>
-        <li>Heat water to exactly 200°F in my gooseneck kettle</li>
-        <li>Wet the paper filter in my V60</li>
-        <li>Add the grounds and create a small well in the center</li>
-        <li>Pour slowly in concentric circles, watching the coffee bloom</li>
-      </ul>
-      
-      <h2>The Mindfulness</h2>
-      <p>What transforms this from simple coffee-making into meditation is the attention to each step. The weight of the beans in my hand. The aroma released when grinding. The sound of water beginning to boil.</p>
-      
-      <p>When I pour the water, I'm completely present. The slow, deliberate circles require focus. There's no room for mental multitasking, no space for the day's anxieties to intrude.</p>
-      
-      <h2>Why It Matters</h2>
-      <p>In our rush to optimize everything, we often optimize away the very experiences that bring us joy. My coffee ritual is intentionally inefficient. I could make coffee in a machine while doing other things, but that would miss the point entirely.</p>
-      
-      <p>This ten-minute routine serves as:</p>
-      <ul>
-        <li>A transition from sleep to wakefulness</li>
-        <li>A moment of presence before the day's demands</li>
-        <li>A practice in patience and precision</li>
-        <li>A reminder that small pleasures matter</li>
-      </ul>
-      
-      <h2>Beyond Coffee</h2>
-      <p>The principles behind this ritual apply to other daily activities. Washing dishes becomes a tactile meditation. Walking to work becomes an opportunity to notice the world around me. Cooking dinner becomes a creative practice rather than just fuel preparation.</p>
-      
-      <p>The key is intentionality – choosing to be fully present for small, regular activities instead of rushing through them to get to something else.</p>
-      
-      <h2>Starting Your Own Ritual</h2>
-      <p>You don't need expensive equipment or perfect technique to create meaningful morning moments. The magic isn't in the pour-over method or the single-origin beans – it's in the attention you bring to whatever process you choose.</p>
-      
-      <p>Maybe it's tea instead of coffee. Maybe it's journaling or stretching or simply sitting quietly for five minutes. The specific activity matters less than the mindfulness you bring to it.</p>
-      
-      <p>In a world that constantly demands our attention, creating deliberate moments of presence becomes a radical act. My coffee ritual reminds me daily that mindfulness doesn't require a meditation cushion – it just requires showing up fully to whatever you're doing.</p>
-    `,
-    date: "October 22, 2025",
-    readTime: "6 min read",
-    tags: ["Coffee", "Lifestyle"],
-    author: "Author Name"
-  },
-  {
-    id: 5,
-    title: "Learning TypeScript: From Confusion to Clarity",
-    slug: "learning-typescript-confusion-to-clarity",
-    excerpt: "My journey from JavaScript comfort zone to TypeScript appreciation, including the mental shifts that made everything click.",
-    content: `
-      <p>I'll be honest: my first encounter with TypeScript was not love at first sight. Coming from JavaScript, all those type annotations felt like unnecessary ceremony, extra syntax standing between me and getting things done.</p>
-      
-      <p>Six months later, I can't imagine going back.</p>
-      
-      <h2>The Initial Resistance</h2>
-      <p>My first TypeScript experience was frustrating. Every line seemed to require extra thought, extra syntax. Simple things that worked perfectly in JavaScript were suddenly throwing errors.</p>
-      
-      <p>The compiler felt like a harsh teacher, constantly correcting me on things that seemed to work fine before. "Property 'length' does not exist on type..." became my nemesis.</p>
-      
-      <h2>The Lightbulb Moment</h2>
-      <p>The shift happened when I stopped seeing TypeScript as "JavaScript with extra rules" and started seeing it as "JavaScript with guardrails."</p>
-      
-      <p>It wasn't trying to make my life harder – it was trying to catch mistakes before they became bugs. Those red squiggly lines weren't criticisms; they were helpful friends pointing out potential problems.</p>
-      
-      <h2>What I Learned</h2>
-      <p>The key insights that changed my perspective:</p>
-      <ul>
-        <li><strong>Types are documentation:</strong> They tell you (and your team) exactly what functions expect and return</li>
-        <li><strong>Refactoring becomes fearless:</strong> The compiler catches breaking changes automatically</li>
-        <li><strong>IntelliSense gets superpowers:</strong> Your editor becomes incredibly helpful with autocomplete</li>
-        <li><strong>Bugs decrease dramatically:</strong> Catch errors at compile time instead of runtime</li>
-      </ul>
-      
-      <h2>Practical Tips</h2>
-      <p>For anyone making the transition:</p>
-      <ul>
-        <li>Start with <code>any</code> types if you need to, then gradually make them more specific</li>
-        <li>Use union types liberally – they're more flexible than you think</li>
-        <li>Don't over-engineer your types early on</li>
-        <li>Let TypeScript infer types when it can</li>
-        <li>Use interfaces for object shapes – they're incredibly powerful</li>
-      </ul>
-      
-      <h2>The Current State</h2>
-      <p>Now when I write JavaScript, something feels missing. The safety net is gone. I find myself second-guessing whether objects have the properties I think they do, whether functions will return what I expect.</p>
-      
-      <p>TypeScript didn't just make my code more reliable – it made me a more thoughtful programmer. It forces you to think about edge cases, to be explicit about your intentions, to consider all the ways things might go wrong.</p>
-      
-      <p>The journey from confusion to clarity taught me that sometimes the best tools are the ones that initially feel like obstacles. They're not making things harder – they're making things better.</p>
-    `,
-    date: "October 20, 2025",
-    readTime: "5 min read",
-    tags: ["Learning", "Programming"],
-    author: "Author Name"
   },
   {
     id: 4,
@@ -444,7 +343,7 @@ export const blogPosts: BlogPost[] = [
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/404-page.png" alt="GitHub 404 Error Page" class="blog-image" />
         </div>      
-      <p>新增 <code>404.html</code>檔案並於<code>index.html</code>新增一段 script 即完成修復。</p>
+      <p>新增 <code>404.html</code> 檔案並於 <code>index.html</code> 新增一段 script 即完成修復。</p>
       <p>Prompt: How can I resolve the issue where a GitHub Pages site shows a 404 error or fails to load correctly when directly accessing or refreshing a route?</p>
         <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/404-solution.png" alt="GitHub 404 Page Solution" class="blog-image" />

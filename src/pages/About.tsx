@@ -2,11 +2,11 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Coffee, Book, Film, Code, Heart, Mail, Github, Instagram } from 'lucide-react'
+import { Coffee, Book, Film, Code, Heart, Mail, Github, Instagram, Beer, Pizza } from 'lucide-react'
 
 const About: React.FC = () => {
   const skills = [
-    'JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'Git', 'Tailwind CSS'
+    'Photography', 'Figma', 'Adobe Creative Cloud', 'Final Cut Pro', 'DaVinci Resolve', 'Foodie', 'Coffee Addict'
   ]
 
   const interests = [
@@ -21,7 +21,7 @@ const About: React.FC = () => {
       {/* Header */}
       <div className="text-center space-y-6">
         <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-          <Heart className="h-12 w-12 text-primary" />
+          <Pizza className="h-12 w-12 text-primary" />
         </div>
         <h1 className="text-4xl font-bold text-foreground">About Me</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -44,8 +44,6 @@ const About: React.FC = () => {
             <p>
               I believe that the best learning happens when you're genuinely curious and having fun.
               – learning through experimentation and authentic interest.
-              這個部落格是嘗試 Vibe Coding 所建立而成的，也同時<s>逼迫</s>自己記錄每天發生的事情、學習的東西，
-              試圖重新找回熱情和人生方向。
             </p>
             <p>
               When I'm not behind a screen, you'll find me brewing the perfect cup of coffee, 
@@ -56,6 +54,10 @@ const About: React.FC = () => {
               This blog serves as both a public notebook and a digital journal – a place where 
               I can share what I'm learning, thinking, and discovering along the way.
             </p>
+            <p>
+              這個部落格是嘗試 Vibe Coding 所建立而成的，也同時<s>逼迫</s>自己記錄每天發生的事情、學習的東西，
+              試圖重新找回熱情和人生方向。
+            </p>
           </CardContent>
         </Card>
 
@@ -63,8 +65,8 @@ const About: React.FC = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Code className="h-5 w-5 text-primary" />
-              Technical Skills
+              <Beer className="h-5 w-5 text-primary" />
+              Skills
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -80,7 +82,7 @@ const About: React.FC = () => {
                 ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                Always learning, always experimenting. The journey is more important than the destination.
+                Always learning, always experimenting. Figuring out what I want to do as I learn every new thing.
               </p>
             </div>
           </CardContent>
