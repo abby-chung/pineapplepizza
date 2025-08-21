@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Coffee, Book, Film, Code, Heart, Mail, Github, Instagram, Beer, Pizza } from 'lucide-react'
+import { Coffee, Book, Film, Code, Heart, Mail, Github, Beer, Pizza, Linkedin} from 'lucide-react'
 
 const About: React.FC = () => {
   const skills = [
@@ -133,8 +133,8 @@ const About: React.FC = () => {
               </a>
             </Button>
             <Button variant="outline" size="sm" className="rounded-full">
-              <Instagram className="h-4 w-4 mr-2" />
-              Instagram
+              <Linkedin className="h-4 w-4 mr-2" />
+              LinkedIn
             </Button>
           </div>
         </CardContent>

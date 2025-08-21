@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Search, Calendar, Clock } from 'lucide-react'
+import { Search, Calendar, Clock, Globe } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
 
 const Blog: React.FC = () => {
@@ -113,6 +113,10 @@ const Blog: React.FC = () => {
                           <Clock className="h-4 w-4" />
                           {post.readTime}
                         </div>
+                        <div className="flex items-center gap-1">
+                          <Globe className="h-4 w-4" />
+                          {post.language}
+                        </div>                        
                       </div>
                     </div>
                   </div>

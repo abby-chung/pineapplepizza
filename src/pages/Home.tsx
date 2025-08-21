@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                   </div>
                 </div>
                 <CardDescription className="text-sm text-muted-foreground">
-                  {post.date} • {post.readTime}
+                  {post.date} • {post.readTime} • {post.language}
                 </CardDescription>
               </CardHeader>
               <CardContent>

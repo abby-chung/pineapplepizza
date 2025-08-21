@@ -6,6 +6,7 @@ export interface BlogPost {
   content: string
   date: string
   readTime: string
+  language:string
   tags: string[]
   author: string
 }
@@ -68,6 +69,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "November 15, 2025",
     readTime: "6 min read",
+    language: "EN",
     tags: ["Photography", "Lifestyle"],
     author: "Abby Chung"
   },
@@ -118,6 +120,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "September 28, 2025",
     readTime: "7 min read",
+    language: "EN",
     tags: ["Movies", "Review"],
     author: "Claude"
   },
@@ -158,6 +161,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "September 5, 2025",
     readTime: "6 min read",
+    language: "EN",
     tags: ["Books", "Review", "Fiction"],
     author: "Author Name"
   },
@@ -365,6 +369,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "August 13, 2025",
     readTime: "15 min read",
+    language: "中文",
     tags: ["Vibe Coding", "Learning"],
     author: "Abby Chung"
   },
@@ -411,6 +416,7 @@ export const blogPosts: BlogPost[] = [
     `,
     date: "August 15, 2025",
     readTime: "4 min read",
+    language: "中文",
     tags: ["Coffee"],
     author: "Author Name"
   }
