@@ -68,9 +68,9 @@ export const blogPosts: BlogPost[] = [
         </div>
     `,
     date: "November 15, 2025",
-    readTime: "6 min read",
+    readTime: "4 min read",
     language: "EN",
-    tags: ["Photography", "Lifestyle"],
+    tags: ["Photography"],
     author: "Abby Chung"
   },
   {
@@ -162,8 +162,8 @@ export const blogPosts: BlogPost[] = [
     date: "September 5, 2025",
     readTime: "6 min read",
     language: "EN",
-    tags: ["Books", "Review", "Fiction"],
-    author: "Author Name"
+    tags: ["Books", "Review"],
+    author: "Claude"
   },
   {
     id: 2,
@@ -186,7 +186,7 @@ export const blogPosts: BlogPost[] = [
         <li>英文能力 is A-OK</li>
       </ul>
       
-      <p>一開始有先用中文下 prompt 挑戰，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
+      <p>一開始有先用中文挑戰下 prompt，但效果不太理想，尤其是在 debug 的時候，最後慘遭魔改到我不知道如何接續提問，決定重新開始。這次為了有至少一次的成功經驗，故採用英文為主要與 LLMs 對話的語言，同時也參考 <a href="https://www.reddit.com/r/PromptEngineering/comments/1kyboo0/the_ultimate_vibe_coding_guide/" target="_blank">Reddit</a> 提到關於 Vibe Coding 的一些準則，使過程更順利。</p>
       
       <h3>希望達到的目標：</h3>
       <ul>
@@ -368,7 +368,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
     `,
     date: "August 13, 2025",
-    readTime: "15 min read",
+    readTime: "12 min read",
     language: "中文",
     tags: ["Vibe Coding", "Learning"],
     author: "Abby Chung"
@@ -379,18 +379,23 @@ export const blogPosts: BlogPost[] = [
     slug: "pour-over-coffee-beginners-journey",
     excerpt: "Discovering the meditative process of manual coffee brewing and how it became the source of my financial crisis.",
     content: `
-      <p>There's something magical about the ritual of pour-over coffee. It's not just about the caffeine – though that's certainly welcome – it's about the process itself. The careful measurement of beans, the precise water temperature, the deliberate, circular motions as you pour.</p>
-      
-      <p>I started this journey six months ago when I realized my morning coffee routine had become purely functional. Press button, wait for beep, drink coffee. Repeat. There was no joy in it, no mindfulness, no connection to what I was consuming.</p>
-      
-      <h2>The Equipment</h2>
-      <p>You don't need much to start:</p>
+      <p>我的啟蒙咖啡大概來自於國中時期，同棟樓的一個叔叔會在家自己烘咖啡，週末騎腳踏車去愛河賣手沖和掛耳。那時候在家裡拿熱水隨便沖跟叔叔買的掛耳，咖啡香味讓挑燈夜戰念書的孩子有了動力。後來想想大晚上喝咖啡真的是不太 ok，還有叔叔好像都是晚上去愛河賣咖啡，究竟是賣給誰？</p>
+
+      <p>之後就踏上了尋找好喝掛耳的路上，到現在則是成為四處尋找咖啡豆，在家裡玩各種沖煮方法的成癮者。</p>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coffee/coffee-bag-ca.jpg" alt="Coffee Bag Collections" class="blog-image" />
+          <p class="image-caption">居住加拿大時嘗試的各家咖啡豆。❤️ hatch</p>
+        </div>
+      <h2>器材</h2>
+      <p>先從簡單的開始：</p>
       <ul>
-        <li>A pour-over dripper (I started with a simple V60)</li>
-        <li>Paper filters</li>
-        <li>A gooseneck kettle</li>
-        <li>A kitchen scale</li>
-        <li>Fresh, good-quality beans</li>
+        <li>V60 濾杯</li>
+        <li>濾紙</li>
+        <li>手沖壺：不需要買到溫控壺，除非你有錢錢</li>
+        <li>可以燒熱水的壺（有些手沖壺可以直火加熱）</li>
+        <li>廚房用小電子秤</li>
+        <li>咖啡豆</li>
+        <li>磨豆機：私心覺得可以好好投資一個好的手搖磨豆機，現磨現沖差很多</li>
       </ul>
 
       <h2>咖啡豆</h2>
@@ -402,22 +407,20 @@ export const blogPosts: BlogPost[] = [
         <li>淺中焙</li>
         <li>淺焙</li>
       </ul>
-      <blockquote>未來可能會再依照產區與處理方法再做細分。</blockquote>
-      
+      <p><blockquote>未來可能會再依照產區與處理方法再做細分。隨著消費者了解的越多，淺中深焙的標籤已經不足夠去傳遞咖啡可能的風味。</blockquote></p>
+      <hr />
       <h2>各派學說</h2>
-      <p>The beauty lies in the simplicity and precision. Heat water to 200°F. Grind your beans (1:16 ratio works well). Wet the filter. Add grounds. Pour in small circles, watching the coffee bloom.</p>
+      <p>手沖方式百百種，熱的冰的還有用的濾杯、濾紙多到眼花撩亂，還有各種輔助器具，我也還沒有機會玩過，但在我不可考的家裡手沖咖啡年資，以及使用最普通的濾杯，可以確定的是，好的咖啡豆和研磨的粗細是關鍵，這兩個有穩住，基本上沖出來都可以有個中上表現，其他就看個人的喜好了。</p>
       
-      <p>What started as a quest for better coffee became a lesson in patience, precision, and presence. Each cup is a small meditation, a moment to pause before the day begins in earnest.</p>
-      
-      <p>The coffee tastes better, yes. But more importantly, the morning feels better. There's intentionality now, a sense of craft and care that carries into the rest of the day.</p>
+      <p>未來再好好記錄各家咖啡豆用的參數和沖出來的心得感想，尤其是台灣的微型烘豆廠或是獨自經營的烘豆師多到再次選擇困難，又是可以發揮實驗精神的時候。🤓</p>
 
-      <h2>什麼是好喝的咖啡</h2>
-      <p>其實自己喜歡的口味就可以稱為好喝的咖啡，除非要開咖啡店賺錢，但那會是另一個故事了。</p>
+      <h2>什麼是好喝的咖啡？</h2>
+      <p>其實自己喜歡的口味就可以稱為好喝的咖啡，除非要開咖啡店賺錢，但那會是另一個故事了。（也是我的小夢想，坐等財富自由的那天實現）</p>
     `,
     date: "August 15, 2025",
     readTime: "4 min read",
     language: "中文",
-    tags: ["Coffee"],
-    author: "Author Name"
+    tags: ["Coffee", "隨筆"],
+    author: "Abby Chung"
   }
 ]

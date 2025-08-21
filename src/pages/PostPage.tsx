@@ -24,7 +24,8 @@ const PostPage: React.FC = () => {
     .slice(0, 3)
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 fade-in">
+    <div className="max-w-3xl mx-auto space-y-8 fade-in">
+      {/* The style was originally just space-y-8 and fade-in */}
       {/* Back Button */}
       <Button variant="ghost" asChild className="mb-4">
         <Link to="/blog">

@@ -32,7 +32,8 @@ const Blog: React.FC = () => {
   }, [searchQuery, selectedCategory])
 
   return (
-    <div className="space-y-8 fade-in">
+    <div className="max-w-3xl mx-auto space-y-8 fade-in">
+      {/* The style was originally just space-y-8 and fade-in */}
       {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-foreground">Blog</h1>

@@ -17,7 +17,8 @@ const Home: React.FC = () => {
   ]
 
   return (
-    <div className="space-y-12 fade-in">
+    <div className="max-w-6xl mx-auto space-y-12 fade-in">
+      {/* The style was originally just space-y-12 and fade-in */}
       {/* Hero Section */}
       <section className="text-center space-y-6 py-12">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground">
