@@ -14,7 +14,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 5,
-    title: "First Take on Voigtlander Color-Skopar 18mm F2.8 with Fujifilm XT4",
+    title: "First Take on Voigtländer Color-Skopar 18mm F2.8 with Fujifilm X-T4",
     slug: "voigtlander-lens-with-fujifilm",
     excerpt: "Walking on the street of New York on a cold December, is it a bad idea to use a manual focus lens?",
     content: `
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
     slug: "dune-part-two-review",
     excerpt: "Denis Villeneuve delivers a stunning continuation that surpasses the first film in every way, creating one of the best sci-fi epics ever made.",
     content: `
-      <p><strong>This article is written by Claude. I still haven't watched Dune: Part Two.</strong></p>
+      <p><strong>Disclaimer: This article is written by Claude. I still haven't watched Dune: Part Two.</strong></p>
       <p>Denis Villeneuve has done something remarkable with "Dune: Part Two." Not only has he successfully adapted one of science fiction's most challenging novels, but he's created a film that stands as a cinematic achievement in its own right.</p>
       
       <p>Where the first film was necessarily about world-building and setup, Part Two is about payoff – and what a payoff it is.</p>
@@ -130,7 +130,8 @@ export const blogPosts: BlogPost[] = [
     slug: "seven-husbands-evelyn-hugo-review",
     excerpt: "A compelling tale of ambition, love, and the price of fame that kept me turning pages well into the night.",
     content: `
-      <p>Sometimes you pick up a book expecting one thing and get completely swept away by something else entirely. That's exactly what happened with Taylor Jenkins Reid's "The Seven Husbands of Evelyn Hugo."</p>
+    <p><strong>Disclaimer: This article is written by Claude. Unfortunately, I have no idea what this book is about.</strong></p>  
+    <p>Sometimes you pick up a book expecting one thing and get completely swept away by something else entirely. That's exactly what happened with Taylor Jenkins Reid's "The Seven Husbands of Evelyn Hugo."</p>
       
       <p>What I expected: A light, entertaining read about Old Hollywood glamour.</p>
       <p>What I got: A profound meditation on love, ambition, sacrifice, and the stories we tell ourselves to survive.</p>
@@ -167,9 +168,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    title: "Building This Blog: A Vibe Coding Adventure",
+    title: "Vibe Coding 筆記：Pineapple Pizza 的誕生故事",
     slug: "building-blog-vibe-coding-adventure",
-    excerpt: "How I approached building this personal blog with curiosity over perfectionism, learning asking the right questions (prompts) along the way.",
+    excerpt: "Vibe Coding 經驗分享和為自己留下的筆記，此次嘗試的目標是藉由 GenAI 產出一個「能看且能用」的部落格網站，也就是現在看到的 Pineapple Pizza。",
     content: `
       <p>此網站的建立源自於我想嘗試使用 Vibe Coding 做出點什麼，決定從一個部落格網站開始，順便督促自己記錄這一路走來的經驗，好好做筆記和整理思緒，練習論述自身能力和經驗。</p>
       
@@ -359,7 +360,7 @@ export const blogPosts: BlogPost[] = [
 
       <h2>下集待續</h2>
       <p><b>實作出一個可以上線使用的產品。</b></p>
-      <p>Tech Stack</p>
+      <p>期望可以運用的 Tech Stack</p>
       <ul>
         <li>Next.js</li>
         <li>Supabase</li>
@@ -367,7 +368,7 @@ export const blogPosts: BlogPost[] = [
         <li>Vercel</li>
       </ul>
     `,
-    date: "August 13, 2025",
+    date: "August 17, 2025",
     readTime: "12 min read",
     language: "中文",
     tags: ["Vibe Coding", "Learning"],
@@ -375,11 +376,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 1,
-    title: "The Art of Pour-Over Coffee: A Beginner's Journey",
+    title: "手沖咖啡之旅：新手村",
     slug: "pour-over-coffee-beginners-journey",
-    excerpt: "Discovering the meditative process of manual coffee brewing and how it became the source of my financial crisis.",
+    excerpt: "愛上咖啡是條不歸路。咖啡雖續命，但需要更努力工作才能買得起咖啡。歡迎一起面對買咖啡所造成的財務危機。",
     content: `
-      <p>我的啟蒙咖啡大概來自於國中時期，同棟樓的一個叔叔會在家自己烘咖啡，週末騎腳踏車去愛河賣手沖和掛耳。那時候在家裡拿熱水隨便沖跟叔叔買的掛耳，咖啡香味讓挑燈夜戰念書的孩子有了動力。後來想想大晚上喝咖啡真的是不太 ok，還有叔叔好像都是晚上去愛河賣咖啡，究竟是賣給誰？</p>
+      <p>我的啟蒙咖啡大概來自於國中時期，同棟樓的一個叔叔會在家自己烘咖啡，週末騎腳踏車去愛河賣手沖和掛耳。那時候在家裡拿熱水隨便沖跟叔叔買的掛耳，咖啡香味讓挑燈夜戰念書的孩子有了動力。（後來想想大晚上喝咖啡真的是不太 ok，還有叔叔好像都是晚上去愛河賣咖啡，究竟是賣給誰？）</p>
 
       <p>之後就踏上了尋找好喝掛耳的路上，到現在則是成為四處尋找咖啡豆，在家裡玩各種沖煮方法的成癮者。</p>
         <div class="image-container">
@@ -410,12 +411,13 @@ export const blogPosts: BlogPost[] = [
       <p><blockquote>未來可能會再依照產區與處理方法再做細分。隨著消費者了解的越多，淺中深焙的標籤已經不足夠去傳遞咖啡可能的風味。</blockquote></p>
       <hr />
       <h2>各派學說</h2>
-      <p>手沖方式百百種，熱的冰的還有用的濾杯、濾紙多到眼花撩亂，還有各種輔助器具，我也還沒有機會玩過，但在我不可考的家裡手沖咖啡年資，以及使用最普通的濾杯，可以確定的是，好的咖啡豆和研磨的粗細是關鍵，這兩個有穩住，基本上沖出來都可以有個中上表現，其他就看個人的喜好了。</p>
+      <p>手沖方式百百種，熱的冰的沖法又不同，濾杯濾紙多到眼花撩亂，還有各種輔助器具我還沒有<s>錢錢</s>嘗試，但在我不可考的居家手沖咖啡年資，以及使用最普通的濾杯，可以確定的是，好的咖啡豆和研磨的粗細是關鍵，這兩個有穩住，基本上沖出來都可以有個中上表現，其他就看個人的喜好了。</p>
       
       <p>未來再好好記錄各家咖啡豆用的參數和沖出來的心得感想，尤其是台灣的微型烘豆廠或是獨自經營的烘豆師多到再次選擇困難，又是可以發揮實驗精神的時候。🤓</p>
 
       <h2>什麼是好喝的咖啡？</h2>
-      <p>其實自己喜歡的口味就可以稱為好喝的咖啡，除非要開咖啡店賺錢，但那會是另一個故事了。（也是我的小夢想，坐等財富自由的那天實現）</p>
+      <p>其實自己喜歡的口味就可以稱為好喝的咖啡，除非要開咖啡店賺錢，但那會是另一個故事了。（也是我的小夢想，坐等財富自由的那天實現～）</p>
+      <p>之後再來補上過去喝到厲害的咖啡豆！有些不見得一鳴驚人，但可以每天來一杯；有些則是具備極為特殊的香氣，但不見得會每天都想喝。</p>
     `,
     date: "August 15, 2025",
     readTime: "4 min read",

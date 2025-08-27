@@ -22,11 +22,14 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="text-center space-y-6 py-12">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-          Welcome to My Digital Journal
+          Welcome to Pineapple Pizza
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          A personal space where I share my thoughts on coffee, books, movies, and document my 
-          technical learning journey. Join me as I explore life's simple pleasures and complex code.
+          We’ve got pineapple, ham, tomato sauce, and mozzarella cheese…
+          Nah, just kidding. We only have coffee, photography, tech, and whatever burnt crust life throws at us. Hope you enjoy the meal!
+        </p>
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          中英內容交錯出現，訓練自己使用兩種語言論述喜歡和正在學習的東西，期望自己在迷惘的時候仍能累積點東西。
         </p>
         <Button asChild size="lg" className="rounded-full">
           <Link to="/blog">

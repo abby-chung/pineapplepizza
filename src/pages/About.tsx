@@ -42,13 +42,8 @@ const About: React.FC = () => {
           </CardHeader>
           <CardContent className="prose">
             <p>
-              I believe that the best learning happens when you're genuinely curious and having fun.
-              – learning through experimentation and authentic interest.
-            </p>
-            <p>
-              When I'm not behind a screen, you'll find me brewing the perfect cup of coffee, 
-              getting lost in a good book, or analyzing the latest film that caught my attention. 
-              Each of these passions informs the others in unexpected ways.
+              When I'm not behind a screen, you'll find me brewing a cup of coffee, 
+              getting lost in a good book, or overanalyzing some old TV shows or films.
             </p>
             <p>
               This blog serves as both a public notebook and a digital journal – a place where 
@@ -72,7 +67,7 @@ const About: React.FC = () => {
           <CardContent>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                Currently exploring these technologies through various projects and learning adventures:
+                These are the skills I’m pretty confident I’ve picked up along the way:
               </p>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
@@ -81,8 +76,8 @@ const About: React.FC = () => {
                   </Badge>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground">
-                Always learning, always experimenting. Figuring out what I want to do as I learn every new thing.
+              <p className="text-muted-foreground">
+                Currently exploring how to use LLMs to build products and pick up skills for modern-day survival.
               </p>
             </div>
           </CardContent>
