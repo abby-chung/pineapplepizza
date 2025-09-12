@@ -12,66 +12,66 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-    {
-    id: 6,
-    title: "Perfect Days",
-    slug: "perfect-days-review",
-    excerpt: "Walking on the street of New York on a cold December, is it a bad idea to use a manual focus lens?",
-    content: `
-      <p>電影系列決定以《我的完美日常》作為開場，好久沒有寫電影相關的文章，雖然說是影視相關科系畢業，在學期間也是<s>硬掰</s>完成了不少電影、影集分析報告，試著把各種電影理論或是致敬塞進寫作中，現在看來只覺得文謅謅，感嘆年輕時真是活在不切實際的世界裡，一知半解卻講得頭頭是道。</p>
-      <p>這也是為什麼踏入社會後，一直在逃避寫觀後感或是電影心得，總覺得彆扭，一部分是擔心自己過度解讀，一部分又是擔心自己愚鈍沒看到精髓。但沒有寫下的東西，就是沒有真的思考過的東西，所以開始練習重新寫。</p>
+  //   {
+  //   id: 6,
+  //   title: "Perfect Days",
+  //   slug: "perfect-days-review",
+  //   excerpt: "《我的完美日常》大概是近年來",
+  //   content: `
+  //     <p>電影系列決定以《我的完美日常》作為開場，好久沒有寫電影相關的文章，雖然說是影視相關科系畢業，在學期間也是<s>硬掰</s>完成了不少電影、影集分析報告，試著把各種電影理論或是致敬塞進寫作中，現在看來只覺得文謅謅，感嘆年輕時真是活在不切實際的世界裡，一知半解卻講得頭頭是道。</p>
+  //     <p>這也是為什麼踏入社會後，一直在逃避寫觀後感或是電影心得，總覺得彆扭，一部分是擔心自己過度解讀，一部分又是擔心自己愚鈍沒看到精髓。但沒有寫下的東西，就是沒有真的思考過的東西，所以開始練習重新寫。</p>
       
-      <h2>一人一世界</h2>
-      <blockquote>
-      <p>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</p>
-      </blockquote>
+  //     <h2>一人一世界</h2>
+  //     <blockquote>
+  //     <p>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</p>
+  //     </blockquote>
       
-      <p>Morning light feels different—especially when shooting against it.</p>
-        <div class="image-container">
-          <img src="/pineapplepizza/images/posts/photography/6th-ave-new-york.jpg" alt="Street of New York City" class="blog-image" />
-          <p class="image-caption">Street of New York City</p>
-        </div>
+  //     <p>Morning light feels different—especially when shooting against it.</p>
+  //       <div class="image-container">
+  //         <img src="/pineapplepizza/images/posts/photography/6th-ave-new-york.jpg" alt="Street of New York City" class="blog-image" />
+  //         <p class="image-caption">Street of New York City</p>
+  //       </div>
 
-      <h2>China Town, New York</h2>
-      <p>A random evening snap—the very first photo I took in New York.</p>
-        <div class="image-container">
-          <img src="/pineapplepizza/images/posts/photography/china-town-new-york.jpg" alt="Night in China Town" class="blog-image" />
-          <p class="image-caption">Night in China Town</p>
-        </div>
+  //     <h2>China Town, New York</h2>
+  //     <p>A random evening snap—the very first photo I took in New York.</p>
+  //       <div class="image-container">
+  //         <img src="/pineapplepizza/images/posts/photography/china-town-new-york.jpg" alt="Night in China Town" class="blog-image" />
+  //         <p class="image-caption">Night in China Town</p>
+  //       </div>
       
-      <h2>Film Simulation</h2>
-      <p>Classic Chrome was the top choice for the entire trip.</p>
+  //     <h2>Film Simulation</h2>
+  //     <p>Classic Chrome was the top choice for the entire trip.</p>
       
-      <p>Settings for the recipe:</p>
-      <ol type="1">
-        <li>Film Simulation: Classic Chrome</li>
-        <li>Grain Effect: Off</li>
-        <li>Color Chrome Effect: Weak</li>
-        <li>White Balance: Auto</li>
-      </ol>
+  //     <p>Settings for the recipe:</p>
+  //     <ol type="1">
+  //       <li>Film Simulation: Classic Chrome</li>
+  //       <li>Grain Effect: Off</li>
+  //       <li>Color Chrome Effect: Weak</li>
+  //       <li>White Balance: Auto</li>
+  //     </ol>
       
-      <h2>Wide Angle Challenge</h2>
-      <p>Even in a city filled with buildings and people, shooting with a wide-angle lens presented its own challenges.</p>
-      <p>With a wide-angle lens, you’re either too far from the subject with no time to move closer, or you risk stepping into someone’s space and drawing attention. Getting noticed isn’t always ideal in street photography—especially not for an introvert like me.</p>
-      <p>I never really had the courage to shoot right in people’s faces, so I switched back to my Fujifilm XF 35mm. It felt more comfortable for street shots of human beings, and I ended up with some of my favorite photos—which I’ll share in a separate post.</p>
-        <div class="image-container">
-          <img src="/pineapplepizza/images/posts/photography/dead-end-new-york.jpg" alt="Kent Park" class="blog-image" />
-          <p class="image-caption">Kent Park, Brooklyn</p>
-        </div>
+  //     <h2>Wide Angle Challenge</h2>
+  //     <p>Even in a city filled with buildings and people, shooting with a wide-angle lens presented its own challenges.</p>
+  //     <p>With a wide-angle lens, you’re either too far from the subject with no time to move closer, or you risk stepping into someone’s space and drawing attention. Getting noticed isn’t always ideal in street photography—especially not for an introvert like me.</p>
+  //     <p>I never really had the courage to shoot right in people’s faces, so I switched back to my Fujifilm XF 35mm. It felt more comfortable for street shots of human beings, and I ended up with some of my favorite photos—which I’ll share in a separate post.</p>
+  //       <div class="image-container">
+  //         <img src="/pineapplepizza/images/posts/photography/dead-end-new-york.jpg" alt="Kent Park" class="blog-image" />
+  //         <p class="image-caption">Kent Park, Brooklyn</p>
+  //       </div>
       
-      <h2>As always, let the food heal our souls</h2>
-      <p>Tacos, pizzas, bagels, donuts, coffee... so many good stuff... 🤤</p>
-        <div class="image-container">
-          <img src="/pineapplepizza/images/posts/photography/tacos-new-york.jpg" alt="Tacos in New York" class="blog-image" />
-          <p class="image-caption">Esse Taco</p>
-        </div>
-    `,
-    date: "November 15, 2025",
-    readTime: "4 min read",
-    language: "EN",
-    tags: ["Photography"],
-    author: "Abby Chung"
-  },
+  //     <h2>As always, let the food heal our souls</h2>
+  //     <p>Tacos, pizzas, bagels, donuts, coffee... so many good stuff... 🤤</p>
+  //       <div class="image-container">
+  //         <img src="/pineapplepizza/images/posts/photography/tacos-new-york.jpg" alt="Tacos in New York" class="blog-image" />
+  //         <p class="image-caption">Esse Taco</p>
+  //       </div>
+  //   `,
+  //   date: "November 15, 2025",
+  //   readTime: "4 min read",
+  //   language: "中文",
+  //   tags: ["Photography"],
+  //   author: "Abby Chung"
+  // },
   {
     id: 5,
     title: "First Take on Voigtländer Color-Skopar 18mm F2.8 with Fujifilm X-T4",
