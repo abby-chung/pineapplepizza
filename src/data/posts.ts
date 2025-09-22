@@ -12,66 +12,6 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  //   {
-  //   id: 6,
-  //   title: "Perfect Days",
-  //   slug: "perfect-days-review",
-  //   excerpt: "《我的完美日常》大概是近年來",
-  //   content: `
-  //     <p>電影系列決定以《我的完美日常》作為開場，好久沒有寫電影相關的文章，雖然說是影視相關科系畢業，在學期間也是<s>硬掰</s>完成了不少電影、影集分析報告，試著把各種電影理論或是致敬塞進寫作中，現在看來只覺得文謅謅，感嘆年輕時真是活在不切實際的世界裡，一知半解卻講得頭頭是道。</p>
-  //     <p>這也是為什麼踏入社會後，一直在逃避寫觀後感或是電影心得，總覺得彆扭，一部分是擔心自己過度解讀，一部分又是擔心自己愚鈍沒看到精髓。但沒有寫下的東西，就是沒有真的思考過的東西，所以開始練習重新寫。</p>
-      
-  //     <h2>一人一世界</h2>
-  //     <blockquote>
-  //     <p>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</p>
-  //     </blockquote>
-      
-  //     <p>Morning light feels different—especially when shooting against it.</p>
-  //       <div class="image-container">
-  //         <img src="/pineapplepizza/images/posts/photography/6th-ave-new-york.jpg" alt="Street of New York City" class="blog-image" />
-  //         <p class="image-caption">Street of New York City</p>
-  //       </div>
-
-  //     <h2>China Town, New York</h2>
-  //     <p>A random evening snap—the very first photo I took in New York.</p>
-  //       <div class="image-container">
-  //         <img src="/pineapplepizza/images/posts/photography/china-town-new-york.jpg" alt="Night in China Town" class="blog-image" />
-  //         <p class="image-caption">Night in China Town</p>
-  //       </div>
-      
-  //     <h2>Film Simulation</h2>
-  //     <p>Classic Chrome was the top choice for the entire trip.</p>
-      
-  //     <p>Settings for the recipe:</p>
-  //     <ol type="1">
-  //       <li>Film Simulation: Classic Chrome</li>
-  //       <li>Grain Effect: Off</li>
-  //       <li>Color Chrome Effect: Weak</li>
-  //       <li>White Balance: Auto</li>
-  //     </ol>
-      
-  //     <h2>Wide Angle Challenge</h2>
-  //     <p>Even in a city filled with buildings and people, shooting with a wide-angle lens presented its own challenges.</p>
-  //     <p>With a wide-angle lens, you’re either too far from the subject with no time to move closer, or you risk stepping into someone’s space and drawing attention. Getting noticed isn’t always ideal in street photography—especially not for an introvert like me.</p>
-  //     <p>I never really had the courage to shoot right in people’s faces, so I switched back to my Fujifilm XF 35mm. It felt more comfortable for street shots of human beings, and I ended up with some of my favorite photos—which I’ll share in a separate post.</p>
-  //       <div class="image-container">
-  //         <img src="/pineapplepizza/images/posts/photography/dead-end-new-york.jpg" alt="Kent Park" class="blog-image" />
-  //         <p class="image-caption">Kent Park, Brooklyn</p>
-  //       </div>
-      
-  //     <h2>As always, let the food heal our souls</h2>
-  //     <p>Tacos, pizzas, bagels, donuts, coffee... so many good stuff... 🤤</p>
-  //       <div class="image-container">
-  //         <img src="/pineapplepizza/images/posts/photography/tacos-new-york.jpg" alt="Tacos in New York" class="blog-image" />
-  //         <p class="image-caption">Esse Taco</p>
-  //       </div>
-  //   `,
-  //   date: "November 15, 2025",
-  //   readTime: "4 min read",
-  //   language: "中文",
-  //   tags: ["Photography"],
-  //   author: "Abby Chung"
-  // },
   {
     id: 5,
     title: "First Take on Voigtländer Color-Skopar 18mm F2.8 with Fujifilm X-T4",
@@ -135,54 +75,63 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: "Dune: Part Two - A Cinematic Masterpiece",
-    slug: "dune-part-two-review",
-    excerpt: "Denis Villeneuve delivers a stunning continuation that surpasses the first film in every way, creating one of the best sci-fi epics ever made.",
+    title: "Perfect Days -《我的完美日常》電影心得",
+    slug: "perfect-days-review",
+    excerpt: "電影系列決定以《我的完美日常》作為開場，這部電影也最符合近期人生階段，對生活的一些想法。",
     content: `
-      <p><strong>Disclaimer: This article is written by Claude. I still haven't watched Dune: Part Two.</strong></p>
-      <p>Denis Villeneuve has done something remarkable with "Dune: Part Two." Not only has he successfully adapted one of science fiction's most challenging novels, but he's created a film that stands as a cinematic achievement in its own right.</p>
+      <p>許久沒有寫電影相關的文章，甚至生活中與朋友討論電影時，也總是以簡單的幾句話帶過對某部電影、影集的想法，害怕再這樣下去會變成無聊的人。</p>
+      <p>另一方面，則是發現自己越來越不會說話了，將發散想法組織成有架構的話語，似乎變得異常困難，而這些發散的想法，總交錯著擔心自己過度解讀、或過於愚鈍而沒看到精髓的反省，使得有架構、有條理的敘述自己的想法，尤其是口頭上，變成一項我極為羨慕的技能。</p>
       
-      <p>Where the first film was necessarily about world-building and setup, Part Two is about payoff – and what a payoff it is.</p>
+      <p>既然口頭上有困難，就先從寫作開始吧，至少留下努力過的印記和審視自己混亂的思緒。決定先從我最愛逃避的電影心得開始，就從最常被引用的兩句台詞切入。</p>
+
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/movies/perfect-days.jpg" alt="Perfect Days" class="blog-image" />
+      </div>
       
-      <h2>Visual Spectacle</h2>
-      <p>Every frame of this film is a work of art. Greig Fraser's cinematography captures the alien beauty and harsh brutality of Arrakis with equal skill. The sandworm sequences alone are worth the price of admission – they're simultaneously beautiful and terrifying, alien yet somehow familiar.</p>
+      <h2>互不相通的世界</h2>
+      <p><blockquote>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</blockquote></p>
       
-      <p>The production design creates a universe that feels lived-in and authentic. From the ornate halls of the Emperor's ship to the austere beauty of Fremen sietches, every environment tells a story.</p>
-      
-      <h2>Character Development</h2>
-      <p>Timothée Chalamet's Paul Atreides becomes darker and more complex in this installment. We see his transformation from reluctant hero to something more ambiguous – a messiah who understands the terrible future his rise will bring.</p>
-      
-      <p>Zendaya's Chani is given much more to do here, serving as both Paul's anchor to humanity and his moral compass. Their relationship provides the emotional heart that keeps the epic scope from feeling cold.</p>
-      
-      <h2>Themes and Relevance</h2>
-      <p>What makes "Dune: Part Two" more than just spectacular entertainment is how it grapples with relevant themes:</p>
+      <p>這句最常被引用的一句話，也許是因為電影中的對白不多，加上來自於話最少的主角平山，也使得這句話格外有重量。</p>
+
+      <p>我的解讀是每個人都是一個獨立的世界，多數人的世界非常雷同，以至於大家看似共處在同一個世界裡。但其實每個人都有所差異，每個人的世界都不一樣，不需要去強求自己活得跟別人一樣，也不需強求他人理解自己，因為世界互不相通，某種程度來說是既自由又孤獨。</p>
+      <p>在平山先生的世界裡，一天大致包含：</p>
       <ul>
-        <li>Religious extremism and manipulation</li>
-        <li>Environmental exploitation</li>
-        <li>The corruption of power</li>
-        <li>Colonial occupation and resistance</li>
+        <li>規律的生活</li>
+        <li>生活圍繞著喜愛的書、音樂、植物等等的事物</li>
+        <li>觀察各種微小的事物</li>
+        <li>工作即使簡單也毫不馬虎（且有自己厲害的 SOP）</li>
       </ul>
+      <p在某些人的世界裡，這樣的一天可以說是非常地「平凡」，也可以說是「奇怪」。而在平山的世界裡，這樣的一天是最完美的一天。</p>
+      <p>互不相通的世界——也許這是為什麼孤獨感偶爾會突然冒出來吧，即便是在豔陽高照的日子，與喜歡、相似的人相處，有些極為細小事物仍是彼此無法理解彼此的，而那股孤獨感則會瞬間出現，因為意識到我們終究還是在各自的世界裡。</p>
+
+      <h2>關於當下</h2>
+      <p><blockquote>「下次是下次，現在是現在。」</blockquote></p>
       
-      <p>Villeneuve doesn't shy away from the darker implications of Herbert's story. Paul's journey isn't a traditional hero's tale – it's a cautionary story about charisma, prophecy, and the dangers of absolute power.</p>
+      <p>普遍大眾對於這部電影主旨，是「當下」。</p>
       
-      <h2>Technical Excellence</h2>
-      <p>Hans Zimmer's score builds on his work from the first film, creating soundscapes that feel both alien and deeply emotional. The sound design is phenomenal – every grain of sand, every whisper of wind feels tangible.</p>
+      <p>看似無意義，甚至是無聊的瑣事，其實都只有「當下」才會發生，賦予意義和價值本身就是事後才會做的，但那個時刻，早已過去。下次就算跟一樣的人，在一樣的地方，做一樣的事情，也不會跟現在、這個當下一模一樣。</p>
       
-      <p>The film's pacing is nearly perfect, balancing intimate character moments with spectacular action sequences. At 166 minutes, it never feels long.</p>
+      <h3>捕捉當下</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/movies/sky.jpg" alt="Sky" class="blog-image" />
+      </div>
+      <p>當主角每天拍下一張陽光與樹葉交織、光線從葉縫穿過畫面時，共鳴很深。</p>
+      <p>大概是某一天在加拿大租屋處的陽台，拍下好藍好藍、一片雲都沒有的天空，之後出門在外，就會開始拍天空，想要紀錄某時某地的那一個天空，對我來說那個畫面是獨特且無法復刻的。</p>
       
-      <h2>Final Thoughts</h2>
-      <p>"Dune: Part Two" is the rare sequel that surpasses its predecessor in every way. It's a science fiction epic that respects both its source material and its audience, delivering spectacle without sacrificing substance.</p>
+      <p>人類大概是最沒有活在當下的生物，總是思考著過去和未來。尤其是這個「大世界」（多數人）似乎總逼著每個人都得有個「對未來的想法」、「想要達成的目標」⋯⋯。</p>
       
-      <p>This is filmmaking at its finest – ambitious, beautiful, and deeply meaningful. It's the kind of movie that reminds you why cinema matters.</p>
+      <p>看似「平凡」、「簡單」的生活，在這個時代反而顯得既不平凡又不簡單。想謝謝《我的完美日常》的出現，給了自己一點慰藉，因為這的確也是在我看這部電影之前，一直思考的生活模式（但理想生活還是《晚酌的流派》哈哈哈，好吃的東西和啤酒不能少呀！）。</p>
+
+      <h2>小記</h2>
+      <p>工作迷惘期已經有四五年了吧，且仍在進行中。曾經自己是追求成就、目標取向、為熱愛的東西燃燒自己，最後只換來了滿身疲憊，不再對熱愛的東西感到興趣。放下了夢想，自此不知道人生接下來該做什麼樣的工作。而每當想到未來，就想到這部電影，再想到，為何我不能找到一份可以供我日常生活需求的工作，剩下的時間填滿自己喜愛的事物，就這樣簡單過完人生。很不幸的是，我還無法像平山一樣果斷，也許隨著書寫的文字增加，我漸漸可以理出頭緒或是積累足夠的勇氣。</p>
       
-      <p><strong>Rating: 5/5 stars</strong></p>
-      <p>A masterpiece that sets a new standard for science fiction cinema.</p>
+      <p>原本只想要簡單的幾個段落寫一點心得，沒想到這篇文章來回寫了好幾週，越寫越長，想法越來越多。</p>
     `,
-    date: "September 28, 2025",
-    readTime: "7 min read",
-    language: "EN",
+    date: "September 22, 2025",
+    readTime: "5 min read",
+    language: "中文",
     tags: ["Movies", "Review"],
-    author: "Claude"
+    author: "Abby Chung"
   },
   {
     id: 3,
