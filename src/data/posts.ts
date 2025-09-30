@@ -13,6 +13,151 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 6,
+    title: "Building an Expense Logger: Track Spending via Text Messages",
+    slug: "automation-expense-logger",
+    excerpt: "Automation with Make AI",
+    content: `
+      <p><blockquote><b>I spent X amount of money at Y location on Z day.</b></blockquote></p>
+      
+      <p>If I could simply send a text message in a chat app I already use, and have that expense automatically logged into a Google Sheet, it would save me the hassle of opening the sheet and manually entering everything cell by cell. And since it’s just sending a quick message, I can do it right after I purchase something.</p>
+      <p>As someone who enjoys DIY, this is one of the few automations I’ve come up with that I’d actually want to use.</p>
+
+      <hr />
+
+      <p>Among my friends, maybe only two or three of them consistently track their expenses. The rest—despite their best efforts on all sorts of budgeting apps—struggle to stick with it.</p>
+      <p>With all the AI agents available today, I started wondering: what if I just send a text message that includes where, when, and how much I spent, and let “someone” (an agent) keep track of it for me? Then, if I ever need to analyze my spending, I could just ask another agent to fetch the data and give me a report—or even answer simple questions like, “Did I spend too much on coffee last month?”😂</p>
+      <p>This is really just an experiment for myself to see whether automation tools are so good that they’re worth paying for a monthly subscription and the time to set it up.</p>
+
+      <h3>Tech Stack</h3>
+      <ul>
+        <li><b>ChatGPT</b> (Free Plan):  For breakdowns, action plans, and quick answers whenever I get stuck.</li>
+        <li><b>Make AI</b> (Free Plan): Free plan doesn’t seem to allow user to use their own AI provider, so Make AI Agent was used in this case</li>
+        <li><b>Discord</b> - I initially thought about using Slack since its integrations looked easier, but the free plan seems to limit the number of messages. Since I’ll likely be doing a lot of testing, my dusty old Discord account suddenly became useful again.</li>
+      </ul>
+      
+      <h3>Here’s the diagram of the scenario:</h3>
+        <div class="image-container">
+              <img src="/pineapplepizza/images/posts/coding/scenario-diagram.png" alt="Scenario Diagram" class="blog-image" />
+              <p class="image-caption">Scenario Flow</p>
+        </div>
+
+      <h3>Mermaid Code to share with ChatGPT</h3>
+        \`\`\`mermaid
+        graph LR
+        A[Discord - Watch Messages] --> B[Make AI Module - return JSON]
+        B --> C[JSON Parse Module]
+        C --> D[Google Sheets Add Row]
+        D --> E[Discord - Send Message]
+        \`\`\`
+
+      <hr />
+      <div class="image-container">
+              <img src="/pineapplepizza/images/posts/coding/make-scenario-expenselogger.png" alt="Discord Expense Logger" class="blog-image" />
+              <p class="image-caption">Make Scenario - Discord Expense Logger</p>
+      </div>
+      <h2>1. Discord Trigger</h2>
+      <ul>
+        <li><b>Module:</b> Discord → Watch Messages in a Channel</li>
+        <li>Captures messages you send.</li>
+        <li><b>Notes</b>: A bot needs to be created and added to the channel</li>
+      </ul>
+      <p><strong>*Side Notes:</strong> My bot was giving me a serious headache. A manual run in Make worked perfectly, but whenever I sent a message in the Discord channel, the scenario just wouldn’t trigger. Since I couldn’t figure out why, I set it to run on a schedule instead—and that actually worked! It didn’t exactly solve the issue, just a workaround to make sure the scenario is functioning normally when new messages appear.</p>
+
+      <h3>Filter</h3>
+      <p>Add a filter between the Discord Trigger and AI Module to make sure only your messages (the channel/server owner) are processed. Otherwise, the confirmation messages will be parsed too.</p>
+      <ul>
+        <li>After the Watch Channel Messages module, add a Filter.</li>
+        <li>Set condition: Author ID = [your Discord user ID]</li>
+      </ul>
+      <p>You can find your Discord User ID by right-clicking your username in Discord (Developer Mode on) → Copy User ID.</p>
+      <p>That way, the scenario ignores bot confirmations, other users, etc.</p>
+
+      <h2>2. AI Module</h2>
+      <ul>
+        <li><b>Module:</b> Make AI Agent → parse text messages</li>
+        <li>System Prompt (which forces the AI to always output a JSON string):</li>
+      </ul>
+        \`\`\`markdown
+        You are a smart expense parser.
+
+        Extract the following fields from this expense note:
+        - Date (in YYYY-MM-DD format; if no date is given, assume today; if "yesterday" is used, subtract one day)
+        - Location
+        - Amount (number with two decimals)
+        - Expense Type (must be one of: Food & Drink, Transport, Groceries, Entertainment, Shopping, Bills & Utilities, Health, Other)
+        - Payment Type (must be one of: Cash, Credit Card, Debit Card, Apple Pay, Bank Transfer, Other)
+
+        Return ONLY valid JSON exactly in this format:
+
+        {
+          "Date": "YYYY-MM-DD",
+          "Location": "PLACE",
+          "Amount": "123.45",
+          "Expense Type": "TYPE",
+          "Payment Type": "TYPE"
+        }
+        Text: {{1.content}}
+        \`\`\`
+
+      <h2>3. JSON Parse Module</h2>
+      <ul>
+        <li><b>Module:</b> Tools → Parse JSON</li>
+        <li>Input: Output of the AI module.</li>
+        <li>Output: Separate variables for Date, Location, Amount, Expense Type, Payment Type.</li>
+      </ul>
+
+      <h2>4. Google Sheets Add Row</h2>
+      <ul>
+        <li><b>Module:</b> Google Sheets → Add Row</li>
+        <li>Map the variables from the JSON Parse step to each column:</li>
+      </ul>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/google-sheet-logged-data.png" alt="Google Sheet Logged Data" class="blog-image" />
+          <p class="image-caption">Expenses logged into Google Sheet after running the scenario</p>
+        </div>
+
+      <h2>5. Discord Confirmation</h2>
+      <ul>
+        <li><b>Module:</b> Discord → Send Message</li>
+        <li>Message:</li>
+      </ul>
+        \`\`\`markdown
+        ✅ Expense logged!
+        - Date: {{Date}}
+        - Location: {{Location}}
+        - Amount: {{Amount}}
+        - Type: {{Expense Type}}
+        - Payment: {{Payment Type}
+        \`\`\`
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/discord-messages.png" alt="Confirmation Messages" class="blog-image" />
+          <p class="image-caption">Confirmation Messages shown in Discord channel after running the scenario</p>
+        </div>
+      <hr />
+
+      <h2>Next Thing</h2>
+      <p>This experiment was mainly about validating the workflow. There are plenty of improvements and optimizations that could make it mature enough for daily use, such as:</p>
+      <ul>
+        <li>Setting up validation rules in Google Sheets so that even if the AI makes a mistake, the columns still only allow valid categories</li>
+        <li>Adding more details like merchants, items, or even a Notes column for miscellaneous stuff</li>
+        <li>Refining prompts and giving the AI Agent more background information or context data</li>
+      </ul>
+
+
+      <h2>After Thoughts</h2>
+      <p>Designing this automation workflow was pretty fun. I think I’ll need to build a few more and actually use them in real life before I can say for sure whether they really save me time and energy.</p>
+          
+      <p>Whether automation truly saves time and helps people work more efficiently ultimately depends on how it feels for the person using it. That said, the process of designing the flow itself has already been valuable. It made me rethink how I do certain things, break down and analyze each step of my workflow, and spot areas where I could improve—or even recognize things I was already doing well but hadn’t noticed before (which feels like a nice little vote of confidence lol).</p>
+      
+    `,
+    date: "September 30, 2025",
+    readTime: "7 min read",
+    language: "EN",
+    tags: ["Automation", "Learning"],
+    author: "Abby Chung"
+  },
+  {
     id: 5,
     title: "First Take on Voigtländer Color-Skopar 18mm F2.8 with Fujifilm X-T4",
     slug: "voigtlander-lens-with-fujifilm",
@@ -67,7 +212,7 @@ export const blogPosts: BlogPost[] = [
           <p class="image-caption">Esse Taco</p>
         </div>
     `,
-    date: "August 20, 2025",
+    date: "September 22, 2025",
     readTime: "4 min read",
     language: "EN",
     tags: ["Photography"],
@@ -127,7 +272,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>原本只想要簡單的幾個段落寫一點心得，沒想到這篇文章來回寫了好幾週，越寫越長，想法越來越多。</p>
     `,
-    date: "September 22, 2025",
+    date: "September 20, 2025",
     readTime: "5 min read",
     language: "中文",
     tags: ["Movies", "Review"],
@@ -135,48 +280,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    title: "Book Review: The Seven Husbands of Evelyn Hugo",
-    slug: "seven-husbands-evelyn-hugo-review",
-    excerpt: "A compelling tale of ambition, love, and the price of fame that kept me turning pages well into the night.",
-    content: `
-    <p><strong>Disclaimer: This article is written by Claude. Unfortunately, I have no idea what this book is about.</strong></p>  
-    <p>Sometimes you pick up a book expecting one thing and get completely swept away by something else entirely. That's exactly what happened with Taylor Jenkins Reid's "The Seven Husbands of Evelyn Hugo."</p>
-      
-      <p>What I expected: A light, entertaining read about Old Hollywood glamour.</p>
-      <p>What I got: A profound meditation on love, ambition, sacrifice, and the stories we tell ourselves to survive.</p>
-      
-      <h2>The Story</h2>
-      <p>Evelyn Hugo, a reclusive former Hollywood icon, finally decides to tell her life story. But instead of choosing a seasoned journalist, she selects Monique Grant, a relatively unknown writer who's struggling both professionally and personally.</p>
-      
-      <p>As Evelyn recounts her seven marriages, we learn that nothing about her story is quite what it seems. Each husband served a purpose, but not always the one you'd expect.</p>
-      
-      <h2>What Works</h2>
-      <p>Reid's greatest strength is her ability to create complex, flawed characters who feel absolutely real. Evelyn is ruthless and calculating, but also vulnerable and deeply human. Her choices are sometimes terrible, but they're always understandable within the context of her world.</p>
-      
-      <p>The dual timeline structure works beautifully, gradually revealing connections between past and present that made me gasp out loud more than once.</p>
-      
-      <h2>The Deeper Themes</h2>
-      <p>Beneath the Hollywood glitz, this book explores:</p>
-      <ul>
-        <li>The cost of living authentically in a world that demands performance</li>
-        <li>How societal constraints shape our choices</li>
-        <li>The different forms love can take</li>
-        <li>The stories we tell versus the truth we live</li>
-      </ul>
-      
-      <p>I finished this book in two sittings, completely absorbed by Evelyn's world. It's the kind of novel that stays with you, making you think about the masks we all wear and the prices we pay for our dreams.</p>
-      
-      <p><strong>Rating: 4.5/5 stars</strong></p>
-      <p>A compelling page-turner that's also a thoughtful exploration of identity, ambition, and love in all its forms.</p>
-    `,
-    date: "September 5, 2025",
-    readTime: "6 min read",
-    language: "EN",
-    tags: ["Books", "Review"],
-    author: "Claude"
-  },
-  {
-    id: 2,
     title: "Vibe Coding 筆記：Pineapple Pizza 的誕生故事",
     slug: "building-blog-vibe-coding-adventure",
     excerpt: "Vibe Coding 經驗分享和為自己留下的筆記，此次嘗試的目標是藉由 GenAI 產出一個「能看且能用」的部落格網站，也就是現在看到的 Pineapple Pizza。",
@@ -382,6 +485,48 @@ export const blogPosts: BlogPost[] = [
     language: "中文",
     tags: ["Vibe Coding", "Learning"],
     author: "Abby Chung"
+  },
+  {
+    id: 2,
+    title: "Book Review: The Seven Husbands of Evelyn Hugo",
+    slug: "seven-husbands-evelyn-hugo-review",
+    excerpt: "A compelling tale of ambition, love, and the price of fame that kept me turning pages well into the night.",
+    content: `
+    <p><strong>Disclaimer: This article is written by Claude. Unfortunately, I have no idea what this book is about.</strong></p>  
+    <p>Sometimes you pick up a book expecting one thing and get completely swept away by something else entirely. That's exactly what happened with Taylor Jenkins Reid's "The Seven Husbands of Evelyn Hugo."</p>
+      
+      <p>What I expected: A light, entertaining read about Old Hollywood glamour.</p>
+      <p>What I got: A profound meditation on love, ambition, sacrifice, and the stories we tell ourselves to survive.</p>
+      
+      <h2>The Story</h2>
+      <p>Evelyn Hugo, a reclusive former Hollywood icon, finally decides to tell her life story. But instead of choosing a seasoned journalist, she selects Monique Grant, a relatively unknown writer who's struggling both professionally and personally.</p>
+      
+      <p>As Evelyn recounts her seven marriages, we learn that nothing about her story is quite what it seems. Each husband served a purpose, but not always the one you'd expect.</p>
+      
+      <h2>What Works</h2>
+      <p>Reid's greatest strength is her ability to create complex, flawed characters who feel absolutely real. Evelyn is ruthless and calculating, but also vulnerable and deeply human. Her choices are sometimes terrible, but they're always understandable within the context of her world.</p>
+      
+      <p>The dual timeline structure works beautifully, gradually revealing connections between past and present that made me gasp out loud more than once.</p>
+      
+      <h2>The Deeper Themes</h2>
+      <p>Beneath the Hollywood glitz, this book explores:</p>
+      <ul>
+        <li>The cost of living authentically in a world that demands performance</li>
+        <li>How societal constraints shape our choices</li>
+        <li>The different forms love can take</li>
+        <li>The stories we tell versus the truth we live</li>
+      </ul>
+      
+      <p>I finished this book in two sittings, completely absorbed by Evelyn's world. It's the kind of novel that stays with you, making you think about the masks we all wear and the prices we pay for our dreams.</p>
+      
+      <p><strong>Rating: 4.5/5 stars</strong></p>
+      <p>A compelling page-turner that's also a thoughtful exploration of identity, ambition, and love in all its forms.</p>
+    `,
+    date: "September 5, 2025",
+    readTime: "6 min read",
+    language: "EN",
+    tags: ["Books", "Review"],
+    author: "Claude"
   },
   {
     id: 1,
