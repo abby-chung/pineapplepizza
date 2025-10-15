@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
     id: 6,
     title: "Building an Expense Logger: Track Spending via Text Messages",
     slug: "automation-expense-logger",
-    excerpt: "Automation with Make AI",
+    excerpt: "Automation with Make AI - exploring the automation process.",
     content: `
       <p><blockquote><b>I spent X amount of money at Y location on Z day.</b></blockquote></p>
       
@@ -57,6 +57,14 @@ export const blogPosts: BlogPost[] = [
               <p class="image-caption">Make Scenario - Discord Expense Logger</p>
       </div>
       <h2>1. Discord Trigger</h2>
+      <p>
+      This is the main function, a new message including details of my spendings sent by me will be used by the AI agent to log into Google Sheet.
+      </p>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/new-discord-messages.png" alt="New Messages" class="blog-image" />
+          <p class="image-caption">New Messages in Discord channel</p>
+        </div>
+      <h3>Setting up in Make</h3>
       <ul>
         <li><b>Module:</b> Discord → Watch Messages in a Channel</li>
         <li>Captures messages you send.</li>
