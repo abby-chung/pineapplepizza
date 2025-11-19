@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "第一次嘗試 AI-native IDE，見識一下 👻 Kiro spec-driven 的開發能力，並結合 Supabase 及 Vercel 來開發小工具。",
     content: `
       <div class="image-container">
-          <img src="/pineapplepizza/public/images/posts/coding/aws-kaohsiung-event-2025.jpg" alt="2025 亞馬遜港都創新日" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/coding/aws-kaohsiung-event-2025.jpg" alt="2025 亞馬遜港都創新日" class="blog-image" />
           <p class="image-caption">2025 亞馬遜港都創新日</p>
       </div>
       <p>一開始會知道 <a href="https://kiro.dev/" style="text-decoration: underline;">Kiro</a> 是在報名 2025 亞馬遜港都創新日時，看到小幽靈 logo 想說這是什麼可愛的東西，我必須認真研究研究！加上初次註冊後的 30 天有 500 credits 可以用，就趁這個機會來做個有功能的產品，也延續先前第一次 Vibe Coding 後，想進階結合 <a href="https://supabase.com/" style="text-decoration: underline;">Supabase</a> 和 <a href="https://vercel.com/" style="text-decoration: underline;">Vercel</a> 做個 mini side project，並接觸 database 相關的開發。</p>
@@ -36,22 +36,22 @@ export const blogPosts: BlogPost[] = [
       <h3>關於 Specs</h3>
       <p>1. Requirements → 2. Design → 3. Task list</p>
       <div class="image-container">
-          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs.png" alt="Kiro Specs" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/coding/kiro-specs.png" alt="Kiro Specs" class="blog-image" />
           <p class="image-caption">Kiro Specs</p>
       </div>
       <p><b>Requirements</b> 基本上就是 PRD，包含詳細的 User Story 以及 Acceptance Criteria。</p>
       <div class="image-container">
-          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-requirements.png" alt="Kiro Specs - Requirements" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/coding/kiro-specs-requirements.png" alt="Kiro Specs - Requirements" class="blog-image" />
           <p class="image-caption">Kiro Specs - Requirements</p>
       </div>
       <p><b>Design</b> 則是技術內容，包含整個程式碼的架構與設計需求，像是每個功能對應的程式碼文件、程式碼之間的關係、設計風格，連測試項目 checklist 也都包辦了。</p>
       <div class="image-container">
-          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-design.png" alt="Kiro Specs - Design" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/coding/kiro-specs-design.png" alt="Kiro Specs - Design" class="blog-image" />
           <p class="image-caption">Kiro Specs - Design</p>
       </div>
       <p><b>Task list</b> 是真正的重頭戲，Kiro 把所有代辦項目都準備好了，只要一鍵 Start task，小幽靈就開始自言自語、自行開工了！按照各個 task 內所列的事項執行，完成每個階段的 task 則會顯示 Task completed，接著提出的需求就會誕生成程式碼了～</p>
       <div class="image-container">
-          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-task.png" alt="Kiro Specs - Task" class="blog-image" />
+          <img src="/pineapplepizza/images/posts/coding/kiro-specs-task.png" alt="Kiro Specs - Task" class="blog-image" />
           <p class="image-caption">Kiro Specs - Task</p>
       </div>
 
@@ -114,10 +114,10 @@ export const blogPosts: BlogPost[] = [
       <p>2025 亞馬遜港都創新日有看到 Kiro 展示，現場使用的是中文去做開發，看起來使用中文對話和產出中文 specs 似乎也沒什麼問題。</p>
       <p>現場 demo 人員有補充，Kiro 除了作為開發工具，還有個好用的地方，對公司來說，如果開發的產品經手人員多且系統複雜，加上交接文件不齊全，公司內沒有人對產品或程式碼瞭若指掌，也可以直接把程式碼丟給 Kiro，請 Kiro 理出架構並解釋之間的關係，並產出對應的說明書或是直接詢問找解答。（OS：這對於人員流動率高的公司應該是個好東西😉）</p>
       <p>像我就問了我的咖啡筆記工具裡，單頁最多能有幾個 notes：</p>
-       <div class="image-container">
+      <div class="image-container">
           <img src="/pineapplepizza/images/posts/coding/kiro-ask-a-question.png" alt="Ask Kiro a question" class="blog-image" />
           <p class="image-caption">Kiro 回答問題</p>
-        </div>
+      </div>
       <h2>給自己的小筆記</h2>
       <p>看到 Kiro 那麼會寫 Specs，有機會想把它運用到創作上，生出原創內容（嚴格來說已經沒有所謂的原創了呵呵），像是書籍章節、摘要，或是電影影集大綱，按照章節或是幕作為檔案分類依據，甚至可以要 Kiro 生出角色分析、故事結構和劇本。</p>
     `,
