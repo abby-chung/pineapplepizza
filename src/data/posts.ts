@@ -13,6 +13,121 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 7,
+    title: "AWS Kiro AI IDE 初體驗：咖啡筆記小工具 Coffee Brew Notes",
+    slug: "vibe-coding-with-kiro",
+    excerpt: "第一次嘗試 AI-native IDE，見識一下 👻 Kiro spec-driven 的開發能力，並結合 Supabase 及 Vercel 來開發小工具。",
+    content: `
+      <div class="image-container">
+          <img src="/pineapplepizza/public/images/posts/coding/aws-kaohsiung-event-2025.jpg" alt="2025 亞馬遜港都創新日" class="blog-image" />
+          <p class="image-caption">2025 亞馬遜港都創新日</p>
+      </div>
+      <p>一開始會知道 <a href="https://kiro.dev/" style="text-decoration: underline;">Kiro</a> 是在報名 2025 亞馬遜港都創新日時，看到小幽靈 logo 想說這是什麼可愛的東西，我必須認真研究研究！加上初次註冊後的 30 天有 500 credits 可以用，就趁這個機會來做個有功能的產品，也延續先前第一次 Vibe Coding 後，想進階結合 <a href="https://supabase.com/" style="text-decoration: underline;">Supabase</a> 和 <a href="https://vercel.com/" style="text-decoration: underline;">Vercel</a> 做個 mini side project，並接觸 database 相關的開發。</p>
+      
+      <p>Kiro 是由 Amazon/AWS 打造的 AI-native IDE，之前曾有想試試同為 AI-native IDE 的 Cursor，但總覺得有距離感，<s>而且 logo 不可愛</s>，身為程式小白痴，總是害怕問的問題或是提的需求不夠精確，會誤導 LLM 大大，然後進入各種 bug 的黑洞中。
+      </p>
+      <p>
+      在使用 Kiro 的過程，那個恐懼好像有被解放，主因應該是來自於 Kiro 所強調的 spec-driven development。
+      </p>
+      
+      <h2>Spec-Driven Development</h2>
+      <p>Kiro 最大的亮點，也是最吸引我的地方——Kiro 會生成 Specs 並將產出的 Specs 奉為聖旨，而不是馬上進入生成環節。Specs 產出的每個階段（Requirements → Design → Task）都會請用戶確認，確認後才進到下一步。Kiro 無論是產生程式碼、排查錯誤的時候都會回頭再到 Specs 確認。當提出新需求時，Kiro 也會更新至 Specs 中。</p>
+
+      <h3>關於 Specs</h3>
+      <p>1. Requirements → 2. Design → 3. Task list</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs.png" alt="Kiro Specs" class="blog-image" />
+          <p class="image-caption">Kiro Specs</p>
+      </div>
+      <p><b>Requirements</b> 基本上就是 PRD，包含詳細的 User Story 以及 Acceptance Criteria。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-requirements.png" alt="Kiro Specs - Requirements" class="blog-image" />
+          <p class="image-caption">Kiro Specs - Requirements</p>
+      </div>
+      <p><b>Design</b> 則是技術內容，包含整個程式碼的架構與設計需求，像是每個功能對應的程式碼文件、程式碼之間的關係、設計風格，連測試項目 checklist 也都包辦了。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-design.png" alt="Kiro Specs - Design" class="blog-image" />
+          <p class="image-caption">Kiro Specs - Design</p>
+      </div>
+      <p><b>Task list</b> 是真正的重頭戲，Kiro 把所有代辦項目都準備好了，只要一鍵 Start task，小幽靈就開始自言自語、自行開工了！按照各個 task 內所列的事項執行，完成每個階段的 task 則會顯示 Task completed，接著提出的需求就會誕生成程式碼了～</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/public/images/posts/coding/kiro-specs-task.png" alt="Kiro Specs - Task" class="blog-image" />
+          <p class="image-caption">Kiro Specs - Task</p>
+      </div>
+
+      <h2>Coffee Brew Notes</h2>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/coffee-brew-notes-landing-page.png" alt="Coffee Brew Notes" class="blog-image" />
+          <p class="image-caption">Coffee Brew Notes - Landing Page</p>
+        </div>
+        <p>咖啡筆記小工具 → <a href="https://coffee-brew-notes-app.vercel.app/" style="text-decoration: underline;">Coffee Brew Notes App</a></p>
+        <p>這次使用 Kiro 做的是咖啡筆記，謝謝 Kiro 幫我在 Specs - Requirements 中寫好介紹：</p>
+        <blockquote><p>The <a href="https://coffee-brew-notes-app.vercel.app/" style="text-decoration: underline;">Coffee Brew Notes App</a> is a web application designed for coffee enthusiasts to log, track, and rate their coffee brewing experiences. The application enables users to record detailed information about each brew including beans, equipment, parameters, and personal tasting notes.</p></blockquote>
+        <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/coffee-brew-notes-logged-in.png" alt="Coffee Brew Notes" class="blog-image" />
+          <p class="image-caption">Coffee Brew Notes - Logged In Page</p>
+        </div>
+      
+      <h2>貼心的小幽靈</h2>
+      <p>自己會開始排查錯誤或是嘗試 build 確認沒有問題，build 如果失敗會自行檢查和修正；如果未出現任何錯誤，但部屬發生問題，向 Kiro 提問，Kiro 則會先建議進行幾項 Manual Test 讓我去測試，我再回報測試結果讓 Kiro 去找 root cause 和 solution。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/kiro-manual-test-suggestion.png" alt="Coffee Brew Notes" class="blog-image" />
+          <p class="image-caption">Coffee Brew Notes - Landing Page</p>
+      </div>
+      
+      <p>之前 Vibe Coding 的時候，我必須把錯誤訊息一個一個貼到 ChatGPT 提問，甚至得補充上下文（像是前一步做了接什麼），使用 AI IDE 直接問真的快很多，也省很多心力去解釋上下文。</p>
+
+      <p>這次的使用 Kiro 的經驗，我覺得也稱不上是 Vibe Coding，因為我真的很無腦地一直按 Start task，我就只需要看著對話框的小幽靈說話、建檔案、產生程式碼、測試除錯。</p>
+
+      <p>唯一有動腦的時候大概就是成品完成後，有些新功能疊加和 layout 問題需要跟 Kiro 解釋，但這也可以靠截圖或貼上錯誤訊息直接解決。</p>
+
+      <h2>不負責任心得感想</h2>
+      <p>其實還有厲害的 Agent Hooks 和 Agent Steering 我還沒嘗試，我相信 Kiro 還有更厲害的功能是我沒給它機會發揮。</p>
+      <p>對於學習者來說，Kiro 有好有壞，寫的 Specs 清晰易懂，執行任務或是回答問題時，會將思緒同步在 chat 中（像是正在檢查哪個程式碼以及為何檢視），但執行能力和自我修正能力強，反而讓初學者「太容易」產出程式碼，不太需要思考或是理解整個架構，就可以運作，當然這是只針對簡單的工具開發，我相信複雜的系統或是軟體，絕對不可能這麼單純。</p>
+      <p>另外一點是，使用 Kiro 時比較不會害怕程式碼壞掉，首先是 Kiro 在每次新增、移除或修正功能之後，會自我檢查並嘗試 build，確認沒有錯誤，而遇到 build 和部署成功，但預期結果是錯誤時，向 Kiro 解釋錯誤，Kiro 會再列出建議測試方法，對於不確定如何排查的情況，Kiro 列出來的測試不僅可以幫助自己釐清問題和邏輯，也可以有效率地讓 Kiro 去找到問題原因。</p>
+
+      <h2>開發時間線</h2>
+      <p>生成初版、新增註冊帳號的功能、串 Supabase、部署到 Vercel（4hrs）。</p>
+      <p>修正問題和疊加功能（+8hrs）：</p>
+      <ol type="1">
+        <li>登入時忘記密碼的重設連結</li>
+        <li>訊息通知文字 overflow</li>
+        <li>Responsive display across devices（手機網頁使用仍不太佳，可能做成手機 app 比較合適）</li>
+        <li>新增搜尋功能、filter、sort by 至登入的帳號介面</li>
+        <li>分頁機制（效能調整）</li>
+        <li>註冊前存取在 LocalStorage 的 notes 要在 Sign up 時導入（這個花比較多時間處理，甚至中途還疊加新功能，後來發現主要是 Supabase 驗證問題在擋，只好調整 Supabase 設定並 roll back）</li>
+        <li>Notes 裡的 Beans column 改為 Type (Single Origin or Blend) 和 Roast level</li>
+        <li>還有其他小修正，像是 Supabase 提出 Performance 改善建議，再請 Kiro 根據建議產出新的 SQL 去做改善</li>
+      </ol>
+      
+      <h2>用量</h2>
+      <p>約莫 100 credits 完成我的咖啡筆記小工具。</p>
+      <p>過程中我盡量不去思考如何下最佳 prompt（省 token），就是想問什麼就問什麼，需要 Kiro 幫我做什麼就請它直接做（包含整理 README 和刪掉無用的檔案），就是想看在使用最低腦用量的情況下，花多少錢和時間可以做出想像的東西。</p>
+      <p>也方便評估未來如果真的要使用在工作上，值不值得訂閱付費方案，和是否真的可以放任它自主處理文件，特別是針對刪減和彙整的部分，這邊主要是以 PM 需求角度去看。</p>
+      <p>執行 task 是燒用量最快的地方，畢竟要確認需求、產生程式碼、模擬測試等等，以 PM 角度，最在意的還是 Specs 部分和提問，這些用量並不多，如果按最低費用的訂閱方案，其實非常夠，而如果是認真孩子想上班用腦的話（？），甚至免費方案就可以提升效率了。</p>
+      
+      <h2>後記</h2>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/aws-kaohsiung-event-kiro-2025.jpg" alt="2025 亞馬遜港都創新日 Kiro" class="blog-image" />
+          <p class="image-caption">2025 亞馬遜港都創新日 - Kiro</p>
+      </div>
+      <p>2025 亞馬遜港都創新日有看到 Kiro 展示，現場使用的是中文去做開發，看起來使用中文對話和產出中文 specs 似乎也沒什麼問題。</p>
+      <p>現場 demo 人員有補充，Kiro 除了作為開發工具，還有個好用的地方，對公司來說，如果開發的產品經手人員多且系統複雜，加上交接文件不齊全，公司內沒有人對產品或程式碼瞭若指掌，也可以直接把程式碼丟給 Kiro，請 Kiro 理出架構並解釋之間的關係，並產出對應的說明書或是直接詢問找解答。（OS：這對於人員流動率高的公司應該是個好東西😉）</p>
+      <p>像我就問了我的咖啡筆記工具裡，單頁最多能有幾個 notes：</p>
+       <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/kiro-ask-a-question.png" alt="Ask Kiro a question" class="blog-image" />
+          <p class="image-caption">Kiro 回答問題</p>
+        </div>
+      <h2>給自己的小筆記</h2>
+      <p>看到 Kiro 那麼會寫 Specs，有機會想把它運用到創作上，生出原創內容（嚴格來說已經沒有所謂的原創了呵呵），像是書籍章節、摘要，或是電影影集大綱，按照章節或是幕作為檔案分類依據，甚至可以要 Kiro 生出角色分析、故事結構和劇本。</p>
+    `,
+    date: "November 20, 2025",
+    readTime: "13 min read",
+    language: "中文",
+    tags: ["Vibe Coding", "Learning"],
+    author: "Abby Chung"
+  },
+  {
     id: 6,
     title: "Building an Expense Logger: Track Spending via Text Messages",
     slug: "automation-expense-logger",
@@ -228,66 +343,6 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: "Perfect Days -《我的完美日常》電影心得",
-    slug: "perfect-days-review",
-    excerpt: "電影系列決定以《我的完美日常》作為開場，這部電影也最符合近期人生階段，對生活的一些想法。",
-    content: `
-      <p>許久沒有寫電影相關的文章，甚至生活中與朋友討論電影時，也總是以簡單的幾句話帶過對某部電影、影集的想法，害怕再這樣下去會變成無聊的人。</p>
-      <p>另一方面，則是發現自己越來越不會說話了，將發散想法組織成有架構的話語，似乎變得異常困難，而這些發散的想法，總交錯著擔心自己過度解讀、或過於愚鈍而沒看到精髓的反省，使得有架構、有條理的敘述自己的想法，尤其是口頭上，變成一項我極為羨慕的技能。</p>
-      
-      <p>既然口頭上有困難，就先從寫作開始吧，至少留下努力過的印記和審視自己混亂的思緒。決定先從我最愛逃避的電影心得開始，就從最常被引用的兩句台詞切入。</p>
-
-      <div class="image-container">
-          <img src="/pineapplepizza/images/posts/movies/perfect-days.jpg" alt="Perfect Days" class="blog-image" />
-      </div>
-      
-      <h2>互不相通的世界</h2>
-      <p><blockquote>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</blockquote></p>
-      
-      <p>這句最常被引用的一句話，也許是因為電影中的對白不多，加上來自於話最少的主角平山，也使得這句話格外有重量。</p>
-
-      <p>我的解讀是每個人都是一個獨立的世界，多數人的世界非常雷同，以至於大家看似共處在同一個世界裡。但其實每個人都有所差異，每個人的世界都不一樣，不需要去強求自己活得跟別人一樣，也不需強求他人理解自己，因為世界互不相通，某種程度來說是既自由又孤獨。</p>
-      <p>在平山先生的世界裡，一天大致包含：</p>
-      <ul>
-        <li>規律的生活</li>
-        <li>生活圍繞著喜愛的書、音樂、植物等等的事物</li>
-        <li>觀察各種微小的事物</li>
-        <li>工作即使簡單也毫不馬虎（且有自己厲害的 SOP）</li>
-      </ul>
-      <p在某些人的世界裡，這樣的一天可以說是非常地「平凡」，也可以說是「奇怪」。而在平山的世界裡，這樣的一天是最完美的一天。</p>
-      <p>互不相通的世界——也許這是為什麼孤獨感偶爾會突然冒出來吧，即便是在豔陽高照的日子，與喜歡、相似的人相處，有些極為細小事物仍是彼此無法理解彼此的，而那股孤獨感則會瞬間出現，因為意識到我們終究還是在各自的世界裡。</p>
-
-      <h2>關於當下</h2>
-      <p><blockquote>「下次是下次，現在是現在。」</blockquote></p>
-      
-      <p>普遍大眾對於這部電影主旨，是「當下」。</p>
-      
-      <p>看似無意義，甚至是無聊的瑣事，其實都只有「當下」才會發生，賦予意義和價值本身就是事後才會做的，但那個時刻，早已過去。下次就算跟一樣的人，在一樣的地方，做一樣的事情，也不會跟現在、這個當下一模一樣。</p>
-      
-      <h3>捕捉當下</h3>
-      <div class="image-container">
-          <img src="/pineapplepizza/images/posts/movies/sky.jpg" alt="Sky" class="blog-image" />
-      </div>
-      <p>當主角每天拍下一張陽光與樹葉交織、光線從葉縫穿過畫面時，共鳴很深。</p>
-      <p>大概是某一天在加拿大租屋處的陽台，拍下好藍好藍、一片雲都沒有的天空，之後出門在外，就會開始拍天空，想要紀錄某時某地的那一個天空，對我來說那個畫面是獨特且無法復刻的。</p>
-      
-      <p>人類大概是最沒有活在當下的生物，總是思考著過去和未來。尤其是這個「大世界」（多數人）似乎總逼著每個人都得有個「對未來的想法」、「想要達成的目標」⋯⋯。</p>
-      
-      <p>看似「平凡」、「簡單」的生活，在這個時代反而顯得既不平凡又不簡單。想謝謝《我的完美日常》的出現，給了自己一點慰藉，因為這的確也是在我看這部電影之前，一直思考的生活模式（但理想生活還是《晚酌的流派》哈哈哈，好吃的東西和啤酒不能少呀！）。</p>
-
-      <h2>小記</h2>
-      <p>工作迷惘期已經有四五年了吧，且仍在進行中。曾經自己是追求成就、目標取向、為熱愛的東西燃燒自己，最後只換來了滿身疲憊，不再對熱愛的東西感到興趣。放下了夢想，自此不知道人生接下來該做什麼樣的工作。而每當想到未來，就想到這部電影，再想到，為何我不能找到一份可以供我日常生活需求的工作，剩下的時間填滿自己喜愛的事物，就這樣簡單過完人生。很不幸的是，我還無法像平山一樣果斷，也許隨著書寫的文字增加，我漸漸可以理出頭緒或是積累足夠的勇氣。</p>
-      
-      <p>原本只想要簡單的幾個段落寫一點心得，沒想到這篇文章來回寫了好幾週，越寫越長，想法越來越多。</p>
-    `,
-    date: "September 20, 2025",
-    readTime: "5 min read",
-    language: "中文",
-    tags: ["Movies", "Review"],
-    author: "Abby Chung"
-  },
-  {
-    id: 3,
     title: "Vibe Coding 筆記：Pineapple Pizza 的誕生故事",
     slug: "building-blog-vibe-coding-adventure",
     excerpt: "Vibe Coding 經驗分享和為自己留下的筆記，此次嘗試的目標是藉由 GenAI 產出一個「能看且能用」的部落格網站，也就是現在看到的 Pineapple Pizza。",
@@ -384,7 +439,7 @@ export const blogPosts: BlogPost[] = [
         - Language: TypeScript
         
       ### Implementation Requirements ###
-      - Provide necessary files for buidling and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
+      - Provide necessary files for building and deploying this project, including but not limiting to package.json, index.html, main.jsx, App.jsx, and config file for packaging
       - Inform folder structure for the project
       - yarn will be used as the package manager, provide installation command lines and necessary instructions
       - Provide command lines to deploy the site to GitHub Page
@@ -495,6 +550,66 @@ export const blogPosts: BlogPost[] = [
     author: "Abby Chung"
   },
   {
+    id: 3,
+    title: "Perfect Days -《我的完美日常》電影心得",
+    slug: "perfect-days-review",
+    excerpt: "電影系列決定以《我的完美日常》作為開場，這部電影也最符合近期人生階段，對生活的一些想法。",
+    content: `
+      <p>許久沒有寫電影相關的文章，甚至生活中與朋友討論電影時，也總是以簡單的幾句話帶過對某部電影、影集的想法，害怕再這樣下去會變成無聊的人。</p>
+      <p>另一方面，則是發現自己越來越不會說話了，將發散想法組織成有架構的話語，似乎變得異常困難，而這些發散的想法，總交錯著擔心自己過度解讀、或過於愚鈍而沒看到精髓的反省，使得有架構、有條理的敘述自己的想法，尤其是口頭上，變成一項我極為羨慕的技能。</p>
+      
+      <p>既然口頭上有困難，就先從寫作開始吧，至少留下努力過的印記和審視自己混亂的思緒。決定先從我最愛逃避的電影心得開始，就從最常被引用的兩句台詞切入。</p>
+
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/movies/perfect-days.jpg" alt="Perfect Days" class="blog-image" />
+      </div>
+      
+      <h2>互不相通的世界</h2>
+      <p><blockquote>「這個世界上其實有很多不同的世界，看起來連在一起，實際上並不互通。」</blockquote></p>
+      
+      <p>這句最常被引用的一句話，也許是因為電影中的對白不多，加上來自於話最少的主角平山，也使得這句話格外有重量。</p>
+
+      <p>我的解讀是每個人都是一個獨立的世界，多數人的世界非常雷同，以至於大家看似共處在同一個世界裡。但其實每個人都有所差異，每個人的世界都不一樣，不需要去強求自己活得跟別人一樣，也不需強求他人理解自己，因為世界互不相通，某種程度來說是既自由又孤獨。</p>
+      <p>在平山先生的世界裡，一天大致包含：</p>
+      <ul>
+        <li>規律的生活</li>
+        <li>生活圍繞著喜愛的書、音樂、植物等等的事物</li>
+        <li>觀察各種微小的事物</li>
+        <li>工作即使簡單也毫不馬虎（且有自己厲害的 SOP）</li>
+      </ul>
+      <p在某些人的世界裡，這樣的一天可以說是非常地「平凡」，也可以說是「奇怪」。而在平山的世界裡，這樣的一天是最完美的一天。</p>
+      <p>互不相通的世界——也許這是為什麼孤獨感偶爾會突然冒出來吧，即便是在豔陽高照的日子，與喜歡、相似的人相處，有些極為細小事物仍是彼此無法理解彼此的，而那股孤獨感則會瞬間出現，因為意識到我們終究還是在各自的世界裡。</p>
+
+      <h2>關於當下</h2>
+      <p><blockquote>「下次是下次，現在是現在。」</blockquote></p>
+      
+      <p>普遍大眾對於這部電影主旨，是「當下」。</p>
+      
+      <p>看似無意義，甚至是無聊的瑣事，其實都只有「當下」才會發生，賦予意義和價值本身就是事後才會做的，但那個時刻，早已過去。下次就算跟一樣的人，在一樣的地方，做一樣的事情，也不會跟現在、這個當下一模一樣。</p>
+      
+      <h3>捕捉當下</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/movies/sky.jpg" alt="Sky" class="blog-image" />
+      </div>
+      <p>當主角每天拍下一張陽光與樹葉交織、光線從葉縫穿過畫面時，共鳴很深。</p>
+      <p>大概是某一天在加拿大租屋處的陽台，拍下好藍好藍、一片雲都沒有的天空，之後出門在外，就會開始拍天空，想要紀錄某時某地的那一個天空，對我來說那個畫面是獨特且無法復刻的。</p>
+      
+      <p>人類大概是最沒有活在當下的生物，總是思考著過去和未來。尤其是這個「大世界」（多數人）似乎總逼著每個人都得有個「對未來的想法」、「想要達成的目標」⋯⋯。</p>
+      
+      <p>看似「平凡」、「簡單」的生活，在這個時代反而顯得既不平凡又不簡單。想謝謝《我的完美日常》的出現，給了自己一點慰藉，因為這的確也是在我看這部電影之前，一直思考的生活模式（但理想生活還是《晚酌的流派》哈哈哈，好吃的東西和啤酒不能少呀！）。</p>
+
+      <h2>小記</h2>
+      <p>工作迷惘期已經有四五年了吧，且仍在進行中。曾經自己是追求成就、目標取向、為熱愛的東西燃燒自己，最後只換來了滿身疲憊，不再對熱愛的東西感到興趣。放下了夢想，自此不知道人生接下來該做什麼樣的工作。而每當想到未來，就想到這部電影，再想到，為何我不能找到一份可以供我日常生活需求的工作，剩下的時間填滿自己喜愛的事物，就這樣簡單過完人生。很不幸的是，我還無法像平山一樣果斷，也許隨著書寫的文字增加，我漸漸可以理出頭緒或是積累足夠的勇氣。</p>
+      
+      <p>原本只想要簡單的幾個段落寫一點心得，沒想到這篇文章來回寫了好幾週，越寫越長，想法越來越多。</p>
+    `,
+    date: "September 20, 2025",
+    readTime: "5 min read",
+    language: "中文",
+    tags: ["Movies"],
+    author: "Abby Chung"
+  },
+  {
     id: 2,
     title: "Book Review: The Seven Husbands of Evelyn Hugo",
     slug: "seven-husbands-evelyn-hugo-review",
@@ -533,7 +648,7 @@ export const blogPosts: BlogPost[] = [
     date: "September 5, 2025",
     readTime: "6 min read",
     language: "EN",
-    tags: ["Books", "Review"],
+    tags: ["Books"],
     author: "Claude"
   },
   {
