@@ -9,6 +9,8 @@ export interface BlogPost {
   language:string
   tags: string[]
   author: string
+  featured?: boolean
+  featuredOrder?: number
 }
 
 export const blogPosts: BlogPost[] = [
@@ -125,7 +127,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "13 min read",
     language: "中文",
     tags: ["Vibe Coding", "Learning"],
-    author: "Abby Chung"
+    author: "Abby Chung",
+    featured: true,
+    featuredOrder: 1
   },
   {
     id: 6,
@@ -278,7 +282,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min read",
     language: "EN",
     tags: ["Automation", "Learning"],
-    author: "Abby Chung"
+    author: "Abby Chung",
+    featured: true,
+    featuredOrder: 2
   },
   {
     id: 5,
@@ -339,7 +345,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     language: "EN",
     tags: ["Photography"],
-    author: "Abby Chung"
+    author: "Abby Chung",
+    featured: true,
+    featuredOrder: 3
   },
   {
     id: 4,
@@ -547,7 +555,9 @@ export const blogPosts: BlogPost[] = [
     readTime: "12 min read",
     language: "中文",
     tags: ["Vibe Coding", "Learning"],
-    author: "Abby Chung"
+    author: "Abby Chung",
+    featured: true,
+    featuredOrder: 4
   },
   {
     id: 3,

@@ -7,7 +7,12 @@ import { ArrowRight, Coffee, Book, Film, Code } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
 
 const Home: React.FC = () => {
-  const recentPosts = blogPosts.slice(0, 4)
+  const featuredPosts = (() => {
+    const featured = blogPosts.filter(p => p.featured)
+    return (featured.length ? featured : blogPosts.slice(0, 4))
+      .sort((a, b) => (a.featuredOrder ?? 0) - (b.featuredOrder ?? 0))
+      .slice(0, 4)
+  })()
 
   const interests = [
     { name: 'Coffee', icon: Coffee, description: 'Brewing methods, tasting notes, and cafe discoveries' },
@@ -58,10 +63,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Recent Posts Section */}
+      {/* Featured Posts Section */}
       <section className="space-y-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-bold text-foreground">Recent Posts</h2>
+          <h2 className="text-3xl font-bold text-foreground">Featured Posts</h2>
           <Button variant="outline" asChild className="rounded-full">
             <Link to="/blog">
               View All Posts <ArrowRight className="ml-2 h-4 w-4" />
@@ -70,17 +75,22 @@ const Home: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {recentPosts.map((post) => (
+          {featuredPosts.map((post) => (
             <Card key={post.id} className="hover:shadow-lg transition-shadow group">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="space-y-2">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 items-center">
                       {post.tags.slice(0, 2).map((tag) => (
                         <Badge key={tag} variant="secondary" className="text-xs">
                           {tag}
                         </Badge>
                       ))}
+                      {post.featured && (
+                        <Badge variant="secondary" className="text-xs">
+                          Featured
+                        </Badge>
+                      )}
                     </div>
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       <Link to={`/blog/${post.slug}`}>
