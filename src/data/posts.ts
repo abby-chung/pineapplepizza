@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     date: "December 18, 2025",
     readTime: "2 min read",
     language: "EN",
-    tags: ["Photography", "Journel"],
+    tags: ["Photography", "Journal"],
     author: "Abby Chung"
   },
   {
@@ -764,7 +764,7 @@ export const blogPosts: BlogPost[] = [
     date: "August 15, 2025",
     readTime: "4 min read",
     language: "中文",
-    tags: ["Coffee", "Journel"],
+    tags: ["Coffee", "Journal"],
     author: "Abby Chung"
   }
 ]
