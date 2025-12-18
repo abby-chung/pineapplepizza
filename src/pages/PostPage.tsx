@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, Link2} from 'lucide-react'
 import { blogPosts } from '@/data/posts'
 import NotFound from './NotFound'
 import MarkdownContent from '@/components/MarkdownContent'
+import Toast from '@/components/Toast'
 
 const PostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -16,6 +17,43 @@ const PostPage: React.FC = () => {
   
   if (!post) {
     return <NotFound />
+  }
+
+  // Share / copy-to-clipboard state
+  const [copied, setCopied] = useState(false)
+
+  const handleShare = async () => {
+    const url = window.location.href
+
+    // Try Clipboard API
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopied(true)
+      return
+    } catch (e) {
+      // Clipboard API failed, try fallback
+    }
+
+    try {
+      const ta = document.createElement('textarea')
+      ta.value = url
+      ta.setAttribute('readonly', '')
+      ta.style.position = 'absolute'
+      ta.style.left = '-9999px'
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+      setCopied(true)
+      return
+    } catch (e) {
+      // Final fallback: use native share if available
+      if ((navigator as any).share) {
+        try {
+          await (navigator as any).share({ title: post.title, url })
+        } catch {}
+      }
+    }
   }
 
   // Get related posts (same tags, excluding current post)
@@ -61,8 +99,8 @@ const PostPage: React.FC = () => {
               <Clock className="h-4 w-4" />
               <span>{post.readTime}</span>
             </div>
-            <Button variant="ghost" size="sm" className="p-0 h-auto">
-              <Share2 className="h-4 w-4 mr-2" />
+            <Button variant="ghost" size="sm" className="p-0 h-auto" onClick={handleShare} aria-label="Share post">
+              <Link2 className="h-4 w-4" />
               Share
             </Button>
           </div>
@@ -154,6 +192,8 @@ const PostPage: React.FC = () => {
           </Link>
         </Button>
       </div>
+
+      <Toast open={copied} onClose={() => setCopied(false)}>Link copied to clipboard</Toast>
     </div>
   )
 }
