@@ -14,6 +14,61 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+    {
+    id: 8,
+    title: "Mazu Pilgrimage: Religion, Faith and Belief",
+    slug: "mazu-pilgrimage",
+    excerpt: "Contemplations on participating in a Mazu pilgrimage event in Taiwan.",
+    content: `
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/Mazu-Pilgrimage.JPG" alt="Mazu Pilgrimage" class="blog-image" />
+          <p class="image-caption">Mazu Pilgrimage</p>
+      </div>
+      <p>A few weeks ago, Mazu deities from three districts in Kaohsiung gathered in Gangshan for a celebration and two-day pilgrimage. Baishatun Mazu, the famous "pink sports car" or "pink supercar," was also invited to join the party. Lucky enough, the route of their procession was close to my home, and I happened to be at home during that weekend.</p>
+
+      <p>I had never participated in any large-scale religious events before, nor am I a person of belief, and I'm certainly not someone who enjoys crowds. But somehow I felt a mysterious force calling me to go take a look, to witness the legendary "pink supercar" and experience this unique Taiwanese culture. *That force could possibly, very likely, to be my mom lol.</p>
+      <p>So I went out with my camera, managed to capture a few photos amidst the chaos and crowds:</p>
+
+      <h3>Thousand-Mile Eyes & Wind-Following Ears</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/Thousand-Mile-Eyes-andWind-Following-Ears.JPG" alt="Protector Generals of Mazu" class="blog-image" />
+          <p class="image-caption">Protector Generals of Mazu</p>
+      </div>
+
+      <h3>Electric-Techno Neon Gods</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/Electric-Techno-Neon-Gods.JPG" alt="Electric-Techno Neon Gods" class="blog-image" />
+          <p class="image-caption">Also known as Techno Prince Nezha</p>
+      </div>
+
+      <h3>Pink Supercar</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/Baishatun-Mazu.JPG" alt="Baishatun Mazu" class="blog-image" />
+          <p class="image-caption">Baishatun Mazu, the famous "Pink Supercar"</p>
+      </div>
+
+      <h2>About Religion, Faith, and Belief</h2>
+      <p>After the festival ended, I actually spent some time reflecting on why I had that urge to participate in the event. At first, I thought perhaps it was because I felt lost in life lately, coupled with having trouble finding a place where I belong (whether in work or life), so I wanted to see if getting closer to religious rituals could bring me some new perspective (though I would consider worshipping Mazu to be more of a belief than a religion), and to observe the crowds following along to figure out why their faith could be so strong.</p>
+      
+      <p>To some extent, I understand the power of putting one's faith in deities or natural forces—believing they will help and get you through all kinds of hardships, and with this belief, you can overcome any difficulty. It's a kind of belief that seems directed outward (toward deities or the forces of nature), yet is also a belief in oneself.</p>
+
+      <p>Although participating in the festival didn't change my views on putting faith in deities or natural forces, I did spend time contemplating the essence of the pilgrimage. Perhaps the purpose of it isn't to reach a destination, nor is it to return to the starting point; perhaps what matters is the process of walking—the dialogue with Mazu while walking, or perhaps it can be seen simply as a dialogue with oneself, whether you gain something from it, or come to understand what you seek in life more clearly…</p>
+
+      <p>I guess this could be the new perspective I gained from the experience, which was definitely rewarding and any Taiwanese should participate at least once in their lifetime.</p>
+      
+      <h3>Bonus</h3>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/photography/zuan-jiao.JPG" alt="zuan jiao" class="blog-image" />
+          <p class="image-caption">Crawling (kneeling) under the palanquin</p>
+      </div>
+      <p>"鑽轎" (zuan jiao), which is an important part of the Mazu procession tradition. This refers to the practice of crawling or passing under the palanquin (sedan chair) carrying the Mazu deity statue. Yes, I was in the line, and yes, it was a battle to get in.</p>
+    `,
+    date: "December 18, 2025",
+    readTime: "2 min read",
+    language: "EN",
+    tags: ["Photography", "Journel"],
+    author: "Abby Chung"
+  },
   {
     id: 7,
     title: "AWS Kiro AI IDE 初體驗：咖啡筆記小工具 Coffee Brew Notes",
@@ -709,7 +764,7 @@ export const blogPosts: BlogPost[] = [
     date: "August 15, 2025",
     readTime: "4 min read",
     language: "中文",
-    tags: ["Coffee", "隨筆"],
+    tags: ["Coffee", "Journel"],
     author: "Abby Chung"
   }
 ]
