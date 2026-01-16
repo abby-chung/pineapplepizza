@@ -1,14 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { ArrowLeft, Calendar, Clock, Link2} from 'lucide-react'
-import { blogPosts } from '@/data/posts'
+import { ArrowLeft, Calendar, Clock, Link2 } from 'lucide-react'
+import { blogPosts, type BlogPost } from '@/data/posts'
 import NotFound from './NotFound'
 import MarkdownContent from '@/components/MarkdownContent'
 import Toast from '@/components/Toast'
+
+/**
+ * Utility function to copy URL to clipboard with fallback support
+ */
+const copyUrlToClipboard = async (url: string): Promise<boolean> => {
+  try {
+    await navigator.clipboard.writeText(url)
+    return true
+  } catch {
+    // Fallback for older browsers
+    try {
+      const textarea = document.createElement('textarea')
+      textarea.value = url
+      textarea.setAttribute('readonly', '')
+      textarea.style.position = 'absolute'
+      textarea.style.left = '-9999px'
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+      return true
+    } catch {
+      return false
+    }
+  }
+}
 
 const PostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
@@ -22,42 +48,16 @@ const PostPage: React.FC = () => {
   // Share / copy-to-clipboard state
   const [copied, setCopied] = useState(false)
 
-  const handleShare = async () => {
+  const handleShare = useCallback(async () => {
     const url = window.location.href
-
-    // Try Clipboard API
-    try {
-      await navigator.clipboard.writeText(url)
+    const success = await copyUrlToClipboard(url)
+    if (success) {
       setCopied(true)
-      return
-    } catch (e) {
-      // Clipboard API failed, try fallback
     }
-
-    try {
-      const ta = document.createElement('textarea')
-      ta.value = url
-      ta.setAttribute('readonly', '')
-      ta.style.position = 'absolute'
-      ta.style.left = '-9999px'
-      document.body.appendChild(ta)
-      ta.select()
-      document.execCommand('copy')
-      document.body.removeChild(ta)
-      setCopied(true)
-      return
-    } catch (e) {
-      // Final fallback: use native share if available
-      if ((navigator as any).share) {
-        try {
-          await (navigator as any).share({ title: post.title, url })
-        } catch {}
-      }
-    }
-  }
+  }, [])
 
   // Get related posts (same tags, excluding current post)
-  const relatedPosts = blogPosts
+  const relatedPosts: BlogPost[] = blogPosts
     .filter(p => p.id !== post.id && p.tags.some(tag => post.tags.includes(tag)))
     .slice(0, 3)
 

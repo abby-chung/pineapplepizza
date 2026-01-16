@@ -2,6 +2,17 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Separator } from '@/components/ui/separator'
 
+interface FooterLink {
+  label: string
+  href: string
+}
+
+const FOOTER_LINKS: FooterLink[] = [
+  { label: 'Archive', href: '/blog/archive' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms of Service', href: '/terms' },
+]
+
 const Footer: React.FC = () => {
   return (
     <footer className="border-t border-border bg-background">
@@ -9,24 +20,15 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center space-y-4">
           {/* Footer Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <Link
-              to="/blog/archive"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Archive
-            </Link>
-            <Link
-              to="/privacy"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms of Service
-            </Link>
+            {FOOTER_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           <Separator className="w-full max-w-xs" />

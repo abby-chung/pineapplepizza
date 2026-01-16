@@ -1,11 +1,17 @@
 // src/components/MarkdownContent.tsx
-import React from 'react';
-import SyntaxHighlighter from './SyntaxHighlighter';
+import React from 'react'
+import SyntaxHighlighter from './SyntaxHighlighter'
 
 interface MarkdownContentProps {
-  content: string;
+  /** HTML content to process for code blocks and markdown formatting */
+  content: string
 }
 
+/**
+ * Renders markdown and HTML content with syntax-highlighted code blocks.
+ * Processes code blocks separately for proper syntax highlighting and applies
+ * simple markdown formatting to regular text.
+ */
 const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
   // Function to process markdown content and extract code blocks
   const processContent = (text: string) => {

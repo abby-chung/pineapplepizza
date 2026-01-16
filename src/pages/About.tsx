@@ -2,19 +2,26 @@ import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Coffee, Book, Film, Code, Heart, Mail, Github, Beer, Pizza, Linkedin} from 'lucide-react'
+import { Coffee, Book, Film, Code, Heart, Mail, Github, Beer, Pizza, Linkedin } from 'lucide-react'
+
+interface InterestItem {
+  name: string
+  icon: React.ComponentType<{ className?: string }>
+  description: string
+}
+
+const SKILLS = [
+  'Photography', 'Figma', 'Adobe Creative Cloud', 'Final Cut Pro', 'DaVinci Resolve', 'Foodie', 'Coffee Addict'
+] as const
+
+const ABOUT_INTERESTS: InterestItem[] = [
+  { name: 'Coffee Brewing', icon: Coffee, description: 'Exploring different brewing methods and coffee origins' },
+  { name: 'Reading', icon: Book, description: 'Fiction, non-fiction, and manga' },
+  { name: 'Film & TV', icon: Film, description: 'Appreciating cinematography and storytelling' },
+  { name: 'Vibe Coding', icon: Code, description: 'Learning to code through experimentation and joy' },
+] as const
 
 const About: React.FC = () => {
-  const skills = [
-    'Photography', 'Figma', 'Adobe Creative Cloud', 'Final Cut Pro', 'DaVinci Resolve', 'Foodie', 'Coffee Addict'
-  ]
-
-  const interests = [
-    { name: 'Coffee Brewing', icon: Coffee, description: 'Exploring different brewing methods and coffee origins' },
-    { name: 'Reading', icon: Book, description: 'Fiction, non-fiction, and manga' },
-    { name: 'Film & TV', icon: Film, description: 'Appreciating cinematography and storytelling' },
-    { name: 'Vibe Coding', icon: Code, description: 'Learning to code through experimentation and joy' },
-  ]
 
   return (
     <div className="max-w-4xl mx-auto space-y-12 fade-in">
@@ -70,7 +77,7 @@ const About: React.FC = () => {
                 These are the skills I’m pretty confident I’ve picked up along the way:
               </p>
               <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
+                {SKILLS.map((skill) => (
                   <Badge key={skill} variant="secondary">
                     {skill}
                   </Badge>
@@ -88,7 +95,7 @@ const About: React.FC = () => {
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-center text-foreground">What Drives Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {interests.map((interest) => (
+          {ABOUT_INTERESTS.map((interest) => (
             <Card key={interest.name} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">

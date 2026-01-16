@@ -14,7 +14,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-    {
+  {
     id: 8,
     title: "Mazu Pilgrimage: Religion, Faith and Belief",
     slug: "mazu-pilgrimage",

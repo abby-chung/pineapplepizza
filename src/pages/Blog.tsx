@@ -5,7 +5,52 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Search, Calendar, Clock, Globe } from 'lucide-react'
-import { blogPosts } from '@/data/posts'
+import { blogPosts, type BlogPost } from '@/data/posts'
+
+/**
+ * Renders a single blog post card with metadata
+ */
+const BlogPostCard: React.FC<{ post: BlogPost }> = ({ post }) => (
+  <Card className="hover:shadow-lg transition-shadow group">
+    <CardHeader>
+      <div className="flex items-start justify-between gap-4">
+        <div className="space-y-2 flex-1">
+          <div className="flex flex-wrap gap-2">
+            {post.tags.map((tag) => (
+              <Badge key={tag} variant="secondary" className="text-xs">
+                {tag}
+              </Badge>
+            ))}
+          </div>
+          <CardTitle className="text-2xl group-hover:text-primary transition-colors">
+            <Link to={`/blog/${post.slug}`}>
+              {post.title}
+            </Link>
+          </CardTitle>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Calendar className="h-4 w-4" />
+              {post.date}
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="h-4 w-4" />
+              {post.readTime}
+            </div>
+            <div className="flex items-center gap-1">
+              <Globe className="h-4 w-4" />
+              {post.language}
+            </div>                        
+          </div>
+        </div>
+      </div>
+    </CardHeader>
+    <CardContent>
+      <CardDescription className="text-base leading-relaxed">
+        {post.excerpt}
+      </CardDescription>
+    </CardContent>
+  </Card>
+)
 
 const Blog: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -89,45 +134,7 @@ const Blog: React.FC = () => {
         ) : (
           <div className="grid gap-6">
             {filteredPosts.map((post) => (
-              <Card key={post.id} className="hover:shadow-lg transition-shadow group">
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="space-y-2 flex-1">
-                      <div className="flex flex-wrap gap-2">
-                        {post.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
-                            {tag}
-                          </Badge>
-                        ))}
-                      </div>
-                      <CardTitle className="text-2xl group-hover:text-primary transition-colors">
-                        <Link to={`/blog/${post.slug}`}>
-                          {post.title}
-                        </Link>
-                      </CardTitle>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          {post.date}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          {post.readTime}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Globe className="h-4 w-4" />
-                          {post.language}
-                        </div>                        
-                      </div>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {post.excerpt}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+              <BlogPostCard key={post.id} post={post} />
             ))}
           </div>
         )}

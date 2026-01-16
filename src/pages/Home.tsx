@@ -6,6 +6,19 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Coffee, Book, Film, Code } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
 
+interface Interest {
+  name: string
+  icon: React.ComponentType<{ className?: string }>
+  description: string
+}
+
+const INTERESTS: Interest[] = [
+  { name: 'Coffee', icon: Coffee, description: 'Brewing methods, tasting notes, and cafe discoveries' },
+  { name: 'Books', icon: Book, description: 'Literary adventures and reading reflections' },
+  { name: 'Movies & TV Shows', icon: Film, description: 'Cinematic experiences and film analysis' },
+  { name: 'Modern-Day Survival', icon: Code, description: 'Technical learning journey and coding experiments' },
+]
+
 const Home: React.FC = () => {
   const featuredPosts = (() => {
     const featured = blogPosts.filter(p => p.featured)
@@ -13,13 +26,6 @@ const Home: React.FC = () => {
       .sort((a, b) => (a.featuredOrder ?? 0) - (b.featuredOrder ?? 0))
       .slice(0, 4)
   })()
-
-  const interests = [
-    { name: 'Coffee', icon: Coffee, description: 'Brewing methods, tasting notes, and cafe discoveries' },
-    { name: 'Books', icon: Book, description: 'Literary adventures and reading reflections' },
-    { name: 'Movies & TV Shows', icon: Film, description: 'Cinematic experiences and film analysis' },
-    { name: 'Modern-Day Survival', icon: Code, description: 'Technical learning journey and coding experiments' },
-  ]
 
   return (
     <div className="max-w-6xl mx-auto space-y-12 fade-in">
@@ -47,7 +53,7 @@ const Home: React.FC = () => {
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-center text-foreground">What I Write About</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {interests.map((interest) => (
+          {INTERESTS.map((interest) => (
             <Card key={interest.name} className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">

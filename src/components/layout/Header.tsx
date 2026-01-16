@@ -3,15 +3,20 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+interface NavItem {
+  name: string
+  href: string
+}
+
+const NAVIGATION: NavItem[] = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
+]
+
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
-  ]
 
   const isActive = (path: string) => {
     return location.pathname === path
@@ -40,7 +45,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
+            {NAVIGATION.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -72,7 +77,7 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border">
             <nav className="py-4 space-y-2">
-              {navigation.map((item) => (
+              {NAVIGATION.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
