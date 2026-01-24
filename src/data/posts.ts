@@ -15,7 +15,7 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 8,
+    id: 9,
     title: "Mazu Pilgrimage: Religion, Faith and Belief",
     slug: "mazu-pilgrimage",
     excerpt: "Contemplations on participating in a Mazu pilgrimage event in Taiwan.",
@@ -69,6 +69,45 @@ export const blogPosts: BlogPost[] = [
     tags: ["Photography", "Journal"],
     author: "Abby Chung"
   },
+  {
+    id: 8,
+    title: "Python 入門工作坊：心得小筆記",
+    slug: "python-workshop",
+    excerpt: "在此小小紀錄 PyLadies Kaohsiung 在高雄舉辦 Python 工作坊的心得，順便督促自己好好複習。😓",
+    content: `
+      <p>2025 年 11 月底有幸參與到 <a href="https://www.facebook.com/pyladies.kaohsiung" style="text-decoration: underline;">PyLadies Kaohsiung</a>* 在高雄舉辦的 Python 入門工作坊，藉此機會好好複習一下我已遺忘光光的 Python。</p>
+      <p>工作坊主要是使用 Google Colab 進行教學與實作練習，現學現練的效果很好，遇到卡關的時候也能直接詢問老師們。兩天的工作坊包含了以下的介紹：</p>
+      <ol type="1">
+        <li>程式 與 Python 簡介</li>
+        <li>常見物件與輸入輸出</li>
+        <li>判斷式</li>
+        <li>串列</li>
+        <li>迴圈</li>
+        <li>字典</li>
+        <li>學習助教 ChatGPT 與其他學習資源</li>
+      </ol>
+      <p>雖然是初學，但可說是非常精實，也辛苦老師們了，中間只有中午午餐時間有辦法休息。</p>      
+
+      <h3>心得感想</h3>
+      <p>以前雖然有在 Kaggle 上面學了點初階的 Python，但遇到 for loop 這個東西就是直接陣亡，我的腦袋永遠轉不過來。這次參與工作坊也是想趁此機會，好好重新理解這東西（很不幸地還是在課堂中的實作一直卡關）。</p>
+      <p>Google Colab 的教學中蠻多實際上商業使用的情境，譬如說銀行計算利息、物流配送狀態查詢、判斷網址安全性等等，與生活息息相關的練習題目，有幫助思考如何運用 Python 處理資料的特性，進一步去做產品開發，以及如何將判斷方式運用在自動化流程的設計（許多 RPA 和 Agentic Automation Process 底層運作模式基本上還是靠 conditional logic 去做判斷處理）。</p>
+      <p>但還是要自我檢討一下，上完工作坊後就再也沒有回頭練習😂，結果就是又回到工作坊之前的程度。可能還是得要有個實際想處理的問題，且能透過 Python 去解決，藉由解決生活問題，才比較有動力開始寫。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/coding/pyladies-kaohsiung.jpg" alt="Python Workshop" class="blog-image" />
+          <p class="image-caption">照片來源：<a href="https://www.facebook.com/share/p/1DvvZaJQPp/" style="text-decoration: underline;">PyLadies Kaohsiung Facebook</a></p>
+      </div>
+      <h3>*備註</h3>
+      <ol type="1">
+        <li><a href="https://kaohsiung.pyladies.com/" style="text-decoration: underline;">PyLadies Kaohsiung</a> 是 <a href="https://pyladies.com/" style="text-decoration: underline;">PyLadies 國際組織</a> 的一員</li>
+        <li>工作坊連結：<a href="https://pyladies-kaohsiung.kktix.cc/events/pyladieskh202511" style="text-decoration: underline;">Python 入門工作坊 (高雄主場)</a></li>
+      </ol>
+    `,
+    date: "November 30, 2025",
+    readTime: "1 min read",
+    language: "中文",
+    tags: ["Learning", "Journal"],
+    author: "Abby Chung"
+  },  
   {
     id: 7,
     title: "AWS Kiro AI IDE 初體驗：咖啡筆記小工具 Coffee Brew Notes",
