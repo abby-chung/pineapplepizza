@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import ThemeToggle from '@/components/ThemeToggle'
 
 interface NavItem {
   name: string
@@ -28,45 +29,50 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2" aria-label="Pineapple Pizza - Home">
                 <img
                   src="/pineapplepizza/favicon.ico"
-                  alt="Pineapple Pizza Logo"
+                  alt=""
                   className="h-8 w-8"
+                  role="presentation"
                 />
                 <span className="text-xl font-bold text-foreground hover:text-primary transition-colors">
                   Pineapple Pizza
                 </span>
               </Link>
-            {/* <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-              Pineapple Pizza
-            </Link> */}
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {NAVIGATION.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive(item.href)
-                    ? 'text-primary bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-accent'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center space-x-4">
+            <nav className="flex space-x-8">
+              {NAVIGATION.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    isActive(item.href)
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                  }`}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+            <ThemeToggle />
+          </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -87,6 +93,7 @@ const Header: React.FC = () => {
                       ? 'text-primary bg-primary/10'
                       : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
+                  aria-current={isActive(item.href) ? 'page' : undefined}
                 >
                   {item.name}
                 </Link>

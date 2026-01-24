@@ -9,6 +9,7 @@ import { blogPosts, type BlogPost } from '@/data/posts'
 import NotFound from './NotFound'
 import MarkdownContent from '@/components/MarkdownContent'
 import Toast from '@/components/Toast'
+import { sanitizeUrl } from '@/lib/security'
 
 /**
  * Utility function to copy URL to clipboard with fallback support
@@ -39,22 +40,22 @@ const copyUrlToClipboard = async (url: string): Promise<boolean> => {
 const PostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
   
-  const post = blogPosts.find(p => p.slug === slug)
-  
-  if (!post) {
-    return <NotFound />
-  }
-
   // Share / copy-to-clipboard state
   const [copied, setCopied] = useState(false)
 
   const handleShare = useCallback(async () => {
-    const url = window.location.href
+    const url = sanitizeUrl(window.location.href)
     const success = await copyUrlToClipboard(url)
     if (success) {
       setCopied(true)
     }
   }, [])
+  
+  const post = blogPosts.find(p => p.slug === slug)
+  
+  if (!post) {
+    return <NotFound />
+  }
 
   // Get related posts (same tags, excluding current post)
   const relatedPosts: BlogPost[] = blogPosts

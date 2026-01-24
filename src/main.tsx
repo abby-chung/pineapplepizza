@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.tsx'
 import ScrollToTop from './components/ScrollToTop'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { checkSecurityContext } from './lib/security'
 import './styles/globals.css'
+
+// Run security checks
+checkSecurityContext()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter basename="/pineapplepizza">
-      <ScrollToTop />
-      <App />
+      <ThemeProvider>
+        <ScrollToTop />
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

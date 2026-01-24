@@ -1,0 +1,5 @@
+Contact: https://github.com/abby-chung/pineapplepizza/issues
+Expires: 2025-12-31T23:59:59.000Z
+Acknowledgments: https://github.com/abby-chung/pineapplepizza
+Preferred-Languages: en, zh
+Canonical: https://abby-chung.github.io/pineapplepizza/.well-known/security.txt

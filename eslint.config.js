@@ -1,13 +1,13 @@
 import js from '@eslint/js'
 import globals from 'globals'
-import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import typescript from '@typescript-eslint/eslint-plugin'
 import typescriptParser from '@typescript-eslint/parser'
 
 export default [
   {
-    ignores: ['dist', 'node_modules'],
+    ignores: ['dist', 'node_modules', '*.config.js', '*.config.ts'],
   },
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -18,35 +18,24 @@ export default [
       globals: globals.browser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
-        project: './tsconfig.json',
       },
     },
     plugins: {
-      react,
       'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
       '@typescript-eslint': typescript,
     },
     rules: {
       ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
-      ...typescript.configs.recommended.rules,
-      'react/prop-types': 0,
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-unused-vars': [
         'warn',
         { argsIgnorePattern: '^_' },
       ],
       'no-unused-vars': 'off',
-      'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+      'react-refresh/only-export-components': 'off', // Disable for now
     },
   },
 ]
