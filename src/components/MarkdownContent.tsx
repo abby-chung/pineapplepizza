@@ -102,6 +102,8 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
       .replace(/^### (.*$)/gm, '<h3>$1</h3>')
       .replace(/^## (.*$)/gm, '<h2>$1</h2>')
       .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+      // Blockquotes
+      .replace(/^> (.*$)/gm, '<blockquote>$1</blockquote>')
       // Bold
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       // Italic
@@ -119,6 +121,12 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
         return `<ul>${match}</ul>`;
       }
       return match;
+    });
+
+    // Wrap consecutive blockquotes in a blockquote container
+    processed = processed.replace(/(<blockquote>.*?<\/blockquote>(?:\s*<blockquote>.*?<\/blockquote>)*)/gm, (match) => {
+      // Flatten multiple blockquote tags into one
+      return match.replace(/<\/blockquote>\s*<blockquote>/g, '<br>');
     });
 
     // Handle paragraphs and line breaks

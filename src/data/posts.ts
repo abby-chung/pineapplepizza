@@ -15,6 +15,54 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 10,
+    title: "《海風酒店》：每一樣巨大的物事總會讓你失望",
+    slug: "the-sea-breeze-club-review",
+    excerpt: "不是閱讀心得，更不是書評，單純只是想寫下來，因為要寫下來，才會記得。",
+    content: `
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/books/taitung-sansiantai.webp" alt="Taitung" class="blog-image" />
+          <p class="image-caption">註：這是台東的照片，海風酒店的地點是設在花蓮秀林鄉和平村。</p>
+      </div>
+      <p>當初在選要從吳明益老師的哪一本作品開始閱讀時，單純只是被海風酒店的封面和書名吸引，然後想要好好閱讀一本長長的小說，過去幾年來的讀物多為短篇，想要坐下來花好幾個小時、好幾天，進入一個世界，參與角色們的人生</p>
+
+      <p>我相信從書中的幾句話，就可以知道這本書是不是適合自己閱讀，也希望這裡留下來的文字，可以讓更多人拿起這本書。為什麼推薦這本書呢？老話一句，「因為我喜歡。」。</p>
+
+      <h3>交換</h3>
+      <blockquote>交換是生命確立關係的重要活動，它們建立於互惠，但其間的天平非常微妙。有時候用一顆小石頭換得一句歌聲，有時候用一生來保護另一個人只是為了獲得瞬息間的微笑，天平的兩端完全由交換者來衡量。當「我」把自己一部分交給「你」，「你」也把自己的一部分交給「我」，死亡或消亡便不那麼可怕。禮物的交換，可以說是一種避免自身消亡的儀式。</blockquote>
+      <blockquote>交換的初始有可能是純潔、無欲的，就像這兩個孩子一樣。但漸漸地人們會對交換有所欲求。交換會帶來期待，那個天平很容易因為欲念，而讓其中的一方不甘心。</blockquote>
+      <p>其實在閱讀到小說後半時，我腦袋一直會回想到這段在小說前段寫到的，對每個人來說，<i>蓋水泥廠換到了什麼？不蓋水泥廠又換到了什麼？</i>很喜歡這邊關於「交換」的敘述，也是當提到海風酒店時，我第一個會閃過腦海的片段，也許是因為所有的人際關係，是靠不間斷的交換形成的，而關係破碎的時候，總是來自於「對交換有所欲求」，而那份「期待」並沒有被滿足的失落。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/books/taroko-gorge-1.webp" alt="Taroko Gorge" class="blog-image" />
+          <p class="image-caption">太魯閣</p>
+      </div>
+
+      <h3>無力感</h3>
+      <blockquote>女孩拿著刀，感受到重量。多年之後她會理解，每一樣巨大的物事總會讓你失望，它們會在時間裡毀壞，會消滅得幾乎不像曾經存在過。而那些你可以帶在身邊，放進蛋捲鐵盒裡，忘在房子一角的東西則不然。等到有一天你想起它們，或意外地發現它們時，它們還是安然無恙地待在那兒。</blockquote>
+      <blockquote>這世界跟你希不希望沒有關係。噓噓噓。這個世界，不是照著我們的希望走的。</blockquote>
+      <p>「無力感」，我想這是大部分的人看完這本書的當下感受。</p>
+
+      <h3>關於人生</h3>
+      <blockquote>我們到達的就是曾經離開的，我們失去的就是我們想追求的。</blockquote>
+      <blockquote>心願的後面還有人生，人生不是一個心願達成之後就結束的。</blockquote>
+      <p>這部分的感觸跟小說內容本身沒什麼關聯，但這兩句話俐落地總結我目前的人生😆，因為我就是一個在二十幾歲的時候用盡全力，逃離原生地，在三十歲時完成自己從小到大的目標，而現在卻又選擇回到原生地，而這個選擇，一部分也是想追回我所失去的。</p>
+      
+      <p>會不會其實不要達成夢想、不要達成目標比較好？永遠待在追尋的路上，是不是會比較幸福？因為這樣就不用承擔抵達後的龐大空虛感。</p>
+
+      <h3>小結</h3>
+      <p>我一向不擅長去做各種分析或是探討作者用意。對我來說，好的作品反而是那種讀到時，可以深深地、也可以淺淺地，碰到心中某處，卻無法用言語形容那個感覺；又或者是，有人寫出了你無法用言語表述的感受。這些時候會讓我感受到文字的力量，以及閱讀本身無可取代的體驗。</p>
+      <div class="image-container">
+          <img src="/pineapplepizza/images/posts/books/taroko-gorge.webp" alt="Taroko Gorge" class="blog-image" />
+          <p class="image-caption">太魯閣</p>
+      </div>      
+    `,
+    date: "February 4, 2026",
+    readTime: "6 min read",
+    language: "中文",
+    tags: ["Books", "Journal"],
+    author: "Abby Chung"
+  },
+  {
     id: 9,
     title: "Mazu Pilgrimage: Religion, Faith and Belief",
     slug: "mazu-pilgrimage",
@@ -64,7 +112,7 @@ export const blogPosts: BlogPost[] = [
       <p>"鑽轎" (zuan jiao), which is an important part of the Mazu procession tradition. This refers to the practice of crawling or passing under the palanquin (sedan chair) carrying the Mazu deity statue. Yes, I was in the line, and yes, it was a battle to get in.</p>
     `,
     date: "December 18, 2025",
-    readTime: "2 min read",
+    readTime: "3 min read",
     language: "EN",
     tags: ["Photography", "Journal"],
     author: "Abby Chung"
@@ -103,7 +151,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
     `,
     date: "November 30, 2025",
-    readTime: "1 min read",
+    readTime: "2 min read",
     language: "中文",
     tags: ["Learning", "Journal"],
     author: "Abby Chung"
