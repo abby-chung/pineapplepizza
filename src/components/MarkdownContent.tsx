@@ -1,6 +1,8 @@
 // src/components/MarkdownContent.tsx
 import React from 'react'
+import ReactDOM from 'react-dom/client'
 import SyntaxHighlighter from './SyntaxHighlighter'
+import LazyImage from './LazyImage'
 
 interface MarkdownContentProps {
   /** HTML content to process for code blocks and markdown formatting */
@@ -13,6 +15,35 @@ interface MarkdownContentProps {
  * simple markdown formatting to regular text.
  */
 const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    // Replace img elements with LazyImage components
+    if (containerRef.current) {
+      const imgElements = containerRef.current.querySelectorAll('img.lazy-image');
+      
+      imgElements.forEach((img) => {
+        const alt = img.getAttribute('data-lazy-image-alt') || 'Image';
+        const src = img.getAttribute('data-lazy-image-src') || '';
+        
+        // Create a wrapper div for the LazyImage component
+        const wrapper = document.createElement('div');
+        wrapper.className = 'my-4 rounded-lg overflow-hidden';
+        
+        img.replaceWith(wrapper);
+        
+        // Render LazyImage component into the wrapper
+        const root = ReactDOM.createRoot(wrapper);
+        root.render(
+          <LazyImage 
+            src={src} 
+            alt={alt} 
+            className="w-full h-auto rounded-lg"
+          />
+        );
+      });
+    }
+  }, [content]);
   // Function to process markdown content and extract code blocks
   const processContent = (text: string) => {
     const elements: React.ReactNode[] = [];
@@ -76,7 +107,9 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
       // Italic
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       // Lists - convert individual items first
-      .replace(/^- (.*$)/gm, '<li>$1</li>');
+      .replace(/^- (.*$)/gm, '<li>$1</li>')
+      // Images: ![alt](src) -> data-lazy-image-alt and data-lazy-image-src
+      .replace(/!\[(.*?)\]\((.*?)\)/g, '<img data-lazy-image-alt="$1" data-lazy-image-src="$2" src="" alt="$1" class="lazy-image" />');
 
     // Wrap consecutive list items in <ul> tags
     // This handles multiple separate lists correctly
@@ -105,7 +138,7 @@ const MarkdownContent: React.FC<MarkdownContentProps> = ({ content }) => {
   };
 
   return (
-    <div className="space-y-4">
+    <div ref={containerRef} className="space-y-4">
       {processContent(content)}
     </div>
   );
