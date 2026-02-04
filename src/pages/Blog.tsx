@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Search, Calendar, Clock, Globe, ChevronLeft, ChevronRight } from 'lucide-react'
 import { blogPosts, type BlogPost } from '@/data/posts'
+import { useSeoMeta } from '@/lib/seo'
 
 const POSTS_PER_PAGE = 6
 
@@ -140,6 +141,16 @@ const Blog: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
+
+  useSeoMeta({
+    title: 'Blog',
+    description: 'Explore all blog posts covering coffee, books, movies, photography, and technical learning. Discover articles and insights on various topics.',
+    keywords: 'blog posts, articles, coffee, learning, technology, photography, movies, books',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/blog',
+    ogTitle: 'Blog - Pineapple Pizza',
+    ogDescription: 'Read blog posts about coffee, books, movies, photography, and technical learning.',
+    ogType: 'website',
+  })
 
   // Get unique categories
   const categories = useMemo(() => {

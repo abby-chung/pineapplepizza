@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { ArrowRight, Coffee, Book, Film, Code } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
+import { useSeoMeta } from '@/lib/seo'
 
 interface Interest {
   name: string
@@ -26,6 +27,16 @@ const Home: React.FC = () => {
       .sort((a, b) => (a.featuredOrder ?? 0) - (b.featuredOrder ?? 0))
       .slice(0, 4)
   })()
+
+  useSeoMeta({
+    title: 'Home',
+    description: 'Welcome to Pineapple Pizza - A personal blog about coffee, books, movies, photography, and technical learning. Bilingual content mixing English and Chinese.',
+    keywords: 'blog, coffee, books, movies, photography, technology, learning, personal, journal',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/',
+    ogTitle: 'Pineapple Pizza - Personal Blog',
+    ogDescription: 'Exploring coffee, books, movies, and technical learning journey. A bilingual digital journal.',
+    ogType: 'website',
+  })
 
   return (
     <div className="max-w-6xl mx-auto space-y-12 fade-in">

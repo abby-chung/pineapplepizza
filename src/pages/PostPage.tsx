@@ -10,6 +10,7 @@ import NotFound from './NotFound'
 import MarkdownContent from '@/components/MarkdownContent'
 import Toast from '@/components/Toast'
 import { sanitizeUrl } from '@/lib/security'
+import { useSeoMeta } from '@/lib/seo'
 
 /**
  * Utility function to copy URL to clipboard with fallback support
@@ -56,6 +57,19 @@ const PostPage: React.FC = () => {
   if (!post) {
     return <NotFound />
   }
+
+  // Set SEO meta tags for the post
+  useSeoMeta({
+    title: post.title,
+    description: post.excerpt,
+    keywords: post.tags.join(', '),
+    canonical: `https://abby-chung.github.io/pineapplepizza/blog/${post.slug}`,
+    ogTitle: post.title,
+    ogDescription: post.excerpt,
+    ogType: 'article',
+    publishedDate: new Date(post.date).toISOString(),
+    author: 'Abby Chung',
+  })
 
   // Get related posts (same tags, excluding current post)
   const relatedPosts: BlogPost[] = blogPosts

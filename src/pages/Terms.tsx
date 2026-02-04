@@ -1,8 +1,19 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { FileText, Scale, AlertTriangle, Mail } from 'lucide-react'
+import { useSeoMeta } from '@/lib/seo'
 
 const Terms: React.FC = () => {
+  useSeoMeta({
+    title: 'Terms of Service',
+    description: 'Terms of service for Pineapple Pizza blog. Please read these terms and conditions before using our website.',
+    keywords: 'terms of service, terms and conditions, legal, usage agreement',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/terms',
+    ogTitle: 'Terms of Service - Pineapple Pizza',
+    ogDescription: 'Read the terms and conditions for using Pineapple Pizza blog.',
+    ogType: 'website',
+  })
+
   return (
     <div className="max-w-4xl mx-auto space-y-8 fade-in">
       {/* Header */}
@@ -214,10 +225,7 @@ const Terms: React.FC = () => {
           </CardHeader>
           <CardContent className="prose max-w-none">
             <p>
-              If you have any questions about these Terms of Service, please contact us through our 
-              <a href="https://github.com/abby-chung/pineapplepizza" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                GitHub repository
-              </a>.
+              If you have any questions about these Terms of Service, please contact us.
             </p>
           </CardContent>
         </Card>

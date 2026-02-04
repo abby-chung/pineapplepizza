@@ -3,8 +3,17 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Home, Search, Coffee } from 'lucide-react'
+import { useSeoMeta } from '@/lib/seo'
 
 const NotFound: React.FC = () => {
+  useSeoMeta({
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for could not be found. Please check the URL or return to the home page.',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/404',
+    ogTitle: '404 - Page Not Found',
+    ogDescription: 'The page you are looking for could not be found.',
+    ogType: 'website',
+  })
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <Card className="w-full max-w-md text-center">

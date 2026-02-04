@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Coffee, Book, Film, Code, Heart, Mail, Github, Beer, Pizza, Linkedin } from 'lucide-react'
+import { useSeoMeta } from '@/lib/seo'
 
 interface InterestItem {
   name: string
@@ -22,6 +23,16 @@ const ABOUT_INTERESTS: InterestItem[] = [
 ] as const
 
 const About: React.FC = () => {
+
+  useSeoMeta({
+    title: 'About',
+    description: 'Learn about Abby - A coffee enthusiast, reader, filmmaker, and developer. Explore my passions and journey through photography, technology, and creative pursuits.',
+    keywords: 'about, profile, photography, web development, coffee, creativity, learning',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/about',
+    ogTitle: 'About Abby - Pineapple Pizza',
+    ogDescription: 'Get to know me - coffee, photography, creative coding, and lifelong learning.',
+    ogType: 'website',
+  })
 
   return (
     <div className="max-w-4xl mx-auto space-y-12 fade-in">
@@ -134,9 +145,11 @@ const About: React.FC = () => {
                 GitHub
               </a>
             </Button>
-            <Button variant="outline" size="sm" className="rounded-full">
-              <Linkedin className="h-4 w-4 mr-2" />
-              LinkedIn
+            <Button asChild variant="outline" size="sm" className="rounded-full">
+              <a href="https://www.linkedin.com/in/abbychung/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4 mr-2" />
+                LinkedIn
+              </a>
             </Button>
           </div>
         </CardContent>

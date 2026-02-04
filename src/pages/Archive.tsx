@@ -5,9 +5,20 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Calendar, Clock, Globe, Archive as ArchiveIcon } from 'lucide-react'
 import { blogPosts } from '@/data/posts'
+import { useSeoMeta } from '@/lib/seo'
 
 const Archive: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<string | null>(null)
+
+  useSeoMeta({
+    title: 'Archive',
+    description: 'Browse all blog posts organized by year. Explore the complete archive of articles about coffee, books, movies, photography, and technology.',
+    keywords: 'archive, blog posts, all posts, sorted by year, blog history',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/blog/archive',
+    ogTitle: 'Blog Archive - Pineapple Pizza',
+    ogDescription: 'Browse all blog posts by year in the complete archive.',
+    ogType: 'website',
+  })
 
   // Group posts by year
   const postsByYear = useMemo(() => {

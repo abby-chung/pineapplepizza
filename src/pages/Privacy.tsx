@@ -1,8 +1,19 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Shield, Eye, Cookie, Mail, Calendar } from 'lucide-react'
+import { useSeoMeta } from '@/lib/seo'
 
 const Privacy: React.FC = () => {
+  useSeoMeta({
+    title: 'Privacy Policy',
+    description: 'Our privacy policy explains how we collect, use, and protect your personal information when you visit our blog.',
+    keywords: 'privacy policy, privacy, data protection, GDPR',
+    canonical: 'https://abby-chung.github.io/pineapplepizza/privacy',
+    ogTitle: 'Privacy Policy - Pineapple Pizza',
+    ogDescription: 'Read our complete privacy policy and how we handle your data.',
+    ogType: 'website',
+  })
+
   return (
     <div className="max-w-4xl mx-auto space-y-8 fade-in">
       {/* Header */}
